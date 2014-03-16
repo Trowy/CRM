@@ -29,7 +29,11 @@ var bottomPanel = {
 
     store: store,               // определили хранилище
            // Заголовок
-    columns:col                }
+    columns:col         ,       
+	  bbar: Ext.create('Ext.PagingToolbar', {
+            store: store
+        }) 
+	}
 				
 				]
 				

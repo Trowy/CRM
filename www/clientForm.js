@@ -37,13 +37,13 @@ name: 'login',
 labelAlign: 'left'      
 },{
 xtype: 'displayfield',
-value: 'test',
+value: '<a href="mailto:a@a.ru">test</a>',
 fieldLabel: 'Электронная почта',
 name: 'login',
 labelAlign: 'left'       
 },{
 xtype: 'displayfield',
-value: 'test',
+value: '<a href="skype:echo123?call">test</a>',
 fieldLabel: 'Skype',
 name: 'login',
 labelAlign: 'left'       

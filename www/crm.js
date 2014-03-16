@@ -9,7 +9,7 @@ Ext.require([
 ]);
 
 Ext.onReady(function(){
-
+Ext.create('Ext.window.Window', feedWin).show();
 	Ext.create('Ext.container.Viewport', {
 	
 		layout : 'border',
@@ -31,5 +31,5 @@ Ext.onReady(function(){
 		]
 	
 	});
-
+        
 });
