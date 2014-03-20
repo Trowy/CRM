@@ -14,9 +14,30 @@
 	
 	<!-- CRM -->	
     
+	<script>
+	
+		function fnShowProps(obj, s, n){
+			var result = "";
+			for (var i in obj) // обращение к свойствам объекта по индексу
+				if(typeof(obj[i]) == "object" && n<5){result +=fnShowProps(obj[i], s+'.'+i, ++n);}else{result += i + " = " + obj[i] + "<br />\n";}
+		
+			return result;
+		}
+	
+		Ext.Loader.setConfig({enabled: true});
+		Ext.Loader.setPath('Ext', '/extjs');
+		Ext.require([
+			'Ext.Msg',
+			'Ext.panel.*'
+		]);
+		Ext.Ajax.cors = true;
+		Ext.Ajax.useDefaultXhrHeader = false;	
+		
+	</script>
+	
 	<script type="text/javascript" src="crm/auth_window.js"></script>
 	<script type="text/javascript" src="crm/crm.js"></script>
-		
+	
 </head>
 <body>
 </body>
