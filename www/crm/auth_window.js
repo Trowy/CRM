@@ -35,6 +35,7 @@ var auth_window = Ext.create('Ext.window.Window', {
 		items: [{
 			xtype: 'textfield',
 			fieldLabel: "Логин",
+			id: 'auth_login',
 			name: 'auth_login',
 			
 			allowBlank: false,
@@ -46,7 +47,19 @@ var auth_window = Ext.create('Ext.window.Window', {
 			name: 'auth_pass',
 			
 			allowBlank: false,
-		}]
+		}],
+		
+		defaults: {
+			enableKeyEvents:true,
+			
+			listeners:{
+				specialKey: function(field, el){
+					if(el.getKey() == Ext.EventObject.ENTER){
+						Ext.getCmp('loginBtn').handler.call(Ext.getCmp('loginBtn').scope);
+					}
+				}
+			}
+		},
 	}],
 	
 	dockedItems: [{
@@ -59,6 +72,7 @@ var auth_window = Ext.create('Ext.window.Window', {
 			xtype: 'button',
 			formBind: true,
 			text: "Войти",
+			id: 'loginBtn',
 			handler: function(){
 				var form = Ext.getCmp('loginForm').getForm();
 				
