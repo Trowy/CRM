@@ -38,6 +38,8 @@ var auth_window = Ext.create('Ext.window.Window', {
 			id: 'auth_login',
 			name: 'auth_login',
 			
+			emptyText: 'Ваш логин',
+			
 			allowBlank: false,
 			vtype: 'login',
 		},{
@@ -45,6 +47,8 @@ var auth_window = Ext.create('Ext.window.Window', {
 			inputType: 'password',
 			fieldLabel: "Пароль",
 			name: 'auth_pass',
+			
+			emptyText: 'Ваш пароль',
 			
 			allowBlank: false,
 		}],
