@@ -26,7 +26,7 @@ var auth_window = Ext.create('Ext.window.Window', {
 	
 	items: [{
 		xtype: 'form',
-		url: 'test-data/auth.json',
+		url: domen+'crm/Auth',
 		id: 'loginForm',
 		
 		minHeight: 200,
