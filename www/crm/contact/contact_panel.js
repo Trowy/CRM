@@ -1,54 +1,59 @@
 function create_add_cnt_window(){
 
-	cmp_window = create_cnt_window();	
-	cmp_window.title = 'rest';	
-	cmp_window.show();
-	refresh();
+	cnt_window = create_cnt_window();	
+	cnt_window.title = 'rest';	
+	cnt_window.show();
+	refresh_cnt();
 
 }
 
 function create_edit_cnt_window(){
 
-	cmp_window = create_cnt_window();
+	cnt_window = create_cnt_window();
 	var row = contact_grid.getSelectionModel().getSelection()[0];
-	cmp_window.items.items[0].getForm().setValues({
-login: row.get('login'),
+	cnt_window.items.items[0].getForm().setValues({
+
 last_name: row.get('last_name'),
 first_name: row.get('first_name'),
 middle_name: row.get('middle_name'),
-role: row.get('role'),
-email: row.get('email')
+info: row.get('info'),
+phones: row.get('phones'),
+emails: row.get('emails'),
+skypes: row.get('skypes')
    
 })
-	mng_window.show();
-	refresh();
+	cnt_window.show();
+	refresh_cnt();
 
 }
 
 function create_del_cnt_window(){
 
-	Ext.Ajax.request({
+	var selectedRecord = contact_grid.getSelectionModel().getSelection()[0];
+	alert(selectedRecord.data.skypes[1]);
+	/*Ext.Ajax.request({
         method: 'GET',
-        url: 'test.php',
-        params: { id:2 },
+        url: domen+'crm/Employee',
+        params: { id: selectedRecord.data.id },
         success: function( result, request ){
-            alert(1);
+            
         }
-    });
+    });*/
 
 }
 
 function refresh_cnt(){
-	store.load();
-	managers_grid.getView().refresh();
+	contact_store.load();
+	contact_grid.getView().refresh();
 
 }
 
 var contact_panel = Ext.create('Ext.panel.Panel', {
 	
-	title: 'Комнания',
+	title: 'Котратор',
+	
+    region: 'center',
 	flex: 1,
-    region: 'south',
     
 	
 	items: [contact_grid],

@@ -15,12 +15,7 @@ var contact_store = Ext.create('Ext.data.JsonStore', {
 var contact_grid = Ext.create('Ext.grid.Panel', {
 				
 		store: contact_store,
-		columns: [
-    
-    {
-      text: "id",
-      dataIndex: 'id',      
-    },
+		columns: [      
 	{
       text: "Фамилия",
       dataIndex: 'last_name',      
@@ -40,5 +35,9 @@ var contact_grid = Ext.create('Ext.grid.Panel', {
 	{
       text: "Эл. почта",
       dataIndex: 'emails',      
+    },
+	{
+      text: "Скайп",
+      dataIndex: 'skypes',      
     }]
 });

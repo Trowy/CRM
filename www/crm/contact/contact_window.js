@@ -5,13 +5,7 @@
 				 url: 'some.json',
 	border:false, // <-- removing the border of the form
 	defaults:{xtype:'textfield'	},	//component by default of the form
-	items:[{
-      fieldLabel: "Логин",
-      name: 'login',      
-    },{
-      fieldLabel: "Пароль",
-      name: 'password',      
-    },
+	items:[
 	{
       fieldLabel: "Фамилия",
       name: 'last_name',      
@@ -25,15 +19,19 @@
       name: 'middle_name',      
     },
 	{
-      fieldLabel: "Роль",
-      name: 'role',      
+      fieldLabel: "инфа",
+      name: 'info',      
     },
 	{
-      fieldLabel: "Эл. почта",
-      name: 'email',      
+      fieldLabel: "тел",
+      name: 'phones',      
+    },
+	{
+      fieldLabel: "почта",
+      name: 'emails',      
     },{
-      fieldLabel: "Пароль эл. почта",
-      name: 'email_password',      
+      fieldLabel: "скайп",
+      name: 'skypes',      
     }
 	] });
  
@@ -46,12 +44,12 @@
  
 	
 				
-    title: 'Добавить клиента', 
+    title: 'Добавить контрктр', 
 	width:300, 
 	height:600, 
 	bodyStyle:'background-color:#fff;padding: 10px', 
 	
-	items: [mng_form = create_mng_form()], //assigning the form
+	items: [mng_form = create_cnt_form()], //assigning the form
 	buttonAlign: 'right', //buttons aligned to the right
 	buttons:[{text:'Добавить',
 	handler: function(){

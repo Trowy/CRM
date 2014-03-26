@@ -27,19 +27,21 @@ email: row.get('email')
 
 function create_del_mng_window(){
 
+	var selectedRecord = managers_grid.getSelectionModel().getSelection()[0];
+	
 	Ext.Ajax.request({
         method: 'GET',
-        url: 'test.php',
-        params: { id:2 },
+        url: domen+'crm/Employee',
+        params: { id: selectedRecord.data.id },
         success: function( result, request ){
-            alert(1);
+            
         }
     });
 
 }
 
 function refresh_mng(){
-	store.load();
+	managers_store.load();
 	managers_grid.getView().refresh();
 
 }
@@ -47,8 +49,9 @@ function refresh_mng(){
 var managers_panel = Ext.create('Ext.panel.Panel', {
 	
 	title: 'Манагеры',
-	flex: 1,
 	region: 'north',
+	flex: 1,
+	
 	items: [managers_grid],
 	
 	tbar: [

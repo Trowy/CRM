@@ -1,10 +1,10 @@
 var company_store = Ext.create('Ext.data.JsonStore', {
-    fields: ['login', 'first_name', 'middle_name', 'last_name', 'role', 'email'],
+    fields: ['id', 'name', 'info', 'site', 'phones', 'emails', 'skypes', 'City', 'BusinessScale', 'CompanyStatus', 'Employee', 'Tags'],
     
   autoLoad: true,
   proxy:{
     type:'ajax',
-    url:domen+'crm/Employee',
+    url:domen+'crm/Company',
     reader:{
          root:'data'
         }
@@ -19,26 +19,51 @@ var company_grid = Ext.create('Ext.grid.Panel', {
     
     {
       text: "Логин",
-      dataIndex: 'login',      
+      dataIndex: 'id',      
     },
 	{
       text: "Фамилия",
-      dataIndex: 'last_name',      
+      dataIndex: 'name',      
     },
 	{
       text: "Имя",
-      dataIndex: 'first_name',      
+      dataIndex: 'info',      
     },
 	{
       text: "Отчество",
-      dataIndex: 'middle_name',      
+      dataIndex: 'site',      
     },
 	{
       text: "Роль",
-      dataIndex: 'role',      
+      dataIndex: 'phones',      
     },
 	{
       text: "Эл. почта",
-      dataIndex: 'email',      
-    }]
+      dataIndex: 'emails',      
+    }, {
+      text: "Логин",
+      dataIndex: 'skypes',      
+    },
+	{
+      text: "Фамилия",
+      dataIndex: 'City',      
+    },
+	{
+      text: "Имя",
+      dataIndex: 'BusinessScale',      
+    },
+	{
+      text: "Отчество",
+      dataIndex: 'CompanyStatus',      
+    },
+	{
+      text: "Роль",
+      dataIndex: 'Employee',      
+    },
+	{
+      text: "Эл. почта",
+      dataIndex: 'Tags',      
+    }
+	
+	]
 });

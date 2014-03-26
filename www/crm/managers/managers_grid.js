@@ -1,12 +1,13 @@
 var managers_store = Ext.create('Ext.data.JsonStore', {
-    fields: ['login', 'first_name', 'middle_name', 'last_name', 'role', 'email'],
+    fields: ['id', 'login', 'password', 'first_name', 'middle_name', 'last_name', 'role', 'email'],
     
   autoLoad: true,
   proxy:{
     type:'ajax',
     url:domen+'crm/Employee',
     reader:{
-         root:'data'
+         root:'data',
+		 idProperty: 'id'
         }
     }
 	
@@ -14,9 +15,8 @@ var managers_store = Ext.create('Ext.data.JsonStore', {
 
 var managers_grid = Ext.create('Ext.grid.Panel', {
 				
-		store: managers_store,
-		columns: [
-    
+	store: managers_store,
+	columns: [    
     {
       text: "Логин",
       dataIndex: 'login',      

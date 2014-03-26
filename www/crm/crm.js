@@ -4,13 +4,12 @@ Ext.onReady(function(){
 
 	Ext.create('Ext.Viewport', {
 
-		layout: 'border',		
+		layout: 'border',	
 
 		items: [
-		
 			managers_panel,
 			company_panel,
-			contact_panel
+			contact_panel			
 		]
 		
 	});

@@ -5,35 +5,53 @@
 				 url: 'some.json',
 	border:false, // <-- removing the border of the form
 	defaults:{xtype:'textfield'	},	//component by default of the form
-	items:[{
+	items:[
+	 {
       fieldLabel: "Логин",
-      name: 'login',      
-    },{
-      fieldLabel: "Пароль",
-      name: 'password',      
+      name: 'id',      
     },
 	{
       fieldLabel: "Фамилия",
-      name: 'last_name',      
+      name: 'name',      
     },
 	{
       fieldLabel: "Имя",
-      name: 'first_name',      
+      name: 'info',      
     },
 	{
       fieldLabel: "Отчество",
-      name: 'middle_name',      
+      name: 'site',      
     },
 	{
       fieldLabel: "Роль",
-      name: 'role',      
+      name: 'phones',      
     },
 	{
       fieldLabel: "Эл. почта",
-      name: 'email',      
-    },{
-      fieldLabel: "Пароль эл. почта",
-      name: 'email_password',      
+      name: 'emails',      
+    }, {
+      fieldLabel: "Логин",
+      name: 'skypes',      
+    },
+	{
+      fieldLabel: "Фамилия",
+      name: 'City',      
+    },
+	{
+      fieldLabel: "Имя",
+      name: 'BusinessScale',      
+    },
+	{
+      fieldLabel: "Отчество",
+      name: 'CompanyStatus',      
+    },
+	{
+      fieldLabel: "Роль",
+      name: 'Employee',      
+    },
+	{
+      fieldLabel: "Эл. почта",
+      name: 'Tags',      
     }
 	] });
  
@@ -51,13 +69,13 @@
 	height:600, 
 	bodyStyle:'background-color:#fff;padding: 10px', 
 	
-	items: [mng_form = create_mng_form()], //assigning the form
+	items: [cmp_form = create_cmp_form()], //assigning the form
 	buttonAlign: 'right', //buttons aligned to the right
 	buttons:[{text:'Добавить',
 	handler: function(){
 
 				
-				mng_form.submit({
+				cmp_form.submit({
 					waitMsg: 'Добавление...',
 					
 					success: function(f,a){
@@ -76,7 +94,7 @@
 					}
 				});
 	}
-	},{text:'Отмена',handler:function(){mng_window.close();}}] 
+	},{text:'Отмена',handler:function(){cmp_window.close();}}] 
           
  
  });

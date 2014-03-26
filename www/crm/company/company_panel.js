@@ -12,15 +12,21 @@ function create_edit_cmp_window(){
 	cmp_window = create_cmp_window();
 	var row = company_grid.getSelectionModel().getSelection()[0];
 	cmp_window.items.items[0].getForm().setValues({
-login: row.get('login'),
-last_name: row.get('last_name'),
-first_name: row.get('first_name'),
-middle_name: row.get('middle_name'),
-role: row.get('role'),
-email: row.get('email')
+id: row.get('id'),
+name: row.get('name'),
+info: row.get('info'),
+site: row.get('site'),
+phones: row.get('phones'),
+emails: row.get('emails'),
+skypes: row.get('skypes'),
+City: row.get('City'),
+BusinessScale: row.get('BusinessScale'),
+CompanyStatus: row.get('CompanyStatus'),
+Employee: row.get('Employee'),
+Tags: row.get('Tags')
    
 })
-	mng_window.show();
+	cmp_window.show();
 	refresh();
 
 }
@@ -47,8 +53,9 @@ function refresh_cmp(){
 var company_panel = Ext.create('Ext.panel.Panel', {
 	
 	title: 'Комнания',
-	flex: 1,
+	
     region: 'south',
+	flex: 1,
     
 	
 	items: [company_grid],
