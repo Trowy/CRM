@@ -52,8 +52,7 @@ var contact_panel = Ext.create('Ext.panel.Panel', {
 	
 	title: 'Котратор',
 	
-    region: 'center',
-	flex: 1,
+    
     
 	
 	items: [contact_grid],

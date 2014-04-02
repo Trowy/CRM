@@ -49,8 +49,7 @@ function refresh_mng(){
 var managers_panel = Ext.create('Ext.panel.Panel', {
 	
 	title: 'Манагеры',
-	region: 'north',
-	flex: 1,
+	
 	
 	items: [managers_grid],
 	

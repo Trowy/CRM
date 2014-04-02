@@ -54,8 +54,7 @@ var company_panel = Ext.create('Ext.panel.Panel', {
 	
 	title: 'Комнания',
 	
-    region: 'south',
-	flex: 1,
+    
     
 	
 	items: [company_grid],

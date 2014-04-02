@@ -4,12 +4,26 @@ Ext.onReady(function(){
 
 	Ext.create('Ext.Viewport', {
 
-		layout: 'border',	
-
+		layout: 'fit',		
+		
 		items: [
-			managers_panel,
-			company_panel,
-			contact_panel			
+		{
+		xtype: 'tabpanel',		
+		activeTab: 0,
+		items:[
+			//tags_panel,
+			//segment_panel,
+			//managers_panel,
+			//event_type_panel,
+			//event_status_panel,
+			//event_panel,
+			//contact_panel,
+			//company_status_panel,
+			//company_panel,
+			business_scale_panel,
+			//city_panel			
+			]
+			}
 		]
 		
 	});
