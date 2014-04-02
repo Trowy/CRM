@@ -4,7 +4,7 @@ var contact_store = Ext.create('Ext.data.JsonStore', {
   autoLoad: true,
   proxy:{
     type:'ajax',
-    url:domen+'crm/Contact',
+   url: domen+'crm/contractors',
     reader:{
          root:'data'
         }

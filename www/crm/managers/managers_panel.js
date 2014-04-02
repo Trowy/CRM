@@ -1,9 +1,13 @@
 function create_add_mng_window(){
 
 	mng_window = create_mng_window();	
-	mng_window.title = 'rest';	
+
+mng_window.title = 'rest';
+mng_window.items.items[0].getForm().setValues({
+action: 'new'
+});		
 	mng_window.show();
-	refresh();
+	
 
 }
 
@@ -21,7 +25,7 @@ email: row.get('email')
    
 })
 	mng_window.show();
-	refresh();
+
 
 }
 
@@ -30,11 +34,11 @@ function create_del_mng_window(){
 	var selectedRecord = managers_grid.getSelectionModel().getSelection()[0];
 	
 	Ext.Ajax.request({
-        method: 'GET',
-        url: domen+'crm/Employee',
+        method: 'POST',
+        url: domen+'crm/employees',
         params: { id: selectedRecord.data.id },
         success: function( result, request ){
-            
+           refresh_mng(); 
         }
     });
 
@@ -48,8 +52,7 @@ function refresh_mng(){
 
 var managers_panel = Ext.create('Ext.panel.Panel', {
 	
-	title: 'Манагеры',
-	
+	title: 'Манагеры',	
 	
 	items: [managers_grid],
 	

@@ -2,7 +2,7 @@
  
  return Ext.create('Ext.form.Panel',{
 				 
-				 url: 'some.json',
+				 url: domen+'crm/managers',
 	border:false, // <-- removing the border of the form
 	defaults:{xtype:'textfield'	},	//component by default of the form
 	items:[{
@@ -32,9 +32,12 @@
       fieldLabel: "Эл. почта",
       name: 'email',      
     },{
-      fieldLabel: "Пароль эл. почта",
-      name: 'email_password',      
-    }
+  xtype:'hidden',
+   name:'action'
+},{
+  xtype:'hidden',
+   name:'id'
+}
 	] });
  
  
@@ -68,6 +71,7 @@
 					
 					success: function(f,a){
 						Ext.Msg.alert('Success', 'It worked');
+						refresh_mng();
 					},
 					
 					failure: function(f,a){

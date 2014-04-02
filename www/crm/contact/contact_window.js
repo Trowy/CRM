@@ -2,7 +2,7 @@
  
  return Ext.create('Ext.form.Panel',{
 				 
-				 url: 'some.json',
+				url: domen+'crm/contractors',
 	border:false, // <-- removing the border of the form
 	defaults:{xtype:'textfield'	},	//component by default of the form
 	items:[

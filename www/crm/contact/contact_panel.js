@@ -2,8 +2,11 @@ function create_add_cnt_window(){
 
 	cnt_window = create_cnt_window();	
 	cnt_window.title = 'rest';	
+	mng_window.items.items[0].getForm().setValues({
+action: 'new'
+});	
 	cnt_window.show();
-	refresh_cnt();
+	
 
 }
 
@@ -23,22 +26,22 @@ skypes: row.get('skypes')
    
 })
 	cnt_window.show();
-	refresh_cnt();
+	
 
 }
 
 function create_del_cnt_window(){
 
 	var selectedRecord = contact_grid.getSelectionModel().getSelection()[0];
-	alert(selectedRecord.data.skypes[1]);
-	/*Ext.Ajax.request({
-        method: 'GET',
-        url: domen+'crm/Employee',
+	
+	Ext.Ajax.request({
+        method: 'POST',
+        url: domen+'crm/contractors',
         params: { id: selectedRecord.data.id },
         success: function( result, request ){
-            
+            refresh_cnt();
         }
-    });*/
+    });
 
 }
 
