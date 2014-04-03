@@ -4,9 +4,91 @@ Ext.onReady(function(){
 
 	Ext.create('Ext.Viewport', {
 
-		layout: 'fit',		
+		layout: {
+			type: 'border',
+			padding: 5
+		},
+
+		defaults: {
+			split: true
+		},
+
+		items: [{
+
+			region: 'west',
+			title: 'Тут ничего нет :(',
+			split: true,
+			width: 200,
+			html: 'Тут ничего нет :('
+
+		},{
+			
+			region: 'center',
+			layout: 'border',
+			border: false,
+
+			items: [
+			
+				{
+					region: 'south',
+					flex:1,
+					height: '40%',
+					
+					items:[{
+					xtype: 'tabpanel',
+activeTab: 0,	
+	items:[
+				
+				event_panel,
+				
+				
+				]}
+					]
+				},
+			
+				{
+							
+					region: 'south',
+					flex:1,
+					height: '60%',
+					
+					items:[{
+					xtype: 'tabpanel',
+activeTab: 0,	
+	items:[
+				
+				contact_panel,
+				
+				company_panel,
+				{title: 'Админка',
+xtype: 'panel',
+				items: [
+				{
 		
-		items:[event_panel]
+items: [	
+		{
+		
+		xtype: 'tabpanel',		
+		activeTab: 0,
+		items:[
+				tags_panel,
+				segment_panel,
+				managers_panel,
+				event_type_panel,
+				event_status_panel,
+				company_status_panel,
+				business_scale_panel,
+				city_panel			
+				]
+			}
+		]}]
+				}			
+				]}
+					]
+					
+				}
+			]
+		}]
 		
 	});
 		
