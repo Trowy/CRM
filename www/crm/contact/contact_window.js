@@ -32,7 +32,13 @@
     },{
       fieldLabel: "скайп",
       name: 'skypes',      
-    }
+    },{
+  xtype:'hidden',
+   name:'action'
+},{
+  xtype:'hidden',
+   name:'id'
+}
 	] });
  
  

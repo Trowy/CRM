@@ -52,10 +52,7 @@ function refresh_cmp(){
 
 var company_panel = Ext.create('Ext.panel.Panel', {
 	
-	title: 'Комнания',
-	
-    
-    
+	title: 'Комнания',   
 	
 	items: [company_grid],
 	

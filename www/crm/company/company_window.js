@@ -5,54 +5,86 @@
 				 url: 'some.json',
 	border:false, // <-- removing the border of the form
 	defaults:{xtype:'textfield'	},	//component by default of the form
-	items:[
-	 {
-      fieldLabel: "Логин",
-      name: 'id',      
-    },
+	items:[	 
 	{
-      fieldLabel: "Фамилия",
+      fieldLabel: "Название",
       name: 'name',      
     },
 	{
-      fieldLabel: "Имя",
+      fieldLabel: "Инфорамция",
       name: 'info',      
     },
 	{
-      fieldLabel: "Отчество",
+      fieldLabel: "Сайт",
       name: 'site',      
     },
 	{
-      fieldLabel: "Роль",
+      fieldLabel: "Телефоны",
       name: 'phones',      
     },
 	{
       fieldLabel: "Эл. почта",
       name: 'emails',      
     }, {
-      fieldLabel: "Логин",
+      fieldLabel: "Скайп",
       name: 'skypes',      
     },
 	{
-      fieldLabel: "Фамилия",
-      name: 'City',      
+	xtype: 'combobox',
+      fieldLabel: "Город",
+      name: 'City',
+
+    store: city_store,
+    queryMode: 'local',
+    displayField: 'name',
+    valueField: 'id',
+	  
     },
 	{
-      fieldLabel: "Имя",
-      name: 'BusinessScale',      
+	xtype: 'combobox',
+      fieldLabel: "Размер бизнеса",
+      name: 'BusinessScale',
+
+    store: business_scale_store,
+    queryMode: 'local',
+    displayField: 'name',
+    valueField: 'id',
+	  
     },
 	{
-      fieldLabel: "Отчество",
-      name: 'CompanyStatus',      
+	xtype: 'combobox',
+      fieldLabel: "Статус",
+      name: 'CompanyStatus',
+
+    store: company_status_store,
+    queryMode: 'local',
+    displayField: 'name',
+    valueField: 'id',
+	  
     },
 	{
-      fieldLabel: "Роль",
-      name: 'Employee',      
+	xtype: 'combobox',
+      fieldLabel: "Манагер",
+      name: 'Employee',
+
+    store: managers_store,
+    queryMode: 'local',
+    displayField: 'login',
+    valueField: 'id',
+	  
     },
 	{
-      fieldLabel: "Эл. почта",
-      name: 'Tags',      
+	xtype: 'combobox',
+      fieldLabel: "Теги",
+      name: 'Tags',
+
+    store: tags_store,
+    queryMode: 'local',
+    displayField: 'name',
+    valueField: 'id',
+	  
     }
+	
 	] });
  
  

@@ -2,7 +2,7 @@ function create_add_cnt_window(){
 
 	cnt_window = create_cnt_window();	
 	cnt_window.title = 'rest';	
-	mng_window.items.items[0].getForm().setValues({
+	cnt_window.items.items[0].getForm().setValues({
 action: 'new'
 });	
 	cnt_window.show();
@@ -15,15 +15,15 @@ function create_edit_cnt_window(){
 	cnt_window = create_cnt_window();
 	var row = contact_grid.getSelectionModel().getSelection()[0];
 	cnt_window.items.items[0].getForm().setValues({
-
+id: row.get('id'),
 last_name: row.get('last_name'),
 first_name: row.get('first_name'),
 middle_name: row.get('middle_name'),
 info: row.get('info'),
 phones: row.get('phones'),
 emails: row.get('emails'),
-skypes: row.get('skypes')
-   
+skypes: row.get('skypes'),
+      action: 'edit'
 })
 	cnt_window.show();
 	

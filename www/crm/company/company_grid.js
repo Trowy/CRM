@@ -1,5 +1,11 @@
 var company_store = Ext.create('Ext.data.JsonStore', {
-    fields: ['id', 'name', 'info', 'site', 'phones', 'emails', 'skypes', 'City', 'BusinessScale', 'CompanyStatus', 'Employee', 'Tags'],
+    fields: ['id', 'name', 'info', 'site', 'phones', 'emails', 'skypes', 
+	{name: 'City', mapping: 'City.name'}, 
+	{name: 'Segment', mapping: 'Segment.name'}, 
+	{name: 'BusinessScale', mapping: 'BusinessScale.name'}, 
+	{name: 'CompanyStatus_name', mapping: 'CompanyStatus.name'}, 
+	'CompanyStatus', 
+	'Employee', 'Tags'],
     
   autoLoad: true,
   proxy:{
@@ -17,52 +23,26 @@ var company_grid = Ext.create('Ext.grid.Panel', {
 		store: company_store,
 		columns: [
     
-    {
-      text: "Логин",
-      dataIndex: 'id',      
-    },
+   
 	{
-      text: "Фамилия",
+      text: "Название",
       dataIndex: 'name',      
     },
 	{
-      text: "Имя",
-      dataIndex: 'info',      
+      text: "Город",       
+	  dataIndex: 'City'
     },
 	{
-      text: "Отчество",
-      dataIndex: 'site',      
+      text: "Статус",
+      dataIndex: 'CompanyStatus_name',      
     },
 	{
-      text: "Роль",
-      dataIndex: 'phones',      
+      text: "Сегмент",
+      dataIndex: 'Segment',      
     },
 	{
-      text: "Эл. почта",
-      dataIndex: 'emails',      
-    }, {
-      text: "Логин",
-      dataIndex: 'skypes',      
-    },
-	{
-      text: "Фамилия",
-      dataIndex: 'City',      
-    },
-	{
-      text: "Имя",
+      text: "Размер бизнеса",
       dataIndex: 'BusinessScale',      
-    },
-	{
-      text: "Отчество",
-      dataIndex: 'CompanyStatus',      
-    },
-	{
-      text: "Роль",
-      dataIndex: 'Employee',      
-    },
-	{
-      text: "Эл. почта",
-      dataIndex: 'Tags',      
     }
 	
 	]
