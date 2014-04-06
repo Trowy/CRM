@@ -2,7 +2,7 @@
  
  return Ext.create('Ext.form.Panel',{
 				 
-				 url: 'some.json',
+				url: domen+'crm/companies',
 	border:false, // <-- removing the border of the form
 	defaults:{xtype:'textfield'	},	//component by default of the form
 	items:[	 
@@ -83,7 +83,13 @@
     displayField: 'name',
     valueField: 'id',
 	  
-    }
+    },{
+  xtype:'hidden',
+   name:'action'
+},{
+  xtype:'hidden',
+   name:'id'
+}
 	
 	] });
  
@@ -111,7 +117,7 @@
 					waitMsg: 'Добавление...',
 					
 					success: function(f,a){
-						Ext.Msg.alert('Success', 'It worked');
+						refresh_cmp();
 					},
 					
 					failure: function(f,a){

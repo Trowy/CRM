@@ -6,35 +6,79 @@
 	border:false, // <-- removing the border of the form
 	defaults:{xtype:'textfield'	},	//component by default of the form
 	items:[{
-      fieldLabel: "Логин",
-      name: 'login',      
+      fieldLabel: "Название",
+      name: 'title',      
     },{
-      fieldLabel: "Пароль",
-      name: 'password',      
+	xtype: 'combobox',
+      fieldLabel: "contractor",
+      name: 'contractor',
+
+    store: contact_store,
+    queryMode: 'local',
+    displayField: 'middle_name',
+    valueField: 'id',
+	  
     },
 	{
-      fieldLabel: "Фамилия",
-      name: 'last_name',      
+	xtype: 'combobox',
+      fieldLabel: "Компания",
+      name: 'company',
+
+    store: company_store,
+    queryMode: 'local',
+    displayField: 'name',
+    valueField: 'id',
+	  
     },
 	{
-      fieldLabel: "Имя",
-      name: 'first_name',      
+	xtype: 'combobox',
+      fieldLabel: "managers",
+      name: 'managers',
+
+    store: managers_store,
+    queryMode: 'local',
+    displayField: 'login',
+    valueField: 'id',
+	  
     },
 	{
-      fieldLabel: "Отчество",
-      name: 'middle_name',      
+	xtype: 'combobox',
+      fieldLabel: "eventType",
+      name: 'eventType',
+
+    store: event_type_store,
+    queryMode: 'local',
+    displayField: 'name',
+    valueField: 'id',
+	  
     },
 	{
-      fieldLabel: "Роль",
-      name: 'role',      
-    },
-	{
-      fieldLabel: "Эл. почта",
-      name: 'email',      
+      fieldLabel: "Дата поступления",
+      name: 'date',      
     },{
-      fieldLabel: "Пароль эл. почта",
-      name: 'email_password',      
-    }
+      fieldLabel: "prodolgitel",
+      name: 'duration',      
+    },
+	{
+      fieldLabel: "Описание",
+      name: 'info',      
+    },{
+	xtype: 'combobox',
+      fieldLabel: "eventStatus",
+      name: 'eventStatus',
+
+    store: event_status_store,
+    queryMode: 'local',
+    displayField: 'name',
+    valueField: 'id',
+	  
+    },{
+  xtype:'hidden',
+   name:'action'
+},{
+  xtype:'hidden',
+   name:'id'
+}
 	] });
  
  
@@ -67,7 +111,7 @@
 					waitMsg: 'Добавление...',
 					
 					success: function(f,a){
-						Ext.Msg.alert('Success', 'It worked');
+						refresh_evt();
 					},
 					
 					failure: function(f,a){

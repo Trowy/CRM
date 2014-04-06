@@ -1,9 +1,12 @@
 function create_add_evt_window(){
 
 	evt_window = create_evt_window();	
-	evt_window.title = 'rest';	
+	evt_window.title = 'rest';
+evt_window.items.items[0].getForm().setValues({
+action: 'new'
+});		
 	evt_window.show();
-	refresh();
+	
 
 }
 
@@ -12,16 +15,21 @@ function create_edit_evt_window(){
 	evt_window = create_evt_window();
 	var row = event_grid.getSelectionModel().getSelection()[0];
 	evt_window.items.items[0].getForm().setValues({
-login: row.get('login'),
-last_name: row.get('last_name'),
-first_name: row.get('first_name'),
-middle_name: row.get('middle_name'),
-role: row.get('role'),
-email: row.get('email')
+id: row.get('id'),
+title: row.get('title'),
+contractor: row.get('contractor'),
+duration:   row.get('duration'),
+company: row.get('company'),
+managers: row.get('managers'),
+eventType: row.get('eventType'),
+date: row.get('date'),
+info: row.get('info'),
+eventStatus: row.get('eventStatus'),
+action: 'edit'
    
 })
 	evt_window.show();
-	refresh();
+	
 
 }
 
@@ -34,13 +42,13 @@ function create_del_evt_window(){
         url: domen+'crm/Employee',
         params: { id: selectedRecord.data.id },
         success: function( result, request ){
-            
+            refresh_evt();
         }
     });
 
 }
 
-function refresh_mng(){
+function refresh_evt(){
 	event_store.load();
 	event_grid.getView().refresh();
 
@@ -69,7 +77,7 @@ var event_panel = Ext.create('Ext.panel.Panel', {
 		'-',
 		{
 		text: 'Обновить',
-		handler: refresh_mng
+		handler: refresh_evt
 		}
 	],
 	

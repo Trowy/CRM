@@ -2,8 +2,11 @@ function create_add_cmp_window(){
 
 	cmp_window = create_cmp_window();	
 	cmp_window.title = 'rest';	
+	cmp_window.items.items[0].getForm().setValues({
+action: 'new'
+});	
 	cmp_window.show();
-	refresh();
+
 
 }
 
@@ -23,11 +26,12 @@ City: row.get('City'),
 BusinessScale: row.get('BusinessScale'),
 CompanyStatus: row.get('CompanyStatus'),
 Employee: row.get('Employee'),
-Tags: row.get('Tags')
+Tags: row.get('Tags'),
+action: 'edit'
    
 })
 	cmp_window.show();
-	refresh();
+	
 
 }
 
@@ -38,7 +42,7 @@ function create_del_cmp_window(){
         url: 'test.php',
         params: { id:2 },
         success: function( result, request ){
-            alert(1);
+            refresh_cmp();
         }
     });
 

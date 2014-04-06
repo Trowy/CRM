@@ -1,5 +1,7 @@
 var event_store = Ext.create('Ext.data.JsonStore', {
-    fields: ['id', 'title', 'info', 'date', 'EventType', 'Contractor'],
+    fields: ['id', 'title', 'info', 'date', 
+	{name: 'EventType', mapping: 'EventType.id'},
+	{name: 'Contractor', mapping: 'Contractor.id'}],
     
   autoLoad: true,
   proxy:{
