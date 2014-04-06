@@ -1,9 +1,9 @@
 var company_store = Ext.create('Ext.data.JsonStore', {
     fields: ['id', 'name', 'info', 'site', 'phones', 'emails', 'skypes', 
-	{name: 'City', mapping: 'City.name'}, 
-	{name: 'Segment', mapping: 'Segment.name'}, 
-	{name: 'BusinessScale', mapping: 'BusinessScale.name'}, 
-	{name: 'CompanyStatus_name', mapping: 'CompanyStatus.name'}, 
+	{name: 'City', mapping: 'City.id'}, 
+	{name: 'Segment', mapping: 'Segment.id'}, 
+	{name: 'BusinessScale', mapping: 'BusinessScale.id'}, 
+	{name: 'CompanyStatus_name', mapping: 'CompanyStatus.id'}, 
 	'CompanyStatus', 
 	'Employee', 'Tags'],
     
