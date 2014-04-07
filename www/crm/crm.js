@@ -13,15 +13,10 @@ Ext.onReady(function(){
 			split: true
 		},
 
-		items: [{
-
-			region: 'west',
-			title: 'Тут ничего нет :(',
-			split: true,
-			width: 200,
-			html: 'Тут ничего нет :('
-
-		},{
+		items: [
+			clientFormPanel
+			
+		,{
 			
 			region: 'center',
 			layout: 'border',
