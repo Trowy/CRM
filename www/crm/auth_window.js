@@ -14,6 +14,7 @@ Ext.apply(Ext.form.field.VTypes, loginVType);
 var auth_window = Ext.create('Ext.window.Window', {
 	
 	title: 'Авторизация',
+	iconCls: 'key',
 	
 	height: 140,
 	width: 300,
@@ -26,7 +27,7 @@ var auth_window = Ext.create('Ext.window.Window', {
 	
 	items: [{
 		xtype: 'form',
-		url: domen+'crm/Auth',
+		url: domen+'crm/auth',
 		id: 'loginForm',
 		
 		minHeight: 200,
@@ -75,6 +76,7 @@ var auth_window = Ext.create('Ext.window.Window', {
 		},{
 			xtype: 'button',
 			formBind: true,
+			iconCls: 'submit_login',
 			text: "Войти",
 			id: 'loginBtn',
 			handler: function(){
@@ -83,11 +85,16 @@ var auth_window = Ext.create('Ext.window.Window', {
 				form.submit({
 					waitMsg: 'Авторизация...',
 					
-					success: function(f,a){
-						Ext.Msg.alert('Success', 'It worked');
+					success: function(form, action){
+										
+						employee_id = action.result.employee_id;
+						employee_admin = action.result.employee_role==='S';
+						
+						auth_window.close();
+						 
 					},
 					
-					failure: function(f,a){
+					failure: function(f,a){alert(2);
 						if (a.failureType === Ext.form.Action.CONNECT_FAILURE){
 							Ext.MessageBox.show({
 								title: 'Ошибка',
