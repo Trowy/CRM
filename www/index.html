@@ -28,6 +28,14 @@ function fnShowProps(obj, s, n){
 		
 			return result;
 }
+
+function getCookie(name) {
+  var matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : "undefined";
+}
+
 		Ext.Loader.setConfig({enabled: true});
 		Ext.Loader.setPath('Ext', '/extjs');
 		Ext.require([
