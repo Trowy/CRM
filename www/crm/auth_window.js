@@ -90,11 +90,13 @@ var auth_window = Ext.create('Ext.window.Window', {
 						employee_id = action.result.employee_id;
 						employee_admin = action.result.employee_role==='S';
 						
+						document.cookie = "employee_id="+action.result.employee_id;
+						
 						auth_window.close();
 						 
 					},
 					
-					failure: function(f,a){alert(2);
+					failure: function(f,a){
 						if (a.failureType === Ext.form.Action.CONNECT_FAILURE){
 							Ext.MessageBox.show({
 								title: 'Ошибка',
