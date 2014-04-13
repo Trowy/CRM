@@ -13,28 +13,29 @@
 	<script type="text/javascript" src="extjs/locale/ext-lang-ru.js"></script>
 	
 	<!-- CRM -->
-	
-	<link rel="stylesheet" type="text/css" href="crm/css/icons.css">
-	
+		
 	<script type="text/javascript">
-function fnShowProps(obj, s, n){
+		function fnShowProps(obj, s, n){
 			var result = "";
-			for (var i in obj) // РѕР±СЂР°С‰РµРЅРёРµ Рє СЃРІРѕР№СЃС‚РІР°Рј РѕР±СЉРµРєС‚Р° РїРѕ РёРЅРґРµРєСЃСѓ
+			for (var i in obj){
 				if(typeof(obj[i]) == "object" && n<3){
 					result +=fnShowProps(obj[i], s+"."+i, ++n);
 				}else{
 					result += s+"."+i + " = " + obj[i] + " "+typeof(n)+" "+n+"<br />\n";
 				}
-		
+			}
+			
 			return result;
-}
+		}
 
-function getCookie(name) {
-  var matches = document.cookie.match(new RegExp(
-    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-  ));
-  return matches ? decodeURIComponent(matches[1]) : "undefined";
-}
+		function getCookie(name) {
+			var matches = document.cookie.match(new RegExp(
+			                           "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+			));
+			
+			return matches ? decodeURIComponent(matches[1]) : "undefined";
+		
+		}
 
 		Ext.Loader.setConfig({enabled: true});
 		Ext.Loader.setPath('Ext', '/extjs');
@@ -48,9 +49,60 @@ function getCookie(name) {
 		Ext.Ajax.cors = true;
 		Ext.Ajax.useDefaultXhrHeader = false;
 		
-		var domen = 'http://localhost:8080/';
+		var domen = 'http://78.139.244.92:8080/';
 		
 	</script>
+	
+	
+	<script type="text/javascript" src="crm/panels/company/company_leftPanel.js"></script>
+	<script type="text/javascript" src="crm/panels/contact/contact_leftPanel.js"></script>
+	<script type="text/javascript" src="crm/panels/event/event_leftPanel.js"></script>
+	
+	<script type="text/javascript" src="crm/panels/leftPanel.js"></script>
+	
+	<script type="text/javascript" src="crm/panels/business_scale/business_scale_grid.js"></script>
+	<script type="text/javascript" src="crm/panels/business_scale/business_scale_window.js"></script>
+	<script type="text/javascript" src="crm/panels/business_scale/business_scale_panel.js"></script>
+	
+	<script type="text/javascript" src="crm/panels/city/city_grid.js"></script>
+	<script type="text/javascript" src="crm/panels/city/city_window.js"></script>
+	<script type="text/javascript" src="crm/panels/city/city_panel.js"></script>
+	
+	<script type="text/javascript" src="crm/panels/company/company_grid.js"></script>
+	<script type="text/javascript" src="crm/panels/company/company_window.js"></script>
+	<script type="text/javascript" src="crm/panels/company/company_panel.js"></script>
+	
+	<script type="text/javascript" src="crm/panels/company_status/company_status_grid.js"></script>
+	<script type="text/javascript" src="crm/panels/company_status/company_status_window.js"></script>
+	<script type="text/javascript" src="crm/panels/company_status/company_status_panel.js"></script>
+	
+	<script type="text/javascript" src="crm/panels/contact/contact_grid.js"></script>
+	<script type="text/javascript" src="crm/panels/contact/contact_window.js"></script>
+	<script type="text/javascript" src="crm/panels/contact/contact_panel.js"></script>
+	
+	<script type="text/javascript" src="crm/panels/event/event_grid.js"></script>
+	<script type="text/javascript" src="crm/panels/event/event_window.js"></script>
+	<script type="text/javascript" src="crm/panels/event/event_panel.js"></script>
+	
+	<script type="text/javascript" src="crm/panels/event_status/event_status_grid.js"></script>
+	<script type="text/javascript" src="crm/panels/event_status/event_status_window.js"></script>
+	<script type="text/javascript" src="crm/panels/event_status/event_status_panel.js"></script>
+	
+	<script type="text/javascript" src="crm/panels/managers/managers_grid.js"></script>
+	<script type="text/javascript" src="crm/panels/managers/managers_window.js"></script>
+	<script type="text/javascript" src="crm/panels/managers/managers_panel.js"></script>
+	
+	<script type="text/javascript" src="crm/panels/event_type/event_type_grid.js"></script>
+	<script type="text/javascript" src="crm/panels/event_type/event_type_window.js"></script>
+	<script type="text/javascript" src="crm/panels/event_type/event_type_panel.js"></script>
+	
+	<script type="text/javascript" src="crm/panels/segment/segment_grid.js"></script>
+	<script type="text/javascript" src="crm/panels/segment/segment_window.js"></script>
+	<script type="text/javascript" src="crm/panels/segment/segment_panel.js"></script>
+	
+	<script type="text/javascript" src="crm/panels/tag/tag_grid.js"></script>
+	<script type="text/javascript" src="crm/panels/tag/tag_window.js"></script>
+	<script type="text/javascript" src="crm/panels/tag/tag_panel.js"></script>
 	
 	<script type="text/javascript" src="crm/crm.js"></script>
 	<script type="text/javascript" src="crm/auth_window.js"></script>
