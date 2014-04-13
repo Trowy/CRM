@@ -88,7 +88,7 @@ var event_panel2 = Ext.create('Ext.panel.Panel', {
 	title: 'евент',
 	flex: 1,
 	region: 'north',
-	items: [event_grid],
+	items: [event_grid2],
 	
 	tbar: [
 		{
@@ -117,7 +117,7 @@ var event_panel3 = Ext.create('Ext.panel.Panel', {
 	title: 'евент',
 	flex: 1,
 	region: 'north',
-	items: [event_grid],
+	items: [event_grid3],
 	
 	tbar: [
 		{
@@ -146,7 +146,7 @@ var event_panel4 = Ext.create('Ext.panel.Panel', {
 	title: 'евент',
 	flex: 1,
 	region: 'north',
-	items: [event_grid],
+	items: [event_grid4],
 	
 	tbar: [
 		{
@@ -175,7 +175,7 @@ var event_panel5 = Ext.create('Ext.panel.Panel', {
 	title: 'евент',
 	flex: 1,
 	region: 'north',
-	items: [event_grid],
+	items: [event_grid5],
 	
 	tbar: [
 		{
@@ -204,7 +204,7 @@ var event_panel6 = Ext.create('Ext.panel.Panel', {
 	title: 'евент',
 	flex: 1,
 	region: 'north',
-	items: [event_grid],
+	items: [event_grid6],
 	
 	tbar: [
 		{
@@ -233,7 +233,7 @@ var event_panel7 = Ext.create('Ext.panel.Panel', {
 	title: 'евент',
 	flex: 1,
 	region: 'north',
-	items: [event_grid],
+	items: [event_grid7],
 	
 	tbar: [
 		{
@@ -262,7 +262,7 @@ var event_panel8 = Ext.create('Ext.panel.Panel', {
 	title: 'евент',
 	flex: 1,
 	region: 'north',
-	items: [event_grid],
+	items: [event_grid8],
 	
 	tbar: [
 		{
@@ -291,7 +291,7 @@ var event_panel9 = Ext.create('Ext.panel.Panel', {
 	title: 'евент',
 	flex: 1,
 	region: 'north',
-	items: [event_grid],
+	items: [event_grid9],
 	
 	tbar: [
 		{

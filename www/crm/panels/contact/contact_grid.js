@@ -17,8 +17,14 @@ var contact_grid = Ext.create('Ext.grid.Panel', {
 			
 	listeners: {
 itemclick: function(dv, record, item, index, e) {
+			cont_event=7;
 leftPanel.getLayout().setActiveItem(1);
-
+event_store1.load();
+	event_store1.getView().refresh();
+	event_store2.load();
+	event_store2.getView().refresh();
+	event_store3.load();
+	event_store3.getView().refresh();
 }},
 				
 		store: contact_store,
