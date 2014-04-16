@@ -1,7 +1,7 @@
 function create_add_bs_window(){
 
 	bs_window = create_bs_window();	
-	bs_window.title = 'rest';	
+	bs_window.title = 'Добавить размер бизнеса';	
 	bs_window.items.items[0].getForm().setValues({
 action: 'new'
 });	
@@ -11,8 +11,8 @@ action: 'new'
 }
 
 function create_edit_bs_window(){
-
-	bs_window = create_bs_window();
+if(business_scale_grid.getSelectionModel().getSelection()!=""){
+	bs_window = create_bs_window();bs_window.title = 'Изменить размер бизнеса';	
 	var row = business_scale_grid.getSelectionModel().getSelection()[0];
 	bs_window.items.items[0].getForm().setValues({
 id: row.get('id'),
@@ -21,7 +21,7 @@ info: row.get('info'),
 action: 'edit'
 });
 	bs_window.show();
-	
+	}
 
 }
 

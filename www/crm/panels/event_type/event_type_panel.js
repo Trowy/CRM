@@ -1,7 +1,7 @@
 function create_add_et_window(){
 
 	et_window = create_et_window();	
-	et_window.title = 'rest';
+	et_window.title = 'Добавить тип события';	
 et_window.items.items[0].getForm().setValues({
 action: 'new'
 });	
@@ -11,8 +11,8 @@ action: 'new'
 }
 
 function create_edit_et_window(){
-
-	et_window = create_et_window();
+if(event_type_grid.getSelectionModel().getSelection()!=""){
+	et_window = create_et_window();et_window.title = 'Изменить тип события';
 	var row = event_type_grid.getSelectionModel().getSelection()[0];
 	et_window.items.items[0].getForm().setValues({
 id: row.get('id'),
@@ -20,7 +20,7 @@ name: row.get('name'),
 info: row.get('info'),
 action: 'edit'
 });
-	et_window.show();
+	et_window.show();}
 	
 
 }

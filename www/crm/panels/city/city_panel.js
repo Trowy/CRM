@@ -1,7 +1,7 @@
 function create_add_ct_window(){
 
 	ct_window = create_ct_window();	
-	ct_window.title = 'rest';	
+	ct_window.title = 'Добавить город';	
 	ct_window.items.items[0].getForm().setValues({
 action: 'new'
 });	
@@ -11,8 +11,8 @@ action: 'new'
 }
 
 function create_edit_ct_window(){
-
-	ct_window = create_ct_window();
+if(city_grid.getSelectionModel().getSelection()!=""){
+	ct_window = create_ct_window();ct_window.title = 'Изменить город';	
 	var row = city_grid.getSelectionModel().getSelection()[0];
 	ct_window.items.items[0].getForm().setValues({
 	id: row.get('id'),
@@ -22,7 +22,7 @@ time_zone: row.get('time_zone'),
    action: 'edit'
 })
 	ct_window.show();
-	
+	}
 
 }
 

@@ -1,7 +1,7 @@
 function create_add_tgs_window(){
 
 	tgs_window = create_tgs_window();	
-	tgs_window.title = 'rest';	
+	tgs_window.title = 'Добавить таг';	
 	tgs_window.items.items[0].getForm().setValues({
 action: 'new'
 });
@@ -10,8 +10,8 @@ action: 'new'
 }
 
 function create_edit_tgs_window(){
-
-	tgs_window = create_tgs_window();
+if(tags_grid.getSelectionModel().getSelection()!=""){
+	tgs_window = create_tgs_window();	tgs_window.title = 'Изменить таг';
 	var row = tags_grid.getSelectionModel().getSelection()[0];
 	tgs_window.items.items[0].getForm().setValues({
 id: row.get('id'),
@@ -19,7 +19,7 @@ name: row.get('name'),
 info: row.get('info'),
 action: 'edit'
 });
-	tgs_window.show();	
+	tgs_window.show();	}
 
 }
 

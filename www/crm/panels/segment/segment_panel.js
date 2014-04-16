@@ -1,7 +1,7 @@
 function create_add_sgt_window(){
 
 	sgt_window = create_sgt_window();	
-	sgt_window.title = 'rest';	
+	sgt_window.title = 'Добавить сегмент';	
 	sgt_window.items.items[0].getForm().setValues({
 action: 'new'
 });
@@ -11,8 +11,8 @@ action: 'new'
 }
 
 function create_edit_sgt_window(){
-
-	sgt_window = create_sgt_window();
+if(segment_grid.getSelectionModel().getSelection()!=""){
+	sgt_window = create_sgt_window();	sgt_window.title = 'Изменить сегмент';	
 	var row = segment_grid.getSelectionModel().getSelection()[0];
 	sgt_window.items.items[0].getForm().setValues({
 id: row.get('id'),
@@ -21,7 +21,7 @@ info: row.get('info'),
 action: 'edit'
 });
 	sgt_window.show();
-	
+	}
 
 }
 

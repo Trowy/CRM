@@ -1,7 +1,7 @@
 function create_add_es_window(){
 
 	es_window = create_es_window();	
-	es_window.title = 'rest';	
+	es_window.title = 'Добавить статус события';	
 	es_window.items.items[0].getForm().setValues({
 action: 'new'
 });	
@@ -11,8 +11,8 @@ action: 'new'
 }
 
 function create_edit_es_window(){
-
-	es_window = create_es_window();
+if(event_status_grid.getSelectionModel().getSelection()!=""){
+	es_window = create_es_window();es_window.title = 'Изменить статус события';	
 	var row = event_status_grid.getSelectionModel().getSelection()[0];
 	es_window.items.items[0].getForm().setValues({
 id: row.get('id'),
@@ -21,7 +21,7 @@ info: row.get('info'),
 action: 'edit'
 });
 	es_window.show();
-
+}
 
 }
 

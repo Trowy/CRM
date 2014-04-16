@@ -1,7 +1,7 @@
 function create_add_evt_window(){
 
 	evt_window = create_evt_window();	
-	evt_window.title = 'rest';
+	evt_window.title = 'Добавить событие';	
 evt_window.items.items[0].getForm().setValues({
 action: 'new'
 });		
@@ -11,8 +11,8 @@ action: 'new'
 }
 
 function create_edit_evt_window(){
-
-	evt_window = create_evt_window();
+if(contractor_grid.getSelectionModel().getSelection()!=""){
+	evt_window = create_evt_window();evt_window.title = 'Изменить событие';	
 	var row = event_grid.getSelectionModel().getSelection()[0];
 	evt_window.items.items[0].getForm().setValues({
 id: row.get('id'),
@@ -28,7 +28,7 @@ eventStatus: row.get('eventStatus'),
 action: 'edit'
    
 })
-	evt_window.show();
+	evt_window.show();}
 	
 
 }

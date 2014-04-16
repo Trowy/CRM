@@ -1,7 +1,7 @@
 function create_add_cs_window(){
 
 	cs_window = create_cs_window();	
-	cs_window.title = 'rest';	
+	cs_window.title = 'Добавить статус компании';	
 	cs_window.items.items[0].getForm().setValues({
 action: 'new'
 });	
@@ -11,8 +11,8 @@ action: 'new'
 }
 
 function create_edit_cs_window(){
-
-	cs_window = create_cs_window();
+if(company_status_grid.getSelectionModel().getSelection()!=""){
+	cs_window = create_cs_window();cs_window.title = 'Изменить статус компании';	
 	var row = company_status_grid.getSelectionModel().getSelection()[0];
 	cs_window.items.items[0].getForm().setValues({
 id: row.get('id'),
@@ -22,7 +22,7 @@ action: 'edit'
 });
 	cs_window.show();
 
-
+}
 }
 
 function create_del_cs_window(){

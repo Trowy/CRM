@@ -2,7 +2,7 @@ function create_add_mng_window(){
 
 	mng_window = create_mng_window();	
 
-mng_window.title = 'rest';
+mng_window.title = 'Добавить сотрудника';	
 mng_window.items.items[0].getForm().setValues({
 action: 'new'
 });		
@@ -12,8 +12,8 @@ action: 'new'
 }
 
 function create_edit_mng_window(){
-
-	mng_window = create_mng_window();
+if(employee_grid.getSelectionModel().getSelection()!=""){
+	mng_window = create_mng_window();mng_window.title = 'Изменить сотрудника';	
 	var row = employee_grid.getSelectionModel().getSelection()[0];
 	mng_window.items.items[0].getForm().setValues({
 login: row.get('login'),
@@ -24,7 +24,7 @@ role: row.get('role'),
 email: row.get('email')
    
 })
-	mng_window.show();
+	mng_window.show();}
 
 
 }

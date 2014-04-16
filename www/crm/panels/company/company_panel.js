@@ -1,7 +1,7 @@
 function create_add_cmp_window(){
 
 	cmp_window = create_cmp_window();	
-	cmp_window.title = 'rest';	
+	cmp_window.title = 'Добавить компанию';	
 	cmp_window.items.items[0].getForm().setValues({
 action: 'new'
 });	
@@ -11,8 +11,8 @@ action: 'new'
 }
 
 function create_edit_cmp_window(){
-
-	cmp_window = create_cmp_window();
+if(company_grid.getSelectionModel().getSelection()!=""){
+	cmp_window = create_cmp_window();cmp_window.title = 'Изменить компанию';	
 	var row = company_grid.getSelectionModel().getSelection()[0];
 	cmp_window.items.items[0].getForm().setValues({
 id: row.get('id'),
@@ -31,7 +31,7 @@ action: 'edit'
    
 })
 	cmp_window.show();
-	
+	}
 
 }
 
