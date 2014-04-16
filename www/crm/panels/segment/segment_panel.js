@@ -49,7 +49,7 @@ function refresh_sgt(){
 
 var segment_panel = Ext.create('Ext.panel.Panel', {
 	
-	title: 'segment',
+	title: 'Сегменты',
 	flex: 1,
 	region: 'north',
 	items: [segment_grid],

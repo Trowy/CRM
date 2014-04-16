@@ -18,11 +18,11 @@ var tags_grid = Ext.create('Ext.grid.Panel', {
 	store: tags_store,
 	columns: [    
     {
-      text: "Логин",
+      text: "Название",
       dataIndex: 'name',      
     },
 	{
-      text: "Фамилия",
+      text: "Описание",
       dataIndex: 'info',      
     }]
 });

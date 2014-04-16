@@ -1,7 +1,7 @@
 function create_add_cnt_window(){
 
 	cnt_window = create_cnt_window();	
-	cnt_window.title = 'rest';	
+	cnt_window.title = 'Добавить контакное лицо';	
 	cnt_window.items.items[0].getForm().setValues({
 action: 'new'
 });	
@@ -11,9 +11,11 @@ action: 'new'
 }
 
 function create_edit_cnt_window(){
-
+if(contractor_grid.getSelectionModel().getSelection()!=""){
+	var row = contractor_grid.getSelectionModel().getSelection()[0];
 	cnt_window = create_cnt_window();
-	var row = contact_grid.getSelectionModel().getSelection()[0];
+	cnt_window.title = 'Изменить контакное лицо';	
+	
 	cnt_window.items.items[0].getForm().setValues({
 id: row.get('id'),
 last_name: row.get('last_name'),
@@ -25,14 +27,14 @@ emails: row.get('emails'),
 skypes: row.get('skypes'),
       action: 'edit'
 })
-	cnt_window.show();
+	cnt_window.show();}
 	
 
 }
 
 function create_del_cnt_window(){
 
-	var selectedRecord = contact_grid.getSelectionModel().getSelection()[0];
+	var selectedRecord = contractor_grid.getSelectionModel().getSelection()[0];
 	
 	Ext.Ajax.request({
         method: 'POST',
@@ -46,19 +48,16 @@ function create_del_cnt_window(){
 }
 
 function refresh_cnt(){
-	contact_store.load();
-	contact_grid.getView().refresh();
+	contractor_store.load();
+	contractor_grid.getView().refresh();
 
 }
 
-var contact_panel = Ext.create('Ext.panel.Panel', {
+var contractor_panel = Ext.create('Ext.panel.Panel', {
 	
-	title: 'Котратор',
+	title: 'Контактные лица',   
 	
-    
-    
-	
-	items: [contact_grid],
+	items: [contractor_grid],
 	
 	tbar: [
 		{

@@ -48,7 +48,7 @@ function refresh_et(){
 
 var event_type_panel = Ext.create('Ext.panel.Panel', {
 	
-	title: 'евент тайп	',
+	title: 'Типы событий',
 	
 	items: [event_type_grid],
 	

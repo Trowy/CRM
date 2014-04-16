@@ -18,11 +18,11 @@ var segment_grid = Ext.create('Ext.grid.Panel', {
 	store: segment_store,
 	columns: [    
     {
-      text: "Логин",
+      text: "Название",
       dataIndex: 'name',      
     },
 	{
-      text: "Фамилия",
+      text: "Описание",
       dataIndex: 'info',      
     }]
 });

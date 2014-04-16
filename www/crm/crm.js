@@ -6,7 +6,7 @@ Ext.onReady(function() {
 	Ext.Ajax.request({
 		method: 'GET',
 		url: domen + 'crm/auth',
-		params: {employee_id: getCookie("employee_id")},
+		
 		success: function(result, request) {
 			var result_array = Ext.decode(result.responseText);
 			if (result_array.success) {
@@ -78,21 +78,21 @@ activeTab: 0,
 		handler: refresh_evt
 		}
 	],
-		items:[{title: '1',
+		items:[{title: 'Все события',
 				xtype: 'tabpanel',
 				items:[
 					event_panel1,
 				event_panel2,
 				event_panel3,					
 				]
-		},{title: '2',
+		},{title: 'События компании',
 				xtype: 'tabpanel',
 				items:[
 					event_panel4,
 				event_panel5,
 				event_panel6,					
 				]
-		},{title: '3',
+		},{title: 'События контактного лица',
 				xtype: 'tabpanel',
 				items:[
 					event_panel7,
@@ -121,10 +121,10 @@ activeTab: 0,
 activeTab: 0,	
 	items:[
 				
-				contact_panel,
-				
+				contractor_panel,
 				company_panel,
-				{title: 'Админка',
+				
+				{title: 'Админестрирование',
 xtype: 'panel',
 				items: [
 				{

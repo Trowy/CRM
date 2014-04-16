@@ -1,96 +1,95 @@
-var companyForm = {
+var companyForm = Ext.create('Ext.form.Panel', {
 		
-		xtype: 'panel',
+		
 		margin: '10 10 10 10',
-		
+		defaults:{xtype:'displayfield',labelAlign: 'left',	},	//component by default of the form
         items:[{
-xtype: 'displayfield',
-value: 'test',
-fieldLabel: 'Фамилия',
-name: 'login',
-labelAlign: 'left',
-edit:false     
+
+
+fieldLabel: 'Название',
+name: 'name',
+
+
 },{
-xtype: 'displayfield',
-value: 'test',
-fieldLabel: 'Имя',
-readOnly: true,
-name: 'login',
-labelAlign: 'left'       
+
+
+fieldLabel: 'Информация',
+
+name: 'info',
+
 },{
-xtype: 'displayfield',
-value: 'test',
-fieldLabel: 'Отчетство',
-name: 'login',
-labelAlign: 'left'       
+
+
+fieldLabel: 'Сайт',
+name: 'site',
+
 },{
-xtype: 'displayfield',
-value: 'test',
-fieldLabel: 'Менеджер',
-name: 'login',
-labelAlign: 'left'       
+
+
+fieldLabel: 'Телефоны',
+name: 'phones',
+
 },{
-xtype: 'displayfield',
-value: 'test<br>test2',
-fieldLabel: 'Телефон',
-name: 'login',
-labelAlign: 'left'      
+
+
+fieldLabel: 'Эл. почта',
+name: 'emails',
+
 },{
-xtype: 'displayfield',
-value: '<a href="mailto:a@a.ru">test</a>',
-fieldLabel: 'Электронная почта',
-name: 'login',
-labelAlign: 'left'       
-},{
-xtype: 'displayfield',
-value: '<a href="skype:echo123?call">test</a>',
+
+
 fieldLabel: 'Skype',
-name: 'login',
-labelAlign: 'left'       
+name: 'skypes',
+
 },{
-xtype: 'displayfield',
-value: 'test',
-fieldLabel: 'Icq',
-name: 'login',
-labelAlign: 'left'       
+
+
+fieldLabel: 'Город',
+name: 'City',
+
 },{
-xtype: 'displayfield',
-value: 'test',
-fieldLabel: 'Примечание',
-name: 'login',
-labelAlign: 'left'       
+
+
+fieldLabel: 'Размер бизнеса',
+name: 'BusinessScale',
+
+},{
+
+
+fieldLabel: 'Статус',
+name: 'CompanyStatus',
+
 },
 {
-xtype: 'displayfield',
-value: 'test',
-fieldLabel: 'Компании',
-name: 'login',
-labelAlign: 'left'       
+
+fieldLabel: 'Сотрудник',
+name: 'Employee',
+
+},
+{
+
+
+fieldLabel: 'Теги',
+name: 'Tags',
+
 }
 ]  
        
-}
+});
 
 var companyFormPanel= {
 
 		xtype: 'panel',
-        title: 'Просмотр компании лица',        
+        title: 'Просмотр компании',        
         layout: 'fit',
         region: 'west',
 		
 			split: true,
 			
 		tbar: [                     
-  
-    {text:'Изменить'}
-    
-                            
-  ,
-  
-  {text:'Удалить'},
-  '-',                      
-  {text:'Написать почту'},   
-  {text:'Позмонить по скайпу'}
+                       
+  {text:'Написать письмо'},   
+  {text:'Звонок'}
 ],
 		
 		items: [

@@ -48,7 +48,7 @@ function refresh_bs(){
 
 var business_scale_panel = Ext.create('Ext.panel.Panel', {
 	
-	title: 'размер бизнеса',
+	title: 'Размеры бизнеса',
 	
 	items: [business_scale_grid],
 	

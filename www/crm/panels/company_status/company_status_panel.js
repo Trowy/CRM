@@ -48,7 +48,7 @@ function refresh_cs(){
 
 var company_status_panel = Ext.create('Ext.panel.Panel', {
 	
-	title: 'компани стутус',
+	title: 'Статус компании',
 	
 	items: [company_status_grid],
 	

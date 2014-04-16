@@ -19,18 +19,18 @@
       name: 'middle_name',      
     },
 	{
-      fieldLabel: "инфа",
+      fieldLabel: "Описание",
       name: 'info',      
     },
 	{
-      fieldLabel: "тел",
+      fieldLabel: "Телефоны",
       name: 'phones',      
     },
 	{
-      fieldLabel: "почта",
+      fieldLabel: "Эл. почты",
       name: 'emails',      
     },{
-      fieldLabel: "скайп",
+      fieldLabel: "Skype",
       name: 'skypes',      
     },{
   xtype:'hidden',
@@ -50,22 +50,23 @@
  
 	
 				
-    title: 'Добавить контрктр', 
+    title: '...', 
 	width:300, 
 	height:600, 
 	bodyStyle:'background-color:#fff;padding: 10px', 
 	
-	items: [mng_form = create_cnt_form()], //assigning the form
+	items: [cnt_form = create_cnt_form()], //assigning the form
 	buttonAlign: 'right', //buttons aligned to the right
-	buttons:[{text:'Добавить',
+	buttons:[{text:'Сохранить',
 	handler: function(){
 
 				
-				mng_form.submit({
-					waitMsg: 'Добавление...',
+				cnt_form.submit({
+					waitMsg: 'Сохранение...',
 					
 					success: function(f,a){
-						Ext.Msg.alert('Success', 'It worked');
+						cnt_window.close();
+						refresh_cnt();
 					},
 					
 					failure: function(f,a){
@@ -80,7 +81,7 @@
 					}
 				});
 	}
-	},{text:'Отмена',handler:function(){mng_window.close();}}] 
+	},{text:'Отмена',handler:function(){cnt_window.close();}}] 
           
  
  });

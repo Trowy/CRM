@@ -52,7 +52,7 @@ function refresh_mng(){
 
 var managers_panel = Ext.create('Ext.panel.Panel', {
 	
-	title: 'Манагеры',	
+	title: 'Сотрудники',	
 	
 	items: [managers_grid],
 	

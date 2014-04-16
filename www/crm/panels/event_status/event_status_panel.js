@@ -48,7 +48,7 @@ function refresh_es(){
 
 var event_status_panel = Ext.create('Ext.panel.Panel', {
 	
-	title: 'евентстатус',
+	title: 'Статусы событий',
 	
 	items: [event_status_grid],
 	

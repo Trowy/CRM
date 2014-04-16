@@ -26,7 +26,7 @@
       fieldLabel: "Эл. почта",
       name: 'emails',      
     }, {
-      fieldLabel: "Скайп",
+      fieldLabel: "Skype",
       name: 'skypes',      
     },
 	{
@@ -64,7 +64,7 @@
     },
 	{
 	xtype: 'combobox',
-      fieldLabel: "Манагер",
+      fieldLabel: "Сотрудник",
       name: 'Employee',
 
     store: managers_store,
@@ -109,12 +109,12 @@
 	
 	items: [cmp_form = create_cmp_form()], //assigning the form
 	buttonAlign: 'right', //buttons aligned to the right
-	buttons:[{text:'Добавить',
+	buttons:[{text:'Сохранить',
 	handler: function(){
 
 				
 				cmp_form.submit({
-					waitMsg: 'Добавление...',
+					waitMsg: 'Сохранение...',
 					
 					success: function(f,a){
 						refresh_cmp();

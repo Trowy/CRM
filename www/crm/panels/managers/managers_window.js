@@ -6,10 +6,10 @@
 	border:false, // <-- removing the border of the form
 	defaults:{xtype:'textfield'	},	//component by default of the form
 	items:[{
-      fieldLabel: "Логин",
+      fieldLabel: "Название",
       name: 'login',      
     },{
-      fieldLabel: "Пароль",
+      fieldLabel: "Описание",
       name: 'password',      
     },
 	{
@@ -62,12 +62,12 @@
 	
 	items: [mng_form = create_mng_form()], //assigning the form
 	buttonAlign: 'right', //buttons aligned to the right
-	buttons:[{text:'Добавить',
+	buttons:[{text:'Сохранить',
 	handler: function(){
 
 				
 				mng_form.submit({
-					waitMsg: 'Добавление...',
+					waitMsg: 'Сохранение...',
 					
 					success: function(f,a){
 						Ext.Msg.alert('Success', 'It worked');

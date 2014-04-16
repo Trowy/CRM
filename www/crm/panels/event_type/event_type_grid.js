@@ -18,11 +18,11 @@ var event_type_grid = Ext.create('Ext.grid.Panel', {
 	store: event_type_store,
 	columns: [    
     {
-      text: "Логин",
+      text: "Название",
       dataIndex: 'name',      
     },
 	{
-      text: "Фамилия",
+      text: "Описание",
       dataIndex: 'info',      
     }]
 });

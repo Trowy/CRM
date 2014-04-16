@@ -3,16 +3,26 @@ var company_store = Ext.create('Ext.data.JsonStore', {
 	{name: 'City', mapping: 'City.id'}, 
 	{name: 'Segment', mapping: 'Segment.id'}, 
 	{name: 'BusinessScale', mapping: 'BusinessScale.id'}, 
-	{name: 'CompanyStatus_name', mapping: 'CompanyStatus.id'}, 
-	'CompanyStatus', 
-	'Employee', 'Tags'],
+	{name: 'CompanyStatus', mapping: 'CompanyStatus.id'}, 
+	{name: 'CompanyStatus', mapping: 'CompanyStatus.id'}, 
+	{name: 'Employee', mapping: 'Employee.id'}, 
+	{name: 'Tags', mapping: 'Tags.id'}, 
+	{name: 'City_name', mapping: 'City.name'}, 
+	{name: 'Segment_name', mapping: 'Segment.name'}, 
+	{name: 'BusinessScale_name', mapping: 'BusinessScale.name'}, 
+	{name: 'CompanyStatus_name', mapping: 'CompanyStatus.name'}, 
+	{name: 'CompanyStatus_name', mapping: 'CompanyStatus.name'}, 
+	{name: 'Employee_name', mapping: 'Employee.last_name'}, 
+	{name: 'Tags_name', mapping: 'Tags.name'},
+],
     
   autoLoad: true,
   proxy:{
     type:'ajax',
     url:domen+'crm/companies',
     reader:{
-         root:'data'
+         root:'data',					
+			
         }
     }
 	
@@ -24,7 +34,20 @@ var company_grid = Ext.create('Ext.grid.Panel', {
 		listeners: {
 itemclick: function(dv, record, item, index, e) {
 leftPanel.getLayout().setActiveItem(2);
-
+var row = company_grid.getSelectionModel().getSelection()[0];
+companyForm.getForm().setValues({
+	name:row.get('name'),
+	info:row.get('info'),
+	site:row.get('site'),
+	phones:row.get('phones'),
+	emails:row.get('emails'),
+	skypes:row.get('skypes'),
+	City:row.get('City_name'),
+	BusinessScale:row.get('BusinessScale_name'),
+	CompanyStatus:row.get('CompanyStatus_name'),
+	Employee:row.get('Employee_name'),
+	Tags:row.get('Tags_name'),
+})
 }},
 		
 		columns: [
@@ -36,7 +59,7 @@ leftPanel.getLayout().setActiveItem(2);
     },
 	{
       text: "Город",       
-	  dataIndex: 'City'
+	  dataIndex: 'City_name'
     },
 	{
       text: "Статус",
@@ -44,11 +67,11 @@ leftPanel.getLayout().setActiveItem(2);
     },
 	{
       text: "Сегмент",
-      dataIndex: 'Segment',      
+      dataIndex: 'Segment_name',      
     },
 	{
       text: "Размер бизнеса",
-      dataIndex: 'BusinessScale',      
+      dataIndex: 'BusinessScale_name',      
     }
 	
 	]

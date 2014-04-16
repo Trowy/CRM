@@ -18,11 +18,11 @@ var business_scale_grid = Ext.create('Ext.grid.Panel', {
 	store: business_scale_store,
 	columns: [    
     {
-      text: "Логин",
+      text: "Название",
       dataIndex: 'name',      
     },
 	{
-      text: "Фамилия",
+      text: "Описание",
       dataIndex: 'info',      
     }]
 });

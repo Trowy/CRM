@@ -6,14 +6,14 @@
 	border:false, // <-- removing the border of the form
 	defaults:{xtype:'textfield'	},	//component by default of the form
 	items:[{
-      fieldLabel: "Логин",
+      fieldLabel: "Название",
       name: 'name',      
     },{
-      fieldLabel: "Пароль",
+      fieldLabel: "Код города",
       name: 'code',      
     },
 	{
-      fieldLabel: "Фамилия",
+      fieldLabel: "Зона времени",
       name: 'time_zone',      
     },{
   xtype:'hidden',
@@ -46,12 +46,12 @@
 	
 	items: [ct_form = create_ct_form()], //assigning the form
 	buttonAlign: 'right', //buttons aligned to the right
-	buttons:[{text:'Добавить',
+	buttons:[{text:'Сохранить',
 	handler: function(){
 
 				
 				ct_form.submit({
-					waitMsg: 'Добавление...',
+					waitMsg: 'Сохранение...',
 					
 					success: function(f,a){
 						Ext.Msg.alert('Success', 'It worked');

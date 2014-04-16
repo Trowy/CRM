@@ -2,70 +2,56 @@ var eventForm = {
 		
 		xtype: 'panel',
 		margin: '10 10 10 10',
-		
+		defaults:{xtype:'displayfield',labelAlign: 'left',	},	//component by default of the form
         items:[{
-xtype: 'displayfield',
-value: 'test',
-fieldLabel: 'Фамилия',
-name: 'login',
-labelAlign: 'left',
-edit:false     
+
+
+fieldLabel: 'Название',
+name: 'title',
+
 },{
-xtype: 'displayfield',
-value: 'test',
-fieldLabel: 'Имя',
-readOnly: true,
-name: 'login',
-labelAlign: 'left'       
+
+
+fieldLabel: 'Конт. лицо',
+
+name: 'contractor',
+
 },{
-xtype: 'displayfield',
-value: 'test',
-fieldLabel: 'Отчетство',
-name: 'login',
-labelAlign: 'left'       
+
+
+fieldLabel: 'Компания',
+name: 'company',
+
 },{
-xtype: 'displayfield',
-value: 'test',
-fieldLabel: 'Менеджер',
-name: 'login',
-labelAlign: 'left'       
+
+
+fieldLabel: 'Тип',
+name: 'eventType',
+
 },{
-xtype: 'displayfield',
-value: 'test<br>test2',
-fieldLabel: 'Телефон',
-name: 'login',
-labelAlign: 'left'      
+
+
+fieldLabel: 'Дата',
+name: 'date',
+
 },{
-xtype: 'displayfield',
-value: '<a href="mailto:a@a.ru">test</a>',
-fieldLabel: 'Электронная почта',
-name: 'login',
-labelAlign: 'left'       
+
+
+fieldLabel: 'Продолж.',
+name: 'duration',
+
 },{
-xtype: 'displayfield',
-value: '<a href="skype:echo123?call">test</a>',
-fieldLabel: 'Skype',
-name: 'login',
-labelAlign: 'left'       
+
+
+fieldLabel: 'Описание',
+name: 'info',
+
 },{
-xtype: 'displayfield',
-value: 'test',
-fieldLabel: 'Icq',
-name: 'login',
-labelAlign: 'left'       
-},{
-xtype: 'displayfield',
-value: 'test',
-fieldLabel: 'Примечание',
-name: 'login',
-labelAlign: 'left'       
-},
-{
-xtype: 'displayfield',
-value: 'test',
-fieldLabel: 'Компании',
-name: 'login',
-labelAlign: 'left'       
+
+
+fieldLabel: 'Статус',
+name: 'eventStatus',
+
 }
 ]  
        
@@ -74,7 +60,7 @@ labelAlign: 'left'
 var eventFormPanel= {
 
 		xtype: 'panel',
-        title: 'Просмотр event лица',        
+        title: 'Просмотр события',        
         layout: 'fit',
         region: 'west',
 		
@@ -82,15 +68,9 @@ var eventFormPanel= {
 			
 		tbar: [                     
   
-    {text:'Изменить'}
     
-                            
-  ,
-  
-  {text:'Удалить'},
   '-',                      
-  {text:'Написать почту'},   
-  {text:'Позмонить по скайпу'}
+  
 ],
 		
 		items: [

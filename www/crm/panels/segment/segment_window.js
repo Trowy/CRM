@@ -6,10 +6,10 @@
 	border:false, // <-- removing the border of the form
 	defaults:{xtype:'textfield'	},	//component by default of the form
 	items:[{
-      fieldLabel: "Логин",
+      fieldLabel: "Название",
       name: 'name',      
     },{
-      fieldLabel: "Пароль",
+      fieldLabel: "Описание",
       name: 'info',      
     },{
   xtype:'hidden',
@@ -42,12 +42,12 @@
 	
 	items: [sgt_form = create_sgt_form()], //assigning the form
 	buttonAlign: 'right', //buttons aligned to the right
-	buttons:[{text:'Добавить',
+	buttons:[{text:'Сохранить',
 	handler: function(){
 
 				
 				sgt_form.submit({
-					waitMsg: 'Добавление...',
+					waitMsg: 'Сохранение...',
 					
 					success: function(f,a){
 						Ext.Msg.alert('Success', 'It worked');

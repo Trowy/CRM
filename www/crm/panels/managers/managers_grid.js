@@ -18,7 +18,7 @@ var managers_grid = Ext.create('Ext.grid.Panel', {
 	store: managers_store,
 	columns: [    
     {
-      text: "Логин",
+      text: "Название",
       dataIndex: 'login',      
     },
 	{

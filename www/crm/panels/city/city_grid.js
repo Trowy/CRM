@@ -18,15 +18,15 @@ var city_grid = Ext.create('Ext.grid.Panel', {
 	store: city_store,
 	columns: [    
     {
-      text: "Логин",
+      text: "Название",
       dataIndex: 'name',      
     },
 	{
-      text: "Фамилия",
+      text: "Код города",
       dataIndex: 'code',      
     },
 	{
-      text: "Имя",
+      text: "Временная зона",
       dataIndex: 'time_zone',      
     }]
 });

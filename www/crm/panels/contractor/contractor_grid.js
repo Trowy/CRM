@@ -1,4 +1,4 @@
-var contact_store = Ext.create('Ext.data.JsonStore', {
+var contractor_store = Ext.create('Ext.data.JsonStore', {
     fields: ['id', 'first_name', 'middle_name', 'last_name', 'info', 'phones',  'emails','skypes'],
     
   autoLoad: true,
@@ -12,22 +12,27 @@ var contact_store = Ext.create('Ext.data.JsonStore', {
 	
 });
 
-var contact_grid = Ext.create('Ext.grid.Panel', {
+var contractor_grid = Ext.create('Ext.grid.Panel', {
 				
 			
 	listeners: {
 itemclick: function(dv, record, item, index, e) {
-			cont_event=7;
-leftPanel.getLayout().setActiveItem(1);
-event_store1.load();
-	event_store1.getView().refresh();
-	event_store2.load();
-	event_store2.getView().refresh();
-	event_store3.load();
-	event_store3.getView().refresh();
-}},
+	leftPanel.getLayout().setActiveItem(1);
+	var row = contractor_grid.getSelectionModel().getSelection()[0];
+contractorForm.getForm().setValues({
+	last_name:row.get('last_name'),
+	first_name:row.get('first_name'),
+	middle_name:row.get('middle_name'),
+	info:row.get('info'),
+	phones:row.get('phones'),
+	emails:row.get('emails'),
+	skypes:row.get('skypes'),
+
+})	
+}
+	},
 				
-		store: contact_store,
+		store: contractor_store,
 		columns: [      
 	{
       text: "Фамилия",
@@ -42,7 +47,7 @@ event_store1.load();
       dataIndex: 'middle_name',      
     },
 	{
-      text: "Роль",
+      text: "Телефон",
       dataIndex: 'phones',      
     },
 	{

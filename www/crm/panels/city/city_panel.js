@@ -49,13 +49,13 @@ function refresh_ct(){
 
 var city_panel = Ext.create('Ext.panel.Panel', {
 	
-	title: 'города',
+	title: 'Города',
 
 	items: [city_grid],
 	
 	tbar: [
 		{
-		text: 'Добавить',
+		text: 'Сохранить',
 		handler: create_add_ct_window
 		},
 		{

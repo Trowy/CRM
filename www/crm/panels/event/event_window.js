@@ -13,7 +13,7 @@
       fieldLabel: "contractor",
       name: 'contractor',
 
-    store: contact_store,
+    store: contractor_store,
     queryMode: 'local',
     displayField: 'middle_name',
     valueField: 'id',
@@ -109,12 +109,12 @@
 	
 	items: [evt_form = create_evt_form()], //assigning the form
 	buttonAlign: 'right', //buttons aligned to the right
-	buttons:[{text:'Добавить',
+	buttons:[{text:'Сохранить',
 	handler: function(){
 
 				
 				evt_form.submit({
-					waitMsg: 'Добавление...',
+					waitMsg: 'Сохранение...',
 					
 					success: function(f,a){
 						refresh_evt();
