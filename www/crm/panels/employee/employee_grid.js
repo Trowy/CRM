@@ -1,4 +1,4 @@
-var managers_store = Ext.create('Ext.data.JsonStore', {
+var employee_store = Ext.create('Ext.data.JsonStore', {
     fields: ['id', 'login', 'password', 'first_name', 'middle_name', 'last_name', 'role', 'email'],
     
   autoLoad: true,
@@ -13,9 +13,9 @@ var managers_store = Ext.create('Ext.data.JsonStore', {
 	
 });
 
-var managers_grid = Ext.create('Ext.grid.Panel', {
+var employee_grid = Ext.create('Ext.grid.Panel', {
 				
-	store: managers_store,
+	store: employee_store,
 	columns: [    
     {
       text: "Название",

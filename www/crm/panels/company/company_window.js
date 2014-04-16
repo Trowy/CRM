@@ -67,7 +67,7 @@
       fieldLabel: "Сотрудник",
       name: 'Employee',
 
-    store: managers_store,
+    store: employee_store,
     queryMode: 'local',
     displayField: 'login',
     valueField: 'id',
@@ -102,7 +102,7 @@
  
 	
 				
-    title: 'Добавить клиента', 
+   title: '...',  
 	width:300, 
 	height:600, 
 	bodyStyle:'background-color:#fff;padding: 10px', 

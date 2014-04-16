@@ -54,7 +54,7 @@ function create_del_cmp_window(){
 function refresh_cmp(){
 	
 	company_store.load();
-	managers_grid.getView().refresh();
+	employee_grid.getView().refresh();
 
 }
 

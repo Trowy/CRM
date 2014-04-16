@@ -14,7 +14,7 @@ action: 'new'
 function create_edit_mng_window(){
 
 	mng_window = create_mng_window();
-	var row = managers_grid.getSelectionModel().getSelection()[0];
+	var row = employee_grid.getSelectionModel().getSelection()[0];
 	mng_window.items.items[0].getForm().setValues({
 login: row.get('login'),
 last_name: row.get('last_name'),
@@ -31,7 +31,7 @@ email: row.get('email')
 
 function create_del_mng_window(){
 
-	var selectedRecord = managers_grid.getSelectionModel().getSelection()[0];
+	var selectedRecord = employee_grid.getSelectionModel().getSelection()[0];
 	
 	Ext.Ajax.request({
         method: 'POST',
@@ -45,16 +45,16 @@ function create_del_mng_window(){
 }
 
 function refresh_mng(){
-	managers_store.load();
-	managers_grid.getView().refresh();
+	employee_store.load();
+	employee_grid.getView().refresh();
 
 }
 
-var managers_panel = Ext.create('Ext.panel.Panel', {
+var employee_panel = Ext.create('Ext.panel.Panel', {
 	
 	title: 'Сотрудники',	
 	
-	items: [managers_grid],
+	items: [employee_grid],
 	
 	tbar: [
 		{

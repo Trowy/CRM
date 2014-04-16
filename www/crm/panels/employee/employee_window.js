@@ -2,7 +2,7 @@
  
  return Ext.create('Ext.form.Panel',{
 				 
-				 url: domen+'crm/managers',
+				 url: domen+'crm/employee',
 	border:false, // <-- removing the border of the form
 	defaults:{xtype:'textfield'	},	//component by default of the form
 	items:[{
@@ -55,7 +55,7 @@
  
 	
 				
-    title: 'Добавить клиента', 
+   title: '...',  
 	width:300, 
 	height:600, 
 	bodyStyle:'background-color:#fff;padding: 10px', 

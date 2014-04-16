@@ -137,7 +137,7 @@ items: [
 		items:[
 				tags_panel,
 				segment_panel,
-				managers_panel,
+				employee_panel,
 				event_type_panel,
 				event_status_panel,
 				company_status_panel,
