@@ -31,7 +31,7 @@
 			return result;
 }
  function create_tgs_window(){
- return win = Ext.create('Ext.window.Window',{
+ return tgs_win = Ext.create('Ext.window.Window',{
  
 	
 				
@@ -50,9 +50,9 @@
 					waitMsg: 'Сохранение...',
 					
 					success: function(f,a){
-						Ext.Msg.alert('Success', 'It worked');
+						
 						refresh_tgs();
-						win.close();
+						tgs_win.close();
 					},
 					
 					failure: function(f,a){

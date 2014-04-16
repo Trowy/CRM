@@ -1,21 +1,21 @@
-function create_add_mng_window(){
+function create_add_emp_window(){
 
-	mng_window = create_mng_window();	
+	emp_window = create_emp_window();	
 
-mng_window.title = 'Добавить сотрудника';	
-mng_window.items.items[0].getForm().setValues({
+emp_window.title = 'Добавить сотрудника';	
+emp_window.items.items[0].getForm().setValues({
 action: 'new'
 });		
-	mng_window.show();
+	emp_window.show();
 	
 
 }
 
-function create_edit_mng_window(){
+function create_edit_emp_window(){
 if(employee_grid.getSelectionModel().getSelection()!=""){
-	mng_window = create_mng_window();mng_window.title = 'Изменить сотрудника';	
+	emp_window = create_emp_window();emp_window.title = 'Изменить сотрудника';	
 	var row = employee_grid.getSelectionModel().getSelection()[0];
-	mng_window.items.items[0].getForm().setValues({
+	emp_window.items.items[0].getForm().setValues({
 login: row.get('login'),
 last_name: row.get('last_name'),
 first_name: row.get('first_name'),
@@ -24,12 +24,12 @@ role: row.get('role'),
 email: row.get('email')
    
 })
-	mng_window.show();}
+	emp_window.show();}
 
 
 }
 
-function create_del_mng_window(){
+function create_del_emp_window(){
 
 	var selectedRecord = employee_grid.getSelectionModel().getSelection()[0];
 	
@@ -59,15 +59,15 @@ var employee_panel = Ext.create('Ext.panel.Panel', {
 	tbar: [
 		{
 		text: 'Добавить',
-		handler: create_add_mng_window
+		handler: create_add_emp_window
 		},
 		{
 		text: 'Изменить',
-		handler: create_edit_mng_window
+		handler: create_edit_emp_window
 		},
 		{		
 		text: 'Удалить',
-		handler: create_del_mng_window
+		handler: create_del_emp_window
 		},
 		'-',
 		{

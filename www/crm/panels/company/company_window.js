@@ -98,7 +98,7 @@
  
 
  function create_cmp_window(){
- return Ext.create('Ext.window.Window',{
+ return cmp_win = Ext.create('Ext.window.Window',{
  
 	
 				
@@ -117,6 +117,7 @@
 					waitMsg: 'Сохранение...',
 					
 					success: function(f,a){
+						cmp_window.close();
 						refresh_cmp();
 					},
 					

@@ -55,7 +55,7 @@ var city_panel = Ext.create('Ext.panel.Panel', {
 	
 	tbar: [
 		{
-		text: 'Сохранить',
+		text: 'Добавить',
 		handler: create_add_ct_window
 		},
 		{

@@ -46,7 +46,7 @@
  
 
  function create_cnt_window(){
- return Ext.create('Ext.window.Window',{
+ return win = Ext.create('Ext.window.Window',{
  
 	
 				

@@ -35,7 +35,7 @@
 			return result;
 }
  function create_ct_window(){
- return Ext.create('Ext.window.Window',{
+ return ct_win = Ext.create('Ext.window.Window',{
  
 	
 				
@@ -54,7 +54,7 @@
 					waitMsg: 'Сохранение...',
 					
 					success: function(f,a){
-						Ext.Msg.alert('Success', 'It worked');
+						ct_window.close();
 						refresh_ct();
 					},
 					

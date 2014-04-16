@@ -98,7 +98,7 @@
 			return result;
 }
  function create_evt_window(){
- return Ext.create('Ext.window.Window',{
+ return evt_win = Ext.create('Ext.window.Window',{
  
 	
 				
@@ -117,6 +117,7 @@
 					waitMsg: 'Сохранение...',
 					
 					success: function(f,a){
+						evt_window.close();
 						refresh_evt();
 					},
 					

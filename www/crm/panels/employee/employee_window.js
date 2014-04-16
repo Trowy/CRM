@@ -1,4 +1,4 @@
- function create_mng_form(){
+ function create_emp_form(){
  
  return Ext.create('Ext.form.Panel',{
 				 
@@ -50,8 +50,8 @@
 		
 			return result;
 }
- function create_mng_window(){
- return Ext.create('Ext.window.Window',{
+ function create_emp_window(){
+ return emp_win = Ext.create('Ext.window.Window',{
  
 	
 				
@@ -60,17 +60,17 @@
 	height:600, 
 	bodyStyle:'background-color:#fff;padding: 10px', 
 	
-	items: [mng_form = create_mng_form()], //assigning the form
+	items: [emp_form = create_emp_form()], //assigning the form
 	buttonAlign: 'right', //buttons aligned to the right
 	buttons:[{text:'Сохранить',
 	handler: function(){
 
 				
-				mng_form.submit({
+				emp_form.submit({
 					waitMsg: 'Сохранение...',
 					
 					success: function(f,a){
-						Ext.Msg.alert('Success', 'It worked');
+						emp_window.close();
 						refresh_mng();
 					},
 					
@@ -86,7 +86,7 @@
 					}
 				});
 	}
-	},{text:'Отмена',handler:function(){mng_window.close();}}] 
+	},{text:'Отмена',handler:function(){emp_window.close();}}] 
           
  
  });
