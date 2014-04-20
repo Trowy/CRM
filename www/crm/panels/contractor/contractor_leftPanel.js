@@ -56,7 +56,7 @@ var contractorFormPanel= {
 		tbar: [                     
   
                    
-  {text:'Написать письмо'},   
+  {text:'Написать письмо',handler:create_email_window},   
   {text:'Звонок'}
 ],
 		
