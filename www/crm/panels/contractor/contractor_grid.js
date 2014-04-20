@@ -18,7 +18,15 @@ var contractor_grid = Ext.create('Ext.grid.Panel', {
 	listeners: {
 itemclick: function(dv, record, item, index, e) {
 	leftPanel.getLayout().setActiveItem(1);
+		
+		tab_event_panel.setActiveTab('cntevt');		
+		
 	var row = contractor_grid.getSelectionModel().getSelection()[0];
+	
+	event_store7.load({params:{cnt:row.get('id')}});
+		event_store8.load({params:{cnt:row.get('id')}});
+		event_store9.load({params:{cnt:row.get('id')}});
+	
 contractorForm.getForm().setValues({
 	last_name:row.get('last_name'),
 	first_name:row.get('first_name'),

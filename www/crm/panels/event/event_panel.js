@@ -182,6 +182,7 @@ activeTab: 0,
 	],
 		items:[{title: 'Все события',
 				xtype: 'tabpanel',
+				id: 'allevt',
 				items:[
 					event_panel1,
 				event_panel2,
@@ -189,6 +190,7 @@ activeTab: 0,
 				]
 		},{title: 'События компании',
 				xtype: 'tabpanel',
+				id: 'cmpevt',
 				items:[
 					event_panel4,
 				event_panel5,
@@ -196,6 +198,7 @@ activeTab: 0,
 				]
 		},{title: 'События контактного лица',
 				xtype: 'tabpanel',
+				id: 'cntevt',
 				items:[
 					event_panel7,
 				event_panel8,

@@ -34,7 +34,13 @@ var company_grid = Ext.create('Ext.grid.Panel', {
 		listeners: {
 itemclick: function(dv, record, item, index, e) {
 leftPanel.getLayout().setActiveItem(2);
+tab_event_panel.setActiveTab('cmpevt');		
 var row = company_grid.getSelectionModel().getSelection()[0];
+
+event_store4.load({params:{comp:row.get('id')}});
+		event_store5.load({params:{comp:row.get('id')}});
+		event_store6.load({params:{comp:row.get('id')}});
+
 companyForm.getForm().setValues({
 	name:row.get('name'),
 	info:row.get('info'),

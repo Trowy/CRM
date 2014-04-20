@@ -2,10 +2,25 @@ var company_event = 0;
 var cont_event = 0;
 
 var event_store1 = Ext.create('Ext.data.JsonStore', {
-    fields: ['id', 'title', 'info', 'date', 
+    fields: [
+			'id', 
+			'title', 
+			'info', 
+			'date', 
+			'duration', 
+			{name: 'StatusType', mapping: 'StatusType.id'},
 	{name: 'EventType', mapping: 'EventType.id'},
-	{name: 'Contractor', mapping: 'Contractor.id'}],
+	{name: 'Company', mapping: 'Company.id'},
+	{name: 'Contractor', mapping: 'Contractor.id'},
+	{name: 'StatusType_name', mapping: 'StatusType.name'},
+	{name: 'EventType_name', mapping: 'EventType.name'},
+	{name: 'Company_name', mapping: 'Company.name'},
+	{name: 'Contractor_name', mapping: 'Contractor.middle_name'}
+],
+
     
+
+		
   autoLoad: true,
 	
   proxy:{
@@ -21,9 +36,21 @@ var event_store1 = Ext.create('Ext.data.JsonStore', {
 });
 
 var event_store2 = Ext.create('Ext.data.JsonStore', {
-    fields: ['id', 'title', 'info', 'date', 
+      fields: [
+			'id', 
+			'title', 
+			'info', 
+			'date', 
+			'duration', 
+			{name: 'StatusType', mapping: 'StatusType.id'},
 	{name: 'EventType', mapping: 'EventType.id'},
-	{name: 'Contractor', mapping: 'Contractor.id'}],
+	{name: 'Company', mapping: 'Company.id'},
+	{name: 'Contractor', mapping: 'Contractor.id'},
+	{name: 'StatusType_name', mapping: 'StatusType.name'},
+	{name: 'EventType_name', mapping: 'EventType.name'},
+	{name: 'Company_name', mapping: 'Company.name'},
+	{name: 'Contractor_name', mapping: 'Contractor.middle_name'}
+],
     
   autoLoad: true,
   proxy:{
@@ -39,9 +66,21 @@ var event_store2 = Ext.create('Ext.data.JsonStore', {
 });
 
 var event_store3 = Ext.create('Ext.data.JsonStore', {
-    fields: ['id', 'title', 'info', 'date', 
+    fields: [
+			'id', 
+			'title', 
+			'info', 
+			'date', 
+			'duration', 
+			{name: 'StatusType', mapping: 'StatusType.id'},
 	{name: 'EventType', mapping: 'EventType.id'},
-	{name: 'Contractor', mapping: 'Contractor.id'}],
+	{name: 'Company', mapping: 'Company.id'},
+	{name: 'Contractor', mapping: 'Contractor.id'},
+	{name: 'StatusType_name', mapping: 'StatusType.name'},
+	{name: 'EventType_name', mapping: 'EventType.name'},
+	{name: 'Company_name', mapping: 'Company.name'},
+	{name: 'Contractor_name', mapping: 'Contractor.middle_name'}
+],
     
   autoLoad: true,
   proxy:{
@@ -56,9 +95,21 @@ var event_store3 = Ext.create('Ext.data.JsonStore', {
 });
 
 var event_store4 = Ext.create('Ext.data.JsonStore', {
-    fields: ['id', 'title', 'info', 'date', 
+    fields: [
+			'id', 
+			'title', 
+			'info', 
+			'date', 
+			'duration', 
+			{name: 'StatusType', mapping: 'StatusType.id'},
 	{name: 'EventType', mapping: 'EventType.id'},
-	{name: 'Contractor', mapping: 'Contractor.id'}],
+	{name: 'Company', mapping: 'Company.id'},
+	{name: 'Contractor', mapping: 'Contractor.id'},
+	{name: 'StatusType_name', mapping: 'StatusType.name'},
+	{name: 'EventType_name', mapping: 'EventType.name'},
+	{name: 'Company_name', mapping: 'Company.name'},
+	{name: 'Contractor_name', mapping: 'Contractor.middle_name'}
+],
     
   autoLoad: true,
   proxy:{
@@ -73,9 +124,21 @@ var event_store4 = Ext.create('Ext.data.JsonStore', {
 });
 
 var event_store5 = Ext.create('Ext.data.JsonStore', {
-    fields: ['id', 'title', 'info', 'date', 
+   fields: [
+			'id', 
+			'title', 
+			'info', 
+			'date', 
+			'duration', 
+			{name: 'StatusType', mapping: 'StatusType.id'},
 	{name: 'EventType', mapping: 'EventType.id'},
-	{name: 'Contractor', mapping: 'Contractor.id'}],
+	{name: 'Company', mapping: 'Company.id'},
+	{name: 'Contractor', mapping: 'Contractor.id'},
+	{name: 'StatusType_name', mapping: 'StatusType.name'},
+	{name: 'EventType_name', mapping: 'EventType.name'},
+	{name: 'Company_name', mapping: 'Company.name'},
+	{name: 'Contractor_name', mapping: 'Contractor.middle_name'}
+],
     
   autoLoad: true,
   proxy:{
@@ -91,9 +154,21 @@ var event_store5 = Ext.create('Ext.data.JsonStore', {
 });
 
 var event_store6 = Ext.create('Ext.data.JsonStore', {
-    fields: ['id', 'title', 'info', 'date', 
+     fields: [
+			'id', 
+			'title', 
+			'info', 
+			'date', 
+			'duration', 
+			{name: 'StatusType', mapping: 'StatusType.id'},
 	{name: 'EventType', mapping: 'EventType.id'},
-	{name: 'Contractor', mapping: 'Contractor.id'}],
+	{name: 'Company', mapping: 'Company.id'},
+	{name: 'Contractor', mapping: 'Contractor.id'},
+	{name: 'StatusType_name', mapping: 'StatusType.name'},
+	{name: 'EventType_name', mapping: 'EventType.name'},
+	{name: 'Company_name', mapping: 'Company.name'},
+	{name: 'Contractor_name', mapping: 'Contractor.middle_name'}
+],
     
   autoLoad: true,
   proxy:{
@@ -108,9 +183,21 @@ var event_store6 = Ext.create('Ext.data.JsonStore', {
 });
 
 var event_store7 = Ext.create('Ext.data.JsonStore', {
-    fields: ['id', 'title', 'info', 'date', 
+     fields: [
+			'id', 
+			'title', 
+			'info', 
+			'date', 
+			'duration', 
+			{name: 'StatusType', mapping: 'StatusType.id'},
 	{name: 'EventType', mapping: 'EventType.id'},
-	{name: 'Contractor', mapping: 'Contractor.id'}],
+	{name: 'Company', mapping: 'Company.id'},
+	{name: 'Contractor', mapping: 'Contractor.id'},
+	{name: 'StatusType_name', mapping: 'StatusType.name'},
+	{name: 'EventType_name', mapping: 'EventType.name'},
+	{name: 'Company_name', mapping: 'Company.name'},
+	{name: 'Contractor_name', mapping: 'Contractor.middle_name'}
+],
     
   autoLoad: true,
   proxy:{
@@ -125,9 +212,21 @@ var event_store7 = Ext.create('Ext.data.JsonStore', {
 });
 
 var event_store8 = Ext.create('Ext.data.JsonStore', {
-    fields: ['id', 'title', 'info', 'date', 
+     fields: [
+			'id', 
+			'title', 
+			'info', 
+			'date', 
+			'duration', 
+			{name: 'StatusType', mapping: 'StatusType.id'},
 	{name: 'EventType', mapping: 'EventType.id'},
-	{name: 'Contractor', mapping: 'Contractor.id'}],
+	{name: 'Company', mapping: 'Company.id'},
+	{name: 'Contractor', mapping: 'Contractor.id'},
+	{name: 'StatusType_name', mapping: 'StatusType.name'},
+	{name: 'EventType_name', mapping: 'EventType.name'},
+	{name: 'Company_name', mapping: 'Company.name'},
+	{name: 'Contractor_name', mapping: 'Contractor.middle_name'}
+],
     
   autoLoad: true,
   proxy:{
@@ -141,15 +240,29 @@ var event_store8 = Ext.create('Ext.data.JsonStore', {
 	
 });
 
+
+
 var event_store9 = Ext.create('Ext.data.JsonStore', {
-    fields: ['id', 'title', 'info', 'date', 
+      fields: [
+			'id', 
+			'title', 
+			'info', 
+			'date', 
+			'duration', 
+			{name: 'StatusType', mapping: 'StatusType.id'},
 	{name: 'EventType', mapping: 'EventType.id'},
-	{name: 'Contractor', mapping: 'Contractor.id'}],
+	{name: 'Company', mapping: 'Company.id'},
+	{name: 'Contractor', mapping: 'Contractor.id'},
+	{name: 'StatusType_name', mapping: 'StatusType.name'},
+	{name: 'EventType_name', mapping: 'EventType.name'},
+	{name: 'Company_name', mapping: 'Company.name'},
+	{name: 'Contractor_name', mapping: 'Contractor.middle_name'}
+],
     
   autoLoad: true,
   proxy:{
     type:'ajax',
-    url:domen+'crm/events',extraParams: {type: "9",cnt:cont_event},
+    url:domen+'crm/events',extraParams: {type: "9",cnt:0},
     reader:{
          root:'data',
 		 idProperty: 'id'
@@ -168,7 +281,7 @@ var event_grid1 = Ext.create('Ext.grid.Panel', {
     },
 	{
       text: "Тип",
-      dataIndex: 'EventType',      
+      dataIndex: 'EventType_name',      
     },
 	{
       text: "Дата",
@@ -176,7 +289,7 @@ var event_grid1 = Ext.create('Ext.grid.Panel', {
     },
 	{
       text: "Контркрт",
-      dataIndex: 'Contractor',      
+      dataIndex: 'Contractor_name',      
     },
 	{
       text: "Описание",
@@ -194,7 +307,7 @@ var event_grid2 = Ext.create('Ext.grid.Panel', {
     },
 	{
       text: "Тип",
-      dataIndex: 'EventType',      
+      dataIndex: 'EventType_name',      
     },
 	{
       text: "Дата",
@@ -202,7 +315,7 @@ var event_grid2 = Ext.create('Ext.grid.Panel', {
     },
 	{
       text: "Контркрт",
-      dataIndex: 'Contractor',      
+      dataIndex: 'Contractor_name',      
     },
 	{
       text: "Описание",
@@ -220,7 +333,7 @@ var event_grid3 = Ext.create('Ext.grid.Panel', {
     },
 	{
       text: "Тип",
-      dataIndex: 'EventType',      
+      dataIndex: 'EventType_name',      
     },
 	{
       text: "Дата",
@@ -228,7 +341,7 @@ var event_grid3 = Ext.create('Ext.grid.Panel', {
     },
 	{
       text: "Контркрт",
-      dataIndex: 'Contractor',      
+      dataIndex: 'Contractor_name',      
     },
 	{
       text: "Описание",
@@ -246,7 +359,7 @@ var event_grid4 = Ext.create('Ext.grid.Panel', {
     },
 	{
       text: "Тип",
-      dataIndex: 'EventType',      
+      dataIndex: 'EventType_name',      
     },
 	{
       text: "Дата",
@@ -254,7 +367,7 @@ var event_grid4 = Ext.create('Ext.grid.Panel', {
     },
 	{
       text: "Контркрт",
-      dataIndex: 'Contractor',      
+      dataIndex: 'Contractor_name',      
     },
 	{
       text: "Описание",
@@ -272,7 +385,7 @@ var event_grid5 = Ext.create('Ext.grid.Panel', {
     },
 	{
       text: "Тип",
-      dataIndex: 'EventType',      
+      dataIndex: 'EventType_name',      
     },
 	{
       text: "Дата",
@@ -280,7 +393,7 @@ var event_grid5 = Ext.create('Ext.grid.Panel', {
     },
 	{
       text: "Контркрт",
-      dataIndex: 'Contractor',      
+      dataIndex: 'Contractor_name',      
     },
 	{
       text: "Описание",
@@ -298,7 +411,7 @@ var event_grid6 = Ext.create('Ext.grid.Panel', {
     },
 	{
       text: "Тип",
-      dataIndex: 'EventType',      
+      dataIndex: 'EventType_name',      
     },
 	{
       text: "Дата",
@@ -306,7 +419,7 @@ var event_grid6 = Ext.create('Ext.grid.Panel', {
     },
 	{
       text: "Контркрт",
-      dataIndex: 'Contractor',      
+      dataIndex: 'Contractor_name',      
     },
 	{
       text: "Описание",
@@ -317,14 +430,14 @@ var event_grid6 = Ext.create('Ext.grid.Panel', {
 var event_grid7 = Ext.create('Ext.grid.Panel', {
 				
 	store: event_store7,
-	columns: [    
+columns: [    
     {
       text: "Название",
       dataIndex: 'title',      
     },
 	{
       text: "Тип",
-      dataIndex: 'EventType',      
+      dataIndex: 'EventType_name',      
     },
 	{
       text: "Дата",
@@ -332,7 +445,7 @@ var event_grid7 = Ext.create('Ext.grid.Panel', {
     },
 	{
       text: "Контркрт",
-      dataIndex: 'Contractor',      
+      dataIndex: 'Contractor_name',      
     },
 	{
       text: "Описание",
@@ -350,7 +463,7 @@ var event_grid8 = Ext.create('Ext.grid.Panel', {
     },
 	{
       text: "Тип",
-      dataIndex: 'EventType',      
+      dataIndex: 'EventType_name',      
     },
 	{
       text: "Дата",
@@ -358,7 +471,7 @@ var event_grid8 = Ext.create('Ext.grid.Panel', {
     },
 	{
       text: "Контркрт",
-      dataIndex: 'Contractor',      
+      dataIndex: 'Contractor_name',      
     },
 	{
       text: "Описание",
@@ -376,7 +489,7 @@ var event_grid9 = Ext.create('Ext.grid.Panel', {
     },
 	{
       text: "Тип",
-      dataIndex: 'EventType',      
+      dataIndex: 'EventType_name',      
     },
 	{
       text: "Дата",
@@ -384,7 +497,7 @@ var event_grid9 = Ext.create('Ext.grid.Panel', {
     },
 	{
       text: "Контркрт",
-      dataIndex: 'Contractor',      
+      dataIndex: 'Contractor_name',      
     },
 	{
       text: "Описание",
