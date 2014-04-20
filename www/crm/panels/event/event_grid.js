@@ -273,6 +273,24 @@ var event_store9 = Ext.create('Ext.data.JsonStore', {
 
 var event_grid1 = Ext.create('Ext.grid.Panel', {
 				
+		listeners: {
+itemclick: function(dv, record, item, index, e) {
+leftPanel.getLayout().setActiveItem(0);
+
+var row = event_grid1.getSelectionModel().getSelection()[0];
+
+eventForm.getForm().setValues({
+title:row.get('title'),
+contractor:row.get('Contractor_name'),
+company:row.get('Company_name'),
+eventType:row.get('EventType_name'),
+date:row.get('date'),
+duration:row.get('duration'),
+info:row.get('info'),
+eventStatus:row.get('EventType_name')
+})
+}},
+				
 	store: event_store1,
 	columns: [    
     {
@@ -298,7 +316,26 @@ var event_grid1 = Ext.create('Ext.grid.Panel', {
 });
 
 var event_grid2 = Ext.create('Ext.grid.Panel', {
-				
+			
+		listeners: {
+itemclick: function(dv, record, item, index, e) {
+leftPanel.getLayout().setActiveItem(0);
+
+var row = event_grid2.getSelectionModel().getSelection()[0];
+
+eventForm.getForm().setValues({
+title:row.get('title'),
+contractor:row.get('Contractor_name'),
+company:row.get('Company_name'),
+eventType:row.get('EventType_name'),
+date:row.get('date'),
+duration:row.get('duration'),
+info:row.get('info'),
+eventStatus:row.get('EventType_name')
+})
+}},
+	
+			
 	store: event_store2,
 	columns: [    
     {
@@ -324,7 +361,26 @@ var event_grid2 = Ext.create('Ext.grid.Panel', {
 });
 
 var event_grid3 = Ext.create('Ext.grid.Panel', {
-				
+					
+		listeners: {
+itemclick: function(dv, record, item, index, e) {
+leftPanel.getLayout().setActiveItem(0);
+
+var row = event_grid3.getSelectionModel().getSelection()[0];
+
+eventForm.getForm().setValues({
+title:row.get('title'),
+contractor:row.get('Contractor_name'),
+company:row.get('Company_name'),
+eventType:row.get('EventType_name'),
+date:row.get('date'),
+duration:row.get('duration'),
+info:row.get('info'),
+eventStatus:row.get('EventType_name')
+})
+}},
+	
+	
 	store: event_store3,
 	columns: [    
     {
@@ -351,6 +407,25 @@ var event_grid3 = Ext.create('Ext.grid.Panel', {
 
 var event_grid4 = Ext.create('Ext.grid.Panel', {
 				
+		listeners: {
+itemclick: function(dv, record, item, index, e) {
+leftPanel.getLayout().setActiveItem(0);
+
+var row = event_grid4.getSelectionModel().getSelection()[0];
+
+eventForm.getForm().setValues({
+title:row.get('title'),
+contractor:row.get('Contractor_name'),
+company:row.get('Company_name'),
+eventType:row.get('EventType_name'),
+date:row.get('date'),
+duration:row.get('duration'),
+info:row.get('info'),
+eventStatus:row.get('EventType_name')
+})
+}},
+	
+		
 	store: event_store4,
 	columns: [    
     {
@@ -377,6 +452,25 @@ var event_grid4 = Ext.create('Ext.grid.Panel', {
 
 var event_grid5 = Ext.create('Ext.grid.Panel', {
 				
+		listeners: {
+itemclick: function(dv, record, item, index, e) {
+leftPanel.getLayout().setActiveItem(0);
+
+var row = event_grid5.getSelectionModel().getSelection()[0];
+
+eventForm.getForm().setValues({
+title:row.get('title'),
+contractor:row.get('Contractor_name'),
+company:row.get('Company_name'),
+eventType:row.get('EventType_name'),
+date:row.get('date'),
+duration:row.get('duration'),
+info:row.get('info'),
+eventStatus:row.get('EventType_name')
+})
+}},
+	
+		
 	store: event_store5,
 	columns: [    
     {
@@ -402,7 +496,26 @@ var event_grid5 = Ext.create('Ext.grid.Panel', {
 });
 
 var event_grid6 = Ext.create('Ext.grid.Panel', {
-				
+			
+		listeners: {
+itemclick: function(dv, record, item, index, e) {
+leftPanel.getLayout().setActiveItem(0);
+
+var row = event_grid6.getSelectionModel().getSelection()[0];
+
+eventForm.getForm().setValues({
+title:row.get('title'),
+contractor:row.get('Contractor_name'),
+company:row.get('Company_name'),
+eventType:row.get('EventType_name'),
+date:row.get('date'),
+duration:row.get('duration'),
+info:row.get('info'),
+eventStatus:row.get('EventType_name')
+})
+}},
+	
+			
 	store: event_store6,
 	columns: [    
     {
@@ -428,7 +541,26 @@ var event_grid6 = Ext.create('Ext.grid.Panel', {
 });
 
 var event_grid7 = Ext.create('Ext.grid.Panel', {
-				
+			
+		listeners: {
+itemclick: function(dv, record, item, index, e) {
+leftPanel.getLayout().setActiveItem(0);
+
+var row = event_grid7.getSelectionModel().getSelection()[0];
+
+eventForm.getForm().setValues({
+title:row.get('title'),
+contractor:row.get('Contractor_name'),
+company:row.get('Company_name'),
+eventType:row.get('EventType_name'),
+date:row.get('date'),
+duration:row.get('duration'),
+info:row.get('info'),
+eventStatus:row.get('EventType_name')
+})
+}},
+	
+			
 	store: event_store7,
 columns: [    
     {
@@ -454,7 +586,26 @@ columns: [
 });
 
 var event_grid8 = Ext.create('Ext.grid.Panel', {
-				
+			
+		listeners: {
+itemclick: function(dv, record, item, index, e) {
+leftPanel.getLayout().setActiveItem(0);
+
+var row = event_grid8.getSelectionModel().getSelection()[0];
+
+eventForm.getForm().setValues({
+title:row.get('title'),
+contractor:row.get('Contractor_name'),
+company:row.get('Company_name'),
+eventType:row.get('EventType_name'),
+date:row.get('date'),
+duration:row.get('duration'),
+info:row.get('info'),
+eventStatus:row.get('EventType_name')
+})
+}},
+	
+			
 	store: event_store8,
 	columns: [    
     {
@@ -480,8 +631,28 @@ var event_grid8 = Ext.create('Ext.grid.Panel', {
 });
 
 var event_grid9 = Ext.create('Ext.grid.Panel', {
-				
+	
+		listeners: {
+itemclick: function(dv, record, item, index, e) {
+leftPanel.getLayout().setActiveItem(0);
+
+var row = event_grid9.getSelectionModel().getSelection()[0];
+
+eventForm.getForm().setValues({
+title:row.get('title'),
+contractor:row.get('Contractor_name'),
+company:row.get('Company_name'),
+eventType:row.get('EventType_name'),
+date:row.get('date'),
+duration:row.get('duration'),
+info:row.get('info'),
+eventStatus:row.get('EventType_name')
+})
+}},
+	
 	store: event_store9,
+	
+	
 	columns: [    
     {
       text: "Название",
