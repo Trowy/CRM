@@ -121,8 +121,8 @@
 					waitMsg: 'Сохранение...',
 					
 					success: function(f,a){
-						//evt_window.close();
-						//refresh_evt();
+						evt_win.close();
+						refresh_evt();
 					},
 					
 					failure: function(f,a){
