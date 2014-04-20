@@ -45,68 +45,13 @@ function init_crm() {
 			layout: 'border',
 			border: false,
 
-			items: [
-			
-				{
-					region: 'south',
+			items: [{
+			region: 'south',
 					flex:1,
 					height: '40%',
 					
-					items:[{
-					xtype: 'tabpanel',
-activeTab: 0,	
-	
-		
-		xtype: 'tabpanel',		
-		activeTab: 0,
-		tbar: [
-		{
-		text: 'Добавить',
-		handler: create_add_evt_window
-		},
-		{
-		text: 'Изменить',
-		handler: create_edit_evt_window
-		},
-		{		
-		text: 'Удалить',
-		handler: create_del_evt_window
-		},
-		'-',
-		{
-		text: 'Обновить',
-		handler: refresh_evt
-		}
-	],
-		items:[{title: 'Все события',
-				xtype: 'tabpanel',
-				items:[
-					event_panel1,
-				event_panel2,
-				event_panel3,					
-				]
-		},{title: 'События компании',
-				xtype: 'tabpanel',
-				items:[
-					event_panel4,
-				event_panel5,
-				event_panel6,					
-				]
-		},{title: 'События контактного лица',
-				xtype: 'tabpanel',
-				items:[
-					event_panel7,
-				event_panel8,
-				event_panel9,					
-				]
-		},
-				
-						
-				
-				
-				
-				
-				]}
+					items:[
+				tab_event_panel
 					]
 				},
 			

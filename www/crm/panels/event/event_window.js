@@ -10,7 +10,7 @@
       name: 'title',      
     },{
 	xtype: 'combobox',
-      fieldLabel: "contractor",
+      fieldLabel: "Контактное лицо",
       name: 'contractor',
 
     store: contractor_store,
@@ -32,7 +32,7 @@
     },
 	{
 	xtype: 'combobox',
-      fieldLabel: "employee",
+      fieldLabel: "Сотрудник",
       name: 'employee',
 
     store: employee_store,
@@ -43,7 +43,7 @@
     },
 	{
 	xtype: 'combobox',
-      fieldLabel: "eventType",
+      fieldLabel: "Тип события",
       name: 'eventType',
 
     store: event_type_store,
@@ -56,7 +56,7 @@
       fieldLabel: "Дата поступления",
       name: 'date',      
     },{
-      fieldLabel: "prodolgitel",
+      fieldLabel: "Продолжител.",
       name: 'duration',      
     },
 	{
@@ -64,7 +64,7 @@
       name: 'info',      
     },{
 	xtype: 'combobox',
-      fieldLabel: "eventStatus",
+      fieldLabel: "Статус события",
       name: 'eventStatus',
 
     store: event_status_store,
@@ -72,13 +72,15 @@
     displayField: 'name',
     valueField: 'id',
 	  
-    },{
-                    xtype: 'fileuploadfield',
-                    id: 'filedata',
-                    emptyText: 'Select a document to upload...',
-                    fieldLabel: 'File',
-                    buttonText: 'Browse'
-                },{
+    }		,
+//		{
+//                    xtype: 'fileuploadfield',
+//                    id: 'filedata',
+//                    emptyText: 'Select a document to upload...',
+//                    fieldLabel: 'File',
+//                    buttonText: 'Browse'
+//                },
+								{
   xtype:'hidden',
    name:'action'
 },{
@@ -111,14 +113,16 @@
 	buttonAlign: 'right', //buttons aligned to the right
 	buttons:[{text:'Сохранить',
 	handler: function(){
+//var tab = tab_event_panel.getActiveTab()
 
-				
+						//alert(fnShowProps(activeTabIndex));
+              //       alert("The active tab in the panel is "+activeTab.title);
 				evt_form.submit({
 					waitMsg: 'Сохранение...',
 					
 					success: function(f,a){
-						evt_window.close();
-						refresh_evt();
+						//evt_window.close();
+						//refresh_evt();
 					},
 					
 					failure: function(f,a){
