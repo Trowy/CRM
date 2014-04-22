@@ -56,7 +56,7 @@ var contractorFormPanel= {
 		tbar: [                     
   
                    
-  {text:'Написать письмо',handler:create_email_window},   
+  {text:'Написать письмо',handler:function(){create_email_window(contractorForm.getForm().findField("emails").getValue().split(',')[0]);}},   
   {text:'Звонок'}
 ],
 		

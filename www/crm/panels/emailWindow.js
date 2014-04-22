@@ -1,4 +1,4 @@
- function create_email_form(){
+ function create_email_form(email){
  
  return Ext.create('Ext.form.Panel',{
 				 
@@ -9,7 +9,7 @@
 	{
       fieldLabel: "tosend",
       name: 'toSend', 
-			value:'growety@gmail.com'
+			value:email
 	},
 	{
       fieldLabel: "title",
@@ -33,11 +33,7 @@
 				 url: domen+'crm/email',
 	border:false, // <-- removing the border of the form
 	defaults:{xtype:'textfield'	},	//component by default of the form
-	items:[{
-      fieldLabel: "user",
-      name: 'user',     
-			value:'tserem.tusurov@yandex.ru'
-	},
+	items:[
 	{
       fieldLabel: "pass",
       name: 'password',  
@@ -70,7 +66,7 @@
 		
 			return result;
 }
- function create_email_window(){
+ function create_email_window(email){
   email_win = Ext.create('Ext.window.Window',{
  
 	
@@ -80,7 +76,7 @@
 	height:600, 
 	bodyStyle:'background-color:#fff;padding: 10px', 
 	
-	items: [email_form = create_email_form()], //assigning the form
+	items: [email_form = create_email_form(email)], //assigning the form
 	buttonAlign: 'right', //buttons aligned to the right
 	buttons:[{text:'Отправить',
 	handler: function(){
@@ -104,11 +100,17 @@
 	});
 	
 	email_form1.submit({
-					waitMsg: 'Сохранение...',
+					waitMsg: 'Отправка...',
 					
 					success: function(f,a){
 						email_win1.close();
 						email_win.close();
+						Ext.MessageBox.show({
+								title: 'Успех',
+								msg: 'Письмо отправлено',
+								buttons: Ext.MessageBox.OK
+								
+							});
 					},
 					
 					failure: function(f,a){
@@ -124,7 +126,7 @@
 				});
 	
 	}
-	},{text:'Отмена',handler:function(){email_form1.close();}}] 
+	},{text:'Отмена',handler:function(){email_win1.close();}}] 
           
  
  }).show();
@@ -153,7 +155,7 @@
 //					}
 //				});
 	}
-	},{text:'Отмена',handler:function(){evt_window.close();}}] 
+	},{text:'Отмена',handler:function(){email_win.close();}}] 
           
  
  });
