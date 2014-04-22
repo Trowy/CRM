@@ -2,12 +2,15 @@
  
  return Ext.create('Ext.form.Panel',{
 				 
-				 url: domen+'crm/employee',
+				 url: domen+'crm/employees',
 	border:false, // <-- removing the border of the form
 	defaults:{xtype:'textfield'	},	//component by default of the form
 	items:[{
       fieldLabel: "Название",
       name: 'login',      
+    },{
+      fieldLabel: "Пароль",
+      name: 'password',      
     },{
       fieldLabel: "Описание",
       name: 'password',      
@@ -25,8 +28,23 @@
       name: 'middle_name',      
     },
 	{
+		xtype:'combo',
       fieldLabel: "Роль",
       name: 'role',      
+		
+    store: Ext.create('Ext.data.Store', {
+    fields: ['value', 'display'],
+    data : [
+        {"value":"S", "display":"S"},
+        {"value":"M", "display":"M"}
+        
+       
+    ]}),
+    queryMode: 'local',
+    displayField: 'display',
+    valueField: 'value',
+    value: 'M'
+		
     },
 	{
       fieldLabel: "Эл. почта",

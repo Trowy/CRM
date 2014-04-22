@@ -16,12 +16,14 @@ if(employee_grid.getSelectionModel().getSelection()!=""){
 	emp_window = create_emp_window();emp_window.title = 'Изменить сотрудника';	
 	var row = employee_grid.getSelectionModel().getSelection()[0];
 	emp_window.items.items[0].getForm().setValues({
+		id: row.get('id'),
 login: row.get('login'),
 last_name: row.get('last_name'),
 first_name: row.get('first_name'),
 middle_name: row.get('middle_name'),
 role: row.get('role'),
-email: row.get('email')
+email: row.get('email'),
+action: 'edit'
    
 })
 	emp_window.show();}
