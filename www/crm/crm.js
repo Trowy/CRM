@@ -87,7 +87,8 @@ items: [
 				event_status_panel,
 				company_status_panel,
 				business_scale_panel,
-				city_panel			
+				city_panel,
+				tab_report_panel
 				]
 			}
 		]}]
