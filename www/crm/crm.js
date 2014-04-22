@@ -25,6 +25,10 @@ Ext.onReady(function() {
 
 function init_crm() {
 
+if(employee_admin){
+		admin_panel.hidden = false;
+}
+
 	Ext.create('Ext.Viewport', {
 
 		layout: {
@@ -69,30 +73,7 @@ activeTab: 0,
 				contractor_panel,
 				company_panel,
 				
-				{title: 'Админестрирование',
-xtype: 'panel',
-				items: [
-				{
-		
-items: [	
-		{
-		
-		xtype: 'tabpanel',		
-		activeTab: 0,
-		items:[
-				tags_panel,
-				segment_panel,
-				employee_panel,
-				event_type_panel,
-				event_status_panel,
-				company_status_panel,
-				business_scale_panel,
-				city_panel,
-				tab_report_panel
-				]
-			}
-		]}]
-				}			
+				admin_panel
 				]}
 					]
 					
@@ -101,7 +82,9 @@ items: [
 		}]
 		
 	})		;
-	
+	employee_store.load();
+city_store.load();
+business_scale_store.load();	
 	tags_store.load();
 segment_store.load();
 report_store1.load();
@@ -118,12 +101,10 @@ event_store6.load();
 event_store7.load();
 event_store8.load();
 event_store9.load();
-employee_store.load();
 contractor_store.load();
 company_status_store.load();
 company_store.load();
-city_store.load();
-business_scale_store.load();
+
 
 
 }
