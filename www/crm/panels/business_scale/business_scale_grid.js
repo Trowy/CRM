@@ -1,7 +1,7 @@
 var business_scale_store = Ext.create('Ext.data.JsonStore', {
     fields: ['id', 'name', 'info'],
     
-  autoLoad: true,
+  
   proxy:{
     type:'ajax',
     url:domen+'crm/business_scales',

@@ -16,7 +16,7 @@ var company_store = Ext.create('Ext.data.JsonStore', {
 	{name: 'Tags_name', mapping: 'Tags.name'},
 ],
     
-  autoLoad: true,
+  
   proxy:{
     type:'ajax',
     url:domen+'crm/companies',

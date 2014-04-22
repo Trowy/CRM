@@ -1,7 +1,7 @@
 var contractor_store = Ext.create('Ext.data.JsonStore', {
     fields: ['id', 'first_name', 'middle_name', 'last_name', 'info', 'phones',  'emails','skypes'],
     
-  autoLoad: true,
+  
   proxy:{
     type:'ajax',
    url: domen+'crm/contractors',

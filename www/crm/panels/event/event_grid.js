@@ -23,7 +23,7 @@ var event_store1 = Ext.create('Ext.data.JsonStore', {
     
 
 		
-  autoLoad: true,
+  
 	
   proxy:{
     type:'ajax',
@@ -56,7 +56,7 @@ var event_store2 = Ext.create('Ext.data.JsonStore', {
 	{name: 'EventStatus_name', mapping: 'EventStatus.name'},
 ],
     
-  autoLoad: true,
+  
   proxy:{
     type:'ajax',
     url:domen+'crm/events',extraParams: {type: "2"},
@@ -88,7 +88,7 @@ var event_store3 = Ext.create('Ext.data.JsonStore', {
 	{name: 'EventStatus_name', mapping: 'EventStatus.name'},
 ],
     
-  autoLoad: true,
+  
   proxy:{
     type:'ajax',
     url:domen+'crm/events',extraParams: {type: "3"},
@@ -119,7 +119,7 @@ var event_store4 = Ext.create('Ext.data.JsonStore', {
 	{name: 'EventStatus_name', mapping: 'EventStatus.name'},
 ],
     
-  autoLoad: true,
+  
   proxy:{
     type:'ajax',
     url:domen+'crm/events',extraParams: {type: "4",comp: company_event},
@@ -150,7 +150,7 @@ var event_store5 = Ext.create('Ext.data.JsonStore', {
 	{name: 'EventStatus_name', mapping: 'EventStatus.name'},
 ],
     
-  autoLoad: true,
+  
   proxy:{
     type:'ajax',
     url:domen+'crm/events',extraParams: {type: "5",comp: company_event},
@@ -182,7 +182,7 @@ var event_store6 = Ext.create('Ext.data.JsonStore', {
 	{name: 'EventStatus_name', mapping: 'EventStatus.name'},
 ],
     
-  autoLoad: true,
+  
   proxy:{
     type:'ajax',
     url:domen+'crm/events',extraParams: {type: "6",comp: company_event},
@@ -213,7 +213,7 @@ var event_store7 = Ext.create('Ext.data.JsonStore', {
 	{name: 'EventStatus_name', mapping: 'EventStatus.name'},
 ],
     
-  autoLoad: true,
+  
   proxy:{
     type:'ajax',
     url:domen+'crm/events',extraParams: {type: "7",cnt:cont_event},
@@ -244,7 +244,7 @@ var event_store8 = Ext.create('Ext.data.JsonStore', {
 	{name: 'EventStatus_name', mapping: 'EventStatus.name'},
 ],
     
-  autoLoad: true,
+  
   proxy:{
     type:'ajax',
     url:domen+'crm/events',extraParams: {type: "8",cnt:cont_event},
@@ -277,7 +277,7 @@ var event_store9 = Ext.create('Ext.data.JsonStore', {
 	{name: 'EventStatus_name', mapping: 'EventStatus.name'},
 ],
     
-  autoLoad: true,
+  
   proxy:{
     type:'ajax',
     url:domen+'crm/events',extraParams: {type: "9",cnt:0},

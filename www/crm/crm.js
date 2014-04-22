@@ -100,7 +100,30 @@ items: [
 			]
 		}]
 		
-	})		
+	})		;
+	
+	tags_store.load();
+segment_store.load();
+report_store1.load();
+report_store2.load();
+report_store3.load();
+event_type_store.load();
+event_status_store.load();
+event_store1.load();
+event_store2.load();
+event_store3.load();
+event_store4.load();
+event_store5.load();
+event_store6.load();
+event_store7.load();
+event_store8.load();
+event_store9.load();
+employee_store.load();
+contractor_store.load();
+company_status_store.load();
+company_store.load();
+city_store.load();
+business_scale_store.load();
 
 
 }

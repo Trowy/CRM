@@ -1,7 +1,7 @@
 var report_store1 = Ext.create('Ext.data.JsonStore', {
     fields: ['employee_id', 'cmpInsert', 'cmpUpdate','cmpDelete', 'evtInsert', 'evtUpdate','evtDelete'],
     
-  autoLoad: true,
+  
   proxy:{
     type:'ajax',
     url:domen+'crm/reports',extraParams: {type: "0"},
@@ -50,7 +50,7 @@ var report_grid1 = Ext.create('Ext.grid.Panel', {
 var report_store2 = Ext.create('Ext.data.JsonStore', {
     fields: ['employee_id', 'cmpInsert', 'cmpUpdate','cmpDelete', 'evtInsert', 'evtUpdate','evtDelete'],
     
-  autoLoad: true,
+  
   proxy:{
     type:'ajax',
     url:domen+'crm/reports',extraParams: {type: "1"},
@@ -99,7 +99,7 @@ var report_grid2 = Ext.create('Ext.grid.Panel', {
 var report_store3 = Ext.create('Ext.data.JsonStore', {
     fields: ['employee_id', 'cmpInsert', 'cmpUpdate','cmpDelete', 'evtInsert', 'evtUpdate','evtDelete'],
     
-  autoLoad: true,
+  
   proxy:{
     type:'ajax',
     url:domen+'crm/reports',extraParams: {type: "2"},

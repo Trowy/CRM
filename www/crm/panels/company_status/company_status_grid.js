@@ -1,7 +1,7 @@
 var company_status_store = Ext.create('Ext.data.JsonStore', {
     fields: ['id', 'name', 'info'],
     
-  autoLoad: true,
+  
   proxy:{
     type:'ajax',
     url:domen+'crm/company_statuses',

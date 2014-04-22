@@ -1,7 +1,7 @@
 var event_type_store = Ext.create('Ext.data.JsonStore', {
     fields: ['id', 'name', 'info'],
     
-  autoLoad: true,
+  
   proxy:{
     type:'ajax',
     url:domen+'crm/event_types',
