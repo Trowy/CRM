@@ -34,7 +34,7 @@
 	xtype: 'combobox',
       fieldLabel: "Сотрудник",
       name: 'employee',
-
+hidden:!employee_admin,
     store: employee_store,
     queryMode: 'local',
     displayField: 'login',
