@@ -1,6 +1,6 @@
  function create_cmp_form(){
  
- return Ext.create('Ext.form.Panel',{
+ var form =  Ext.create('Ext.form.Panel',{
 				 
 				url: domen+'crm/companies',
 	border:false, // <-- removing the border of the form
@@ -33,19 +33,19 @@
 	xtype: 'combobox',
       fieldLabel: "Город",
       name: 'City',
-
+id:'city_id',
     store: city_store,
     queryMode: 'local',
     displayField: 'name',
     valueField: 'id',
-		value: city_store.getAt('0').get('name')
+		value: city_store.getAt('0').get('id'),
 	  
     },
 	{
 	xtype: 'combobox',
       fieldLabel: "Размер бизнеса",
       name: 'BusinessScale',
-value: business_scale_store.getAt('0').get('name'),
+value: business_scale_store.getAt('0').get('id'),
     store: business_scale_store,
     queryMode: 'local',
     displayField: 'name',
@@ -56,7 +56,7 @@ value: business_scale_store.getAt('0').get('name'),
 	xtype: 'combobox',
       fieldLabel: "Статус",
       name: 'CompanyStatus',
-value: company_status_store.getAt('0').get('name'),
+value: company_status_store.getAt('0').get('id'),
     store: company_status_store,
     queryMode: 'local',
     displayField: 'name',
@@ -68,7 +68,7 @@ value: company_status_store.getAt('0').get('name'),
       fieldLabel: "Сотрудник",
       name: 'Employee',
 hidden:!employee_admin,
-value: employee_store.getAt('0').get('login'),
+value: employee_store.getAt('0').get('id'),
     store: employee_store,
     queryMode: 'local',
     displayField: 'login',
@@ -79,7 +79,7 @@ value: employee_store.getAt('0').get('login'),
 	xtype: 'combobox',
       fieldLabel: "Теги",
       name: 'Tags',
-value: tags_store.getAt('0').get('name'),
+value: tags_store.getAt('0').get('id'),
     store: tags_store,
     queryMode: 'local',
     displayField: 'name',
@@ -94,7 +94,8 @@ value: tags_store.getAt('0').get('name'),
 }
 	
 	] });
- 
+
+ return form;
  
  }
  
