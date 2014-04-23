@@ -38,13 +38,14 @@
     queryMode: 'local',
     displayField: 'name',
     valueField: 'id',
+		value: city_store.getAt('0').get('name')
 	  
     },
 	{
 	xtype: 'combobox',
       fieldLabel: "Размер бизнеса",
       name: 'BusinessScale',
-
+value: business_scale_store.getAt('0').get('name'),
     store: business_scale_store,
     queryMode: 'local',
     displayField: 'name',
@@ -55,7 +56,7 @@
 	xtype: 'combobox',
       fieldLabel: "Статус",
       name: 'CompanyStatus',
-
+value: company_status_store.getAt('0').get('name'),
     store: company_status_store,
     queryMode: 'local',
     displayField: 'name',
@@ -67,6 +68,7 @@
       fieldLabel: "Сотрудник",
       name: 'Employee',
 hidden:!employee_admin,
+value: employee_store.getAt('0').get('login'),
     store: employee_store,
     queryMode: 'local',
     displayField: 'login',
@@ -77,7 +79,7 @@ hidden:!employee_admin,
 	xtype: 'combobox',
       fieldLabel: "Теги",
       name: 'Tags',
-
+value: tags_store.getAt('0').get('name'),
     store: tags_store,
     queryMode: 'local',
     displayField: 'name',
