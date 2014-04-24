@@ -36,13 +36,21 @@ action: 'edit'
 }
 
 function create_del_cmp_window(){
-	var selectedRecord = city_grid.getSelectionModel().getSelection()[0];
+	var selectedRecord = company_grid.getSelectionModel().getSelection()[0];
 	Ext.Ajax.request({
         method: 'POST',
         url: domen+'crm/companies',
         params: { id: selectedRecord.data.id, action: 'delete'},
         success: function( result, request ){
-            refresh_cmp();
+           
+            var response = Ext.decode(result.responseText);
+                 if (response.success) { refresh_cmp();}
+                 else {Ext.MessageBox.show({
+								title: 'Ошибка',
+								msg: response.errors.name,
+								buttons: Ext.MessageBox.OK,
+								icon: Ext.MessageBox.ERROR
+							});}
         }
     });
 	

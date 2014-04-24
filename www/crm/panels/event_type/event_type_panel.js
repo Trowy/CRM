@@ -34,7 +34,15 @@ function create_del_et_window(){
         url: domen+'crm/event_statuses',
         params: { id: selectedRecord.data.id, action: 'delete'},
         success: function( result, request ){
-             refresh_et();
+            
+            var response = Ext.decode(result.responseText);
+                 if (response.success) { refresh_et();}
+                 else {Ext.MessageBox.show({
+								title: 'Ошибка',
+								msg: response.errors.name,
+								buttons: Ext.MessageBox.OK,
+								icon: Ext.MessageBox.ERROR
+							});}
         }
     });
 

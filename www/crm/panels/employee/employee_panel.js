@@ -40,7 +40,15 @@ function create_del_emp_window(){
         url: domen+'crm/employees',
         params: { id: selectedRecord.data.id, action: 'delete'},
         success: function( result, request ){
-           refresh_mng(); 
+           
+            var response = Ext.decode(result.responseText);
+                 if (response.success) {refresh_mng(); }
+                 else {Ext.MessageBox.show({
+								title: 'Ошибка',
+								msg: response.errors.login,
+								buttons: Ext.MessageBox.OK,
+								icon: Ext.MessageBox.ERROR
+							});}
         }
     });
 

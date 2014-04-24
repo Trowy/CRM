@@ -34,7 +34,15 @@ function create_del_es_window(){
         url: domen+'crm/Employee',
         params: { id: selectedRecord.data.id, action: 'delete'},
         success: function( result, request ){
-            refresh_es();
+           
+            var response = Ext.decode(result.responseText);
+                 if (response.success) { refresh_es();}
+                 else {Ext.MessageBox.show({
+								title: 'Ошибка',
+								msg: response.errors.name,
+								buttons: Ext.MessageBox.OK,
+								icon: Ext.MessageBox.ERROR
+							});}
         }
     });
 

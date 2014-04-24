@@ -35,6 +35,14 @@ function create_del_cs_window(){
         params: { id: selectedRecord.data.id, action: 'delete'},
         success: function( result, request ){
             
+            var response = Ext.decode(result.responseText);
+                 if (response.success) {refresh_cs();
+								 }else {Ext.MessageBox.show({
+								title: 'Ошибка',
+								msg: response.errors.name,
+								buttons: Ext.MessageBox.OK,
+								icon: Ext.MessageBox.ERROR
+							});}
         }
     });
 

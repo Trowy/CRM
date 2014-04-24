@@ -41,7 +41,15 @@ function create_del_cnt_window(){
         url: domen+'crm/contractors',
         params: { id: selectedRecord.data.id, action: 'delete'},
         success: function( result, request ){
-            refresh_cnt();
+            
+            var response = Ext.decode(result.responseText);
+                 if (response.success) {refresh_cnt();}
+                 else {Ext.MessageBox.show({
+								title: 'Ошибка',
+								msg: response.errors.name,
+								buttons: Ext.MessageBox.OK,
+								icon: Ext.MessageBox.ERROR
+							});}
         }
     });
 

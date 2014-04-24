@@ -34,7 +34,15 @@ function create_del_bs_window(){
         url: domen+'crm/business_scales',
         params: { id: selectedRecord.data.id, action: 'delete'},
         success: function( result, request ){
-            
+            var response = Ext.decode(result.responseText);
+                 if (response.success) {refresh_bs();}
+                 
+                 else {Ext.MessageBox.show({
+								title: 'Ошибка',
+								msg: response.errors.name,
+								buttons: Ext.MessageBox.OK,
+								icon: Ext.MessageBox.ERROR
+							});}
         }
     });
 

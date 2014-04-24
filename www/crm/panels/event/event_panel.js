@@ -93,7 +93,15 @@ var ent_grid;
         url: domen+'crm/events',
         params: { id: selectedRecord.data.id, action: 'delete'},
         success: function( result, request ){
-            refresh_evt();
+           
+            var response = Ext.decode(result.responseText);
+                 if (response.success) { refresh_evt();}
+                 else {Ext.MessageBox.show({
+								title: 'Ошибка',
+								msg: response.errors.name,
+								buttons: Ext.MessageBox.OK,
+								icon: Ext.MessageBox.ERROR
+							});}
         }
     });
 
