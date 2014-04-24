@@ -32,18 +32,6 @@ value: company_store.getAt('0').get('id'),
     },
 	{
 	xtype: 'combobox',
-      fieldLabel: "Сотрудник",
-      name: 'employee',
-hidden:!employee_admin,
-value: employee_store.getAt('0').get('id'),
-    store: employee_store,
-    queryMode: 'local',
-    displayField: 'login',
-    valueField: 'id',
-	  
-    },
-	{
-	xtype: 'combobox',
       fieldLabel: "Тип события",
       name: 'eventType',
 value: event_type_store.getAt('0').get('id'),
