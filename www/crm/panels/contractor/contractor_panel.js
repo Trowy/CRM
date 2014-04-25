@@ -84,7 +84,7 @@ var contractor_panel = Ext.create('Ext.panel.Panel', {
 		{
 		text: 'Обновить',
 		handler: refresh_cnt
-		}
+		},
 	],
 	
 });

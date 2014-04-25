@@ -28,7 +28,7 @@ var company_store = Ext.create('Ext.data.JsonStore', {
 	
 });
 
-var company_grid = Ext.create('Ext.grid.Panel', {
+var company_grid = Ext.create('Ext.ux.LiveSearchGridPanel', {
 				
 		store: company_store,
 		listeners: {

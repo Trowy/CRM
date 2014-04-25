@@ -8,6 +8,8 @@
 	<!-- Ext -->
 	
 	<link rel="stylesheet" type="text/css" href="extjs/resources/css/ext-all.css">
+	<link rel="stylesheet" type="text/css" href="extjs/ux/css/LiveSearchGridPanel.css">
+  <link rel="stylesheet" type="text/css" href="extjs/ux/statusbar/css/statusbar.css">
 	<script type="text/javascript" src="extjs/ext-all.js"></script>
 	<script type="text/javascript" src="extjs/ext-theme-neptune.js"></script>
 	<script type="text/javascript" src="extjs/locale/ext-lang-ru.js"></script>	
@@ -39,12 +41,15 @@
 
 		Ext.Loader.setConfig({enabled: true});
 		Ext.Loader.setPath('Ext', '/extjs');
+
+
 		Ext.require([
 			'Ext.Msg',
 			'Ext.panel.*',
 			'Ext.grid.*',
 			'Ext.data.*',
 			'Ext.util.*',			
+			
 		]);
 		Ext.Ajax.cors = true;
 		Ext.Ajax.useDefaultXhrHeader = false;

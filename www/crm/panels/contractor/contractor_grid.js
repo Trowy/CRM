@@ -12,8 +12,8 @@ var contractor_store = Ext.create('Ext.data.JsonStore', {
 	
 });
 
-var contractor_grid = Ext.create('Ext.grid.Panel', {
-				
+var contractor_grid = Ext.create('Ext.ux.LiveSearchGridPanel', {
+ 		
 			
 	listeners: {
 itemclick: function(dv, record, item, index, e) {
@@ -44,26 +44,27 @@ contractorForm.getForm().setValues({
 		columns: [      
 	{
       text: "Фамилия",
-      dataIndex: 'last_name',      
+      dataIndex: 'last_name',  
+			
     },
 	{
       text: "Имя",
-      dataIndex: 'first_name',      
+      dataIndex: 'first_name',   
     },
 	{
       text: "Отчество",
-      dataIndex: 'middle_name',      
+      dataIndex: 'middle_name', 
     },
 	{
       text: "Телефон",
-      dataIndex: 'phones',      
+      dataIndex: 'phones', 
     },
 	{
       text: "Эл. почта",
-      dataIndex: 'emails',      
+      dataIndex: 'emails',  
     },
 	{
       text: "Скайп",
-      dataIndex: 'skypes',      
+      dataIndex: 'skypes',  
     }]
 });
