@@ -65,6 +65,17 @@ value: company_status_store.getAt('0').get('id'),
     },
 	{
 	xtype: 'combobox',
+      fieldLabel: "Сегмент",
+      name: 'Segment',
+value: segment_store.getAt('0').get('id'),
+    store: segment_store,
+    queryMode: 'local',
+    displayField: 'name',
+    valueField: 'id',
+	  
+    },
+	{
+	xtype: 'combobox',
       fieldLabel: "Сотрудник",
       name: 'Employee',
 hidden:!employee_admin,

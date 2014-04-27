@@ -62,13 +62,13 @@ value: event_status_store.getAt('0').get('id'),
     valueField: 'id',
 	  
     }		,
-//		{
-//                    xtype: 'fileuploadfield',
-//                    id: 'filedata',
-//                    emptyText: 'Select a document to upload...',
-//                    fieldLabel: 'File',
-//                    buttonText: 'Browse'
-//                },
+	{
+                    xtype: 'fileuploadfield',
+                    id: 'filedata',
+                    emptyText: 'Select a document to upload...',
+                    fieldLabel: 'File',
+                    buttonText: 'Browse'
+                },
 								{
   xtype:'hidden',
    name:'action'
@@ -110,7 +110,7 @@ value: event_status_store.getAt('0').get('id'),
 					waitMsg: 'Сохранение...',
 					
 					success: function(f,a){
-						evt_win.close();
+						//evt_win.close();
 						refresh_evt();
 					},
 					
