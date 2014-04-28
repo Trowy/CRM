@@ -26,15 +26,23 @@ itemclick: function(dv, record, item, index, e) {
 	event_store7.load({params:{cnt:row.get('id')}});
 		event_store8.load({params:{cnt:row.get('id')}});
 		event_store9.load({params:{cnt:row.get('id')}});
+	phones = "";
+	(row.get('phones')+"").split(',').forEach(function(value){phones+="<a href='skype:"+value+"'>"+value+"</a><br>"});
+	skypes = "";
+	(row.get('skypes')+"").split(',').forEach(function(value){skypes+="<a href='skype:"+value+"'>"+value+"</a><br>"});
+	emails = "";
+	(row.get('emails')+"").split(',').forEach(function(value){emails+="<a href='#' onclick='create_email_window(\""+value+"\");return false;'>"+value+"</a><br>"});
+	
+	
 	
 contractorForm.getForm().setValues({
 	last_name:row.get('last_name'),
 	first_name:row.get('first_name'),
 	middle_name:row.get('middle_name'),
 	info:row.get('info'),
-	phones:(row.get('phones')+"").replace(new RegExp(",",'g'),"<br>"),
-	emails:(row.get('emails')+"").replace(new RegExp(",",'g'),"<br>"),
-	skypes:(row.get('skypes')+"").replace(new RegExp(",",'g'),"<br>"),
+	phones:phones,
+	emails:emails,
+	skypes:skypes
 
 })	
 }

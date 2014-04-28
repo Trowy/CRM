@@ -14,6 +14,7 @@ function create_edit_cs_window(){
 if(company_status_grid.getSelectionModel().getSelection()!=""){
 	cs_window = create_cs_window();cs_window.title = 'Изменить статус компании';	
 	var row = company_status_grid.getSelectionModel().getSelection()[0];
+	
 	cs_window.items.items[0].getForm().setValues({
 id: row.get('id'),
 name: row.get('name'),
