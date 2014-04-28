@@ -95,7 +95,7 @@ value: event_status_store.getAt('0').get('id'),
 				
    title: '...',  
 	width:300, 
-	height:600, 
+	
 	bodyStyle:'background-color:#fff;padding: 10px', 
 	
 	items: [evt_form = create_evt_form()], //assigning the form

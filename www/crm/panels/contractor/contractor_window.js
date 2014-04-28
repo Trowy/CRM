@@ -52,7 +52,7 @@
 				
     title: '...', 
 	width:300, 
-	height:600, 
+	
 	bodyStyle:'background-color:#fff;padding: 10px', 
 	
 	items: [cnt_form = create_cnt_form()], //assigning the form

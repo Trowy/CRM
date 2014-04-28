@@ -37,7 +37,7 @@
 				
     title: '...', 
 	width:300, 
-	height:600, 
+	 
 	bodyStyle:'background-color:#fff;padding: 10px', 
 	
 	items: [bs_form = create_bs_form()], //assigning the form

@@ -37,7 +37,7 @@
 				
    title: '...',  
 	width:300, 
-	height:600, 
+	
 	bodyStyle:'background-color:#fff;padding: 10px', 
 	
 	items: [sgt_form = create_sgt_form()], //assigning the form

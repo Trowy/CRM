@@ -88,7 +88,7 @@ var companyFormPanel= {
 			
 		tbar: [                     
                        
-  {text:'Написать письмо',handler:function(){create_email_window(companyForm.getForm().findField("emails").getValue().split(',')[0]);}},   
+  {text:'Написать письмо',handler:function(){create_email_window(companyForm.getForm().findField("emails").getValue().split('<br>')[0]);}},   
   {text:'Звонок'}
 ],
 		

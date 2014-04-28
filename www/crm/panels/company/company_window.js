@@ -118,7 +118,7 @@ value: tags_store.getAt('0').get('id'),
 				
    title: '...',  
 	width:300, 
-	height:600, 
+	
 	bodyStyle:'background-color:#fff;padding: 10px', 
 	
 	items: [cmp_form = create_cmp_form()], //assigning the form

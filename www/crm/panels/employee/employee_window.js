@@ -10,9 +10,11 @@
       name: 'login',      
     },{
       fieldLabel: "Пароль",
+			inputType: 'password',
       name: 'password',      
     },{
       fieldLabel: "Описание",
+			
       name: 'password',      
     },
 	{
@@ -75,7 +77,7 @@
 				
    title: '...',  
 	width:300, 
-	height:600, 
+	
 	bodyStyle:'background-color:#fff;padding: 10px', 
 	
 	items: [emp_form = create_emp_form()], //assigning the form

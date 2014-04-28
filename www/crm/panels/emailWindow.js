@@ -36,7 +36,8 @@
 	items:[
 	{
       fieldLabel: "pass",
-      name: 'password',  
+      name: 'password', 
+			inputType: 'password',
 			value:'crm-tusur-lol'
 	},{
       fieldLabel: "tosend",
