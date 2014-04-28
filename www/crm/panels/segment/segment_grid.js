@@ -14,7 +14,7 @@ var segment_store = Ext.create('Ext.data.JsonStore', {
 });
 
 var segment_grid = Ext.create('Ext.grid.Panel', {
-				
+				flex: 1,
 	store: segment_store,
 	columns: [    
     {

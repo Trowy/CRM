@@ -136,7 +136,10 @@ var event_panel1 = Ext.create('Ext.panel.Panel', {
 	flex: 1,
 	region: 'north',
 	items: [event_grid1],
-	
+	layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
 	
 	
 });
@@ -147,7 +150,10 @@ var event_panel2 = Ext.create('Ext.panel.Panel', {
 	flex: 1,
 	region: 'north',
 	items: [event_grid2],
-	
+	layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
 	
 	
 });
@@ -158,7 +164,10 @@ var event_panel3 = Ext.create('Ext.panel.Panel', {
 	flex: 1,
 	region: 'north',
 	items: [event_grid3],
-	
+	layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
 	
 	
 });
@@ -180,7 +189,10 @@ var event_panel5 = Ext.create('Ext.panel.Panel', {
 	flex: 1,
 	region: 'north',
 	items: [event_grid5],
-	
+	layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
 	
 	
 });
@@ -202,7 +214,10 @@ var event_panel7 = Ext.create('Ext.panel.Panel', {
 	flex: 1,
 	region: 'north',
 	items: [event_grid7],
-	
+	layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
 	
 	
 });
@@ -213,7 +228,10 @@ var event_panel8 = Ext.create('Ext.panel.Panel', {
 	flex: 1,
 	region: 'north',
 	items: [event_grid8],
-	
+	layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
 	
 	
 });
@@ -224,7 +242,10 @@ var event_panel9 = Ext.create('Ext.panel.Panel', {
 	flex: 1,
 	region: 'north',
 	items: [event_grid9],
-	
+	layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
 	
 	
 });

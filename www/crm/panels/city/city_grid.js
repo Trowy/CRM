@@ -14,7 +14,7 @@ var city_store = Ext.create('Ext.data.JsonStore', {
 });
 
 var city_grid = Ext.create('Ext.grid.Panel', {
-				
+		flex: 1,		
 	store: city_store,
 	columns: [    
     {

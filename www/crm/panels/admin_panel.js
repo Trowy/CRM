@@ -1,12 +1,12 @@
 var admin_panel = {title: 'Администрирование',
 xtype: 'panel',
 hidden:true,
-				items: [
-				{
-		
+layout:'fit',
+				
+	
 items: [	
 		{
-		
+	
 		xtype: 'tabpanel',		
 		activeTab: 0,
 		items:[
@@ -21,7 +21,7 @@ items: [
 				tab_report_panel
 				]
 			}
-		]}]
+		]
 				}		;
 
 

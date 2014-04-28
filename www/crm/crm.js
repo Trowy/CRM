@@ -64,7 +64,7 @@ if(employee_admin){
 					region: 'south',
 					flex:1,
 					height: '60%',
-					
+					layout:'fit',
 					items:[{
 					xtype: 'tabpanel',
 activeTab: 0,	

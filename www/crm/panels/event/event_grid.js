@@ -299,7 +299,7 @@ var event_store9 = Ext.create('Ext.data.JsonStore', {
 });
 
 var event_grid1 = Ext.create('Ext.grid.Panel', {
-				
+				flex: 1,
 		listeners: {
 itemclick: function(dv, record, item, index, e) {
 leftPanel.getLayout().setActiveItem(0);
@@ -343,7 +343,7 @@ eventStatus:row.get('EventStatus_name'),
 });
 
 var event_grid2 = Ext.create('Ext.grid.Panel', {
-			
+			flex: 1,
 		listeners: {
 itemclick: function(dv, record, item, index, e) {
 leftPanel.getLayout().setActiveItem(0);
@@ -389,7 +389,7 @@ eventStatus:row.get('EventStatus_name')
 });
 
 var event_grid3 = Ext.create('Ext.grid.Panel', {
-					
+			flex: 1,		
 		listeners: {
 itemclick: function(dv, record, item, index, e) {
 leftPanel.getLayout().setActiveItem(0);
@@ -434,7 +434,7 @@ eventStatus:row.get('EventStatus_name')
 });
 
 var event_grid4 = Ext.create('Ext.grid.Panel', {
-				
+				flex: 1,
 		listeners: {
 itemclick: function(dv, record, item, index, e) {
 leftPanel.getLayout().setActiveItem(0);
@@ -479,7 +479,7 @@ eventStatus:row.get('EventStatus_name')
 });
 
 var event_grid5 = Ext.create('Ext.grid.Panel', {
-				
+				flex: 1,
 		listeners: {
 itemclick: function(dv, record, item, index, e) {
 leftPanel.getLayout().setActiveItem(0);
@@ -524,7 +524,7 @@ eventStatus:row.get('EventStatus_name')
 });
 
 var event_grid6 = Ext.create('Ext.grid.Panel', {
-			
+			flex: 1,
 		listeners: {
 itemclick: function(dv, record, item, index, e) {
 leftPanel.getLayout().setActiveItem(0);
@@ -569,7 +569,7 @@ eventStatus:row.get('EventStatus_name')
 });
 
 var event_grid7 = Ext.create('Ext.grid.Panel', {
-			
+			flex: 1,
 		listeners: {
 itemclick: function(dv, record, item, index, e) {
 leftPanel.getLayout().setActiveItem(0);
@@ -614,7 +614,7 @@ columns: [
 });
 
 var event_grid8 = Ext.create('Ext.grid.Panel', {
-			
+			flex: 1,
 		listeners: {
 itemclick: function(dv, record, item, index, e) {
 leftPanel.getLayout().setActiveItem(0);
@@ -659,7 +659,7 @@ eventStatus:row.get('EventStatus_name')
 });
 
 var event_grid9 = Ext.create('Ext.grid.Panel', {
-	
+	flex: 1,
 		listeners: {
 itemclick: function(dv, record, item, index, e) {
 leftPanel.getLayout().setActiveItem(0);

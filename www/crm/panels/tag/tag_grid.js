@@ -14,7 +14,7 @@ var tags_store = Ext.create('Ext.data.JsonStore', {
 });
 
 var tags_grid = Ext.create('Ext.grid.Panel', {
-				
+				flex: 1,
 	store: tags_store,
 	columns: [    
     {

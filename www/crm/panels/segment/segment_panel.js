@@ -61,7 +61,10 @@ var segment_panel = Ext.create('Ext.panel.Panel', {
 	flex: 1,
 	region: 'north',
 	items: [segment_grid],
-	
+	layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
 	tbar: [
 		{
 		text: 'Добавить',

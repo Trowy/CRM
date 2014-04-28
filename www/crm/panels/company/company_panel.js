@@ -70,7 +70,10 @@ function refresh_cmp(){
 var company_panel = Ext.create('Ext.panel.Panel', {
 	
 	title: 'Комнании',   
-	
+	layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
 	items: [company_grid],
 	
 	tbar: [

@@ -57,7 +57,10 @@ function refresh_cs(){
 var company_status_panel = Ext.create('Ext.panel.Panel', {
 	
 	title: 'Статус компании',
-	
+		layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
 	items: [company_status_grid],
 	
 	tbar: [

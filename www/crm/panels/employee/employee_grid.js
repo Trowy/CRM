@@ -14,7 +14,7 @@ var employee_store = Ext.create('Ext.data.JsonStore', {
 });
 
 var employee_grid = Ext.create('Ext.grid.Panel', {
-				
+				flex: 1,
 	store: employee_store,
 	columns: [    
     {

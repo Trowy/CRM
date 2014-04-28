@@ -14,7 +14,7 @@ var event_type_store = Ext.create('Ext.data.JsonStore', {
 });
 
 var event_type_grid = Ext.create('Ext.grid.Panel', {
-				
+		flex: 1,		
 	store: event_type_store,
 	columns: [    
     {

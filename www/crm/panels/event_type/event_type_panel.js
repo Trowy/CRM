@@ -57,7 +57,10 @@ function refresh_et(){
 var event_type_panel = Ext.create('Ext.panel.Panel', {
 	
 	title: 'Типы событий',
-	
+	layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
 	items: [event_type_grid],
 	
 	tbar: [

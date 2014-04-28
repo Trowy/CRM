@@ -64,7 +64,10 @@ function refresh_cnt(){
 var contractor_panel = Ext.create('Ext.panel.Panel', {
 	
 	title: 'Контактные лица',   
-	
+	layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
 	items: [contractor_grid],
 	
 	tbar: [

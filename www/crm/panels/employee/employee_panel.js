@@ -63,7 +63,10 @@ function refresh_mng(){
 var employee_panel = Ext.create('Ext.panel.Panel', {
 	
 	title: 'Сотрудники',	
-	
+	layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
 	items: [employee_grid],
 	
 	tbar: [

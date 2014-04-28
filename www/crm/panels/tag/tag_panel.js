@@ -56,7 +56,10 @@ function refresh_tgs(){
 var tags_panel = Ext.create('Ext.panel.Panel', {
 	
 	title: 'Теги компаний',
-
+layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
 	items: [tags_grid],
 	
 	tbar: [

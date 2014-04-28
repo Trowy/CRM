@@ -59,7 +59,10 @@ function refresh_ct(){
 var city_panel = Ext.create('Ext.panel.Panel', {
 	
 	title: 'Города',
-
+layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
 	items: [city_grid],
 	
 	tbar: [

@@ -57,7 +57,10 @@ function refresh_es(){
 var event_status_panel = Ext.create('Ext.panel.Panel', {
 	
 	title: 'Статусы событий',
-	
+	layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
 	items: [event_status_grid],
 	
 	tbar: [

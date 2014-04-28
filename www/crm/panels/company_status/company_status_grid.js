@@ -15,7 +15,7 @@ var company_status_store = Ext.create('Ext.data.JsonStore', {
 });
 
 var company_status_grid = Ext.create('Ext.grid.Panel', {
-				
+			flex: 1,	
 	store: company_status_store,
 	columns: [    
     {

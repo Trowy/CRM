@@ -14,7 +14,7 @@ var business_scale_store = Ext.create('Ext.data.JsonStore', {
 });
 
 var business_scale_grid = Ext.create('Ext.grid.Panel', {
-				
+				flex: 1,
 	store: business_scale_store,
 	columns: [    
     {

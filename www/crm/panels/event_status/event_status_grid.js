@@ -14,7 +14,7 @@ var event_status_store = Ext.create('Ext.data.JsonStore', {
 });
 
 var event_status_grid = Ext.create('Ext.grid.Panel', {
-				
+				flex: 1,
 	store: event_status_store,
 	columns: [    
     {

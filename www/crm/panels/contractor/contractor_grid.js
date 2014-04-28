@@ -13,7 +13,7 @@ var contractor_store = Ext.create('Ext.data.JsonStore', {
 });
 
 var contractor_grid = Ext.create('Ext.ux.LiveSearchGridPanel', {
- 		
+ 		flex: 1,
 			
 	listeners: {
 itemclick: function(dv, record, item, index, e) {
