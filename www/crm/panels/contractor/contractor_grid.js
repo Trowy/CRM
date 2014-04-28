@@ -32,9 +32,9 @@ contractorForm.getForm().setValues({
 	first_name:row.get('first_name'),
 	middle_name:row.get('middle_name'),
 	info:row.get('info'),
-	phones:row.get('phones'),
-	emails:row.get('emails'),
-	skypes:row.get('skypes'),
+	phones:(row.get('phones')+"").replace(new RegExp(",",'g'),"<br>"),
+	emails:(row.get('emails')+"").replace(new RegExp(",",'g'),"<br>"),
+	skypes:(row.get('skypes')+"").replace(new RegExp(",",'g'),"<br>"),
 
 })	
 }
