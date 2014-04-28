@@ -1,5 +1,5 @@
 var employee_store = Ext.create('Ext.data.JsonStore', {
-    fields: ['id', 'login', 'password', 'first_name', 'middle_name', 'last_name', 'role', 'email'],
+    fields: ['id', 'login', 'password', 'first_name', 'middle_name', 'last_name', 'fio', 'role', 'email'],
     
   
   proxy:{

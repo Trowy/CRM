@@ -15,7 +15,7 @@
 value: contractor_store.getAt('0').get('id'),
     store: contractor_store,
     queryMode: 'local',
-    displayField: 'middle_name',
+    displayField: 'fio',
     valueField: 'id',
 	  
     },
