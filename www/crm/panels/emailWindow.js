@@ -1,25 +1,26 @@
  function create_email_form(email){
  
  return Ext.create('Ext.form.Panel',{
-				 
+				 	
 				 url: domen+'crm/email',
 	border:false, // <-- removing the border of the form
-	defaults:{xtype:'textfield'	},	//component by default of the form
+	defaults:{xtype:'textfield',width:450	},	//component by default of the form
 	items:[
 	{
-      fieldLabel: "tosend",
+      fieldLabel: "Почта:",
       name: 'toSend', 
 			value:email
 	},
 	{
-      fieldLabel: "title",
+      fieldLabel: "Тема:",
       name: 'subject',      
-			value:'test'
+			
 	},
 	{
-      fieldLabel: "text",
-      name: 'text',      
-			value:'privetkakdila?'
+      fieldLabel: "Письмо:",
+      name: 'text',
+			 xtype: 'textareafield',
+			 height: 150
 	},
 	] });
  
@@ -31,14 +32,14 @@
  return Ext.create('Ext.form.Panel',{
 				 
 				 url: domen+'crm/email',
-	border:false, // <-- removing the border of the form
-	defaults:{xtype:'textfield'	},	//component by default of the form
+	
+	defaults:{xtype:'textfield',margin:10	},	//component by default of the form
 	items:[
 	{
-      fieldLabel: "pass",
+      fieldLabel: "Пароль:",
       name: 'password', 
 			inputType: 'password',
-			value:'crm-tusur-lol'
+			
 	},{
       fieldLabel: "tosend",
       name: 'toSend',
@@ -72,9 +73,9 @@
  
 	
 				
-   title: '...',  
-	width:300, 
-	height:600, 
+   title: 'Отправка почты',  
+	width:500, 
+	
 	bodyStyle:'background-color:#fff;padding: 10px', 
 	
 	items: [email_form = create_email_form(email)], //assigning the form
@@ -85,9 +86,9 @@
  
 	modal: true, 
 				
-   title: '...',  
+   title: 'Пароль от почты',  
 	width:350, 
-	height:300, 
+
 	
 	
 	items: [email_form1 = create_email_form_pass()], //assigning the form
