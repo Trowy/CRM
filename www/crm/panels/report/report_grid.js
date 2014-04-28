@@ -1,5 +1,5 @@
 var report_store1 = Ext.create('Ext.data.JsonStore', {
-    fields: ['employee_id', 'cmpInsert', 'cmpUpdate','cmpDelete', 'evtInsert', 'evtUpdate','evtDelete'],
+    fields: ['employee_id', 'employee', 'cmpInsert', 'cmpUpdate','cmpDelete', 'evtInsert', 'evtUpdate','evtDelete'],
     
   
   proxy:{
@@ -19,7 +19,7 @@ var report_grid1 = Ext.create('Ext.grid.Panel', {
 	columns: [    
     {
       text: "Сотрудник",
-      dataIndex: 'employee_id',      
+      dataIndex: 'employee',      
     },
 	{
       text: "Добавлено компаний",
