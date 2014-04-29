@@ -12,7 +12,8 @@
     },
 	{
       fieldLabel: "Инфорамция",
-      name: 'info',      
+      name: 'info',  
+			xtype: 'textarea'
     },
 	{
       fieldLabel: "Сайт",

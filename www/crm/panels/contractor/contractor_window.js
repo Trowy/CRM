@@ -21,6 +21,7 @@
 	{
       fieldLabel: "Описание",
       name: 'info',      
+			xtype: 'textarea'
     },
 	{
       fieldLabel: "Телефоны",

@@ -50,7 +50,8 @@ value: event_type_store.getAt('0').get('id'),
     },
 	{
       fieldLabel: "Описание",
-      name: 'info',      
+      name: 'info',   
+			xtype: 'textarea'
     },{
 	xtype: 'combobox',
       fieldLabel: "Статус события",

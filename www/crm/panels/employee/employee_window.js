@@ -6,15 +6,11 @@
 	border:false, // <-- removing the border of the form
 	defaults:{xtype:'textfield'	},	//component by default of the form
 	items:[{
-      fieldLabel: "Название",
+      fieldLabel: "Логин",
       name: 'login',      
     },{
       fieldLabel: "Пароль",
 			inputType: 'password',
-      name: 'password',      
-    },{
-      fieldLabel: "Описание",
-			
       name: 'password',      
     },
 	{
