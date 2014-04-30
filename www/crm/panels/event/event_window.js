@@ -41,10 +41,10 @@ value: event_type_store.getAt('0').get('id'),
     valueField: 'id',
 	  
     },
-	{
+	{xtype:'datefield',
       fieldLabel: "Дата поступления",
       name: 'date',      
-    },{
+    },{xtype: 'numberfield',
       fieldLabel: "Продолжител.",
       name: 'duration',      
     },

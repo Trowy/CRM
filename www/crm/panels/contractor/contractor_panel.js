@@ -15,18 +15,33 @@ if(contractor_grid.getSelectionModel().getSelection()!=""){
 	var row = contractor_grid.getSelectionModel().getSelection()[0];
 	cnt_window = create_cnt_window();
 	cnt_window.title = 'Изменить контакное лицо';	
-	
+
+			
+	emails = 	(row.get('emails')+"").split(',');
+	phones = 	(row.get('phones')+"").split(',');
+	skypes = 	(row.get('skypes')+"").split(',');
+		
 	cnt_window.items.items[0].getForm().setValues({
 id: row.get('id'),
 last_name: row.get('last_name'),
 first_name: row.get('first_name'),
 middle_name: row.get('middle_name'),
 info: row.get('info'),
-phones: row.get('phones'),
-emails: row.get('emails'),
-skypes: row.get('skypes'),
+phone_0: phones[0],
+email_0: emails[0],
+skype_0: skypes[0],
       action: 'edit'
 })
+for(i=1;i<phones.length;i++){
+	cnt_window.items.items[0].add_phone(phones[i]);
+}
+for(i=1;i<emails.length;i++){
+	cnt_window.items.items[0].add_email(emails[i]);
+}
+for(i=1;i<skypes.length;i++){
+	cnt_window.items.items[0].add_skype(skypes[i]);
+}
+
 	cnt_window.show();}
 	
 

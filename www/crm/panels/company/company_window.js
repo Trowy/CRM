@@ -1,7 +1,9 @@
  function create_cmp_form(){
  
  var form =  Ext.create('Ext.form.Panel',{
-				 
+				 p:1, 
+				e:1, 
+				s:1, 
 				url: domen+'crm/companies',
 	border:false, // <-- removing the border of the form
 	defaults:{xtype:'textfield'	},	//component by default of the form
@@ -18,18 +20,73 @@
 	{
       fieldLabel: "Сайт",
       name: 'site',      
+    },phones_container = Ext.create('Ext.form.FieldContainer',{
+        
+				
+				defaults:{xtype:'textfield'	},
+				 items:[
+			{
+      fieldLabel: "Телефон",
+      name: 'phone_0',      
+			
     },
-	{
-      fieldLabel: "Телефоны",
-      name: 'phones',      
-    },
-	{
-      fieldLabel: "Эл. почта",
-      name: 'emails',      
-    }, {
+	
+				 ], }),Ext.create('Ext.Button', {
+				 align :'right',
+        text: '+',
+        handler: function () {
+           var tf = Ext.create('Ext.form.field.Text', {
+                    name: 'phone_'+(cnt_form.p++),
+                    fieldLabel: 'Доп. телефон',
+                });
+                phones_container.add(tf);
+        },
+        
+    }),skypes_container = Ext.create('Ext.form.FieldContainer',{
+        
+				
+				defaults:{xtype:'textfield'	},
+				 items:[
+			{
       fieldLabel: "Skype",
-      name: 'skypes',      
+      name: 'skype_0',      
+			
     },
+	
+				 ], }),Ext.create('Ext.Button', {
+				 align :'right',
+        text: '+',
+        handler: function () {
+           var tf = Ext.create('Ext.form.field.Text', {
+                    name: 'skype_'+(cnt_form.s++),
+                    fieldLabel: 'Доп. skype',
+                });
+                skypes_container.add(tf);
+        },
+        
+    }),emails_container = Ext.create('Ext.form.FieldContainer',{
+        
+				
+				defaults:{xtype:'textfield'	},
+				 items:[
+			{
+      fieldLabel: "Эл. почта",
+      name: 'email_0',      
+			
+    },
+	
+				 ], }),Ext.create('Ext.Button', {
+				 align :'right',
+        text: '+',
+        handler: function () {
+           var tf = Ext.create('Ext.form.field.Text', {
+                    name: 'email_'+(cnt_form.e++),
+                    fieldLabel: 'Доп. эл. почта',
+                });
+                emails_container.add(tf);
+        },
+        
+    }),
 	{
 	xtype: 'combobox',
       fieldLabel: "Город",
@@ -86,9 +143,13 @@ value: employee_store.getAt('0').get('id'),
     displayField: 'login',
     valueField: 'id',
 	  
-    },
-	{
-	xtype: 'combobox',
+    },tags_container = Ext.create('Ext.form.FieldContainer',{
+        
+				
+				defaults:{xtype:'combobox'	},
+				 items:[
+			{
+	
       fieldLabel: "Теги",
       name: 'Tags',
 value: tags_store.getAt('0').get('id'),
@@ -97,7 +158,26 @@ value: tags_store.getAt('0').get('id'),
     displayField: 'name',
     valueField: 'id',
 	  
-    },{
+    },
+	
+				 ], }),Ext.create('Ext.Button', {
+				 align :'right',
+        text: '+',
+        handler: function () {
+           var tf = Ext.create('Ext.form.field.ComboBox', {
+                    fieldLabel: "Теги",
+      name: 'Tags',
+value: tags_store.getAt('0').get('id'),
+    store: tags_store,
+    queryMode: 'local',
+    displayField: 'name',
+    valueField: 'id',
+                });
+                tags_container.add(tf);
+        },
+        
+    }),
+	{
   xtype:'hidden',
    name:'action'
 },{
@@ -105,7 +185,32 @@ value: tags_store.getAt('0').get('id'),
    name:'id'
 }
 	
-	] });
+	],
+add_email:function(email){
+				var tf = Ext.create('Ext.form.field.Text', {
+                    name: 'email_'+(form.e++),
+                    fieldLabel: 'Доп. эл. почта',
+										value: email
+                });
+                emails_container.add(tf);	
+				},
+				add_phone:function(phone){
+				var tf = Ext.create('Ext.form.field.Text', {
+                    name: 'phone_'+(form.p++),
+                    fieldLabel: 'Доп. телефон',
+										value: phone
+                });
+                phones_container.add(tf);	
+				},
+				add_skype:function(skype){
+				var tf = Ext.create('Ext.form.field.Text', {
+                    name: 'skype_'+(form.s++),
+                    fieldLabel: 'Доп. skype',
+										value: skype
+                });
+                skypes_container.add(tf);	
+				},
+});
 
  return form;
  

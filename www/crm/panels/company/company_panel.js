@@ -14,14 +14,19 @@ function create_edit_cmp_window(){
 if(company_grid.getSelectionModel().getSelection()!=""){
 	cmp_window = create_cmp_window();cmp_window.title = 'Изменить компанию';	
 	var row = company_grid.getSelectionModel().getSelection()[0];
+	
+	emails = 	(row.get('emails')+"").split(',');
+	phones = 	(row.get('phones')+"").split(',');
+	skypes = 	(row.get('skypes')+"").split(',');
+	
 	cmp_window.items.items[0].getForm().setValues({
 id: row.get('id'),
 name: row.get('name'),
 info: row.get('info'),
 site: row.get('site'),
-phones: row.get('phones'),
-emails: row.get('emails'),
-skypes: row.get('skypes'),
+phone_0: phones[0],
+email_0: emails[0],
+skype_0: skypes[0],
 City: row.get('City'),
 BusinessScale: row.get('BusinessScale'),
 Segment: row.get('Segment'),
@@ -31,6 +36,17 @@ Tags: row.get('Tags'),
 action: 'edit'
    
 })
+
+for(i=1;i<phones.length;i++){
+	cmp_window.items.items[0].add_phone(phones[i]);
+}
+for(i=1;i<emails.length;i++){
+	cmp_window.items.items[0].add_email(emails[i]);
+}
+for(i=1;i<skypes.length;i++){
+	cmp_window.items.items[0].add_skype(skypes[i]);
+}
+
 	cmp_window.show();
 	}
 
