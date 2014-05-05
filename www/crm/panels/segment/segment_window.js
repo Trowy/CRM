@@ -34,7 +34,7 @@
  return sgt_win = Ext.create('Ext.window.Window',{
  
 	
-				
+				resizable: false,
    title: '...',  
 	width:300, 
 	

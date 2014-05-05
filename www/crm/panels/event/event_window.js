@@ -93,7 +93,7 @@ value: event_status_store.getAt('0').get('id'),
  return evt_win = Ext.create('Ext.window.Window',{
  
 	
-				
+			resizable: false,
    title: '...',  
 	width:300, 
 	

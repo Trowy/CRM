@@ -53,6 +53,13 @@ fieldLabel: 'Статус',
 name: 'eventStatus',
 
 }
+,{
+
+
+fieldLabel: 'Прикрепление',
+name: 'attachment',
+
+}
 ]  
        
 });

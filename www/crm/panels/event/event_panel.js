@@ -277,7 +277,7 @@ activeTab: 0,
 		handler: refresh_evt
 		}
 	],
-		items:[{title: 'Все события',
+		items:[{title: 'Все события',iconCls: 'event',
 				xtype: 'tabpanel',
 				id: 'allevt',
 				items:[
@@ -285,7 +285,7 @@ activeTab: 0,
 				event_panel2,
 				event_panel3,					
 				]
-		},{title: 'События компании',
+		},{title: 'События компании',iconCls: 'event',
 				xtype: 'tabpanel',
 				id: 'cmpevt',
 				items:[
@@ -293,7 +293,7 @@ activeTab: 0,
 				event_panel5,
 				event_panel6,					
 				]
-		},{title: 'События контактного лица',
+		},{title: 'События контактного лица',iconCls: 'event',
 				xtype: 'tabpanel',
 				id: 'cntevt',
 				items:[

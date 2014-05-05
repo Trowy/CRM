@@ -18,7 +18,8 @@ var event_store1 = Ext.create('Ext.data.JsonStore', {
 	{name: 'Company_name', mapping: 'Company.name'},
 	{name: 'Contractor_name', mapping: 'Contractor.fio'},
 	{name: 'EventStatus_name', mapping: 'EventStatus.name'},
-	
+	{name: 'Attachment_id', mapping: 'Attachments.id'},
+	{name: 'Attachment_name', mapping: 'Attachments'},
 ],
 
     
@@ -315,6 +316,7 @@ date:row.get('date'),
 duration:row.get('duration'),
 info:row.get('info'),
 eventStatus:row.get('EventStatus_name'),
+attachment:"<a href='"+domen+"crm/attachments?id="+row.get('Attachment_name')[0].id+"' target='_blink'>"+row.get('Attachment_name')[0].name+"</a>",
 })
 }},
 				
