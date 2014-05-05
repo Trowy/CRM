@@ -52,7 +52,7 @@ phones = "";
 companyForm.getForm().setValues({
 	name:row.get('name'),
 	info:row.get('info'),
-	site:'<a href="'+row.get('site')+'">'+row.get('site')+'</a>',
+	site:'<a target="_blink" href="'+row.get('site')+'">'+row.get('site')+'</a>',
 	phones:phones,
 	emails:emails,
 	skypes:skypes,
