@@ -62,8 +62,8 @@ name: 'CompanyStatus',
 },
 {
 
-fieldLabel: 'Сотрудник',
-name: 'Employee',
+fieldLabel: 'Сегмент',
+name: 'Segment',
 
 },
 {

@@ -4,6 +4,7 @@
 				 p:1, 
 				e:1, 
 				s:1, 
+				t:1, 
 				url: domen+'crm/companies',
 	border:false, // <-- removing the border of the form
 	defaults:{xtype:'textfield'	},	//component by default of the form
@@ -36,7 +37,7 @@
         text: '+',
         handler: function () {
            var tf = Ext.create('Ext.form.field.Text', {
-                    name: 'phone_'+(cnt_form.p++),
+                    name: 'phone_'+(form.p++),
                     fieldLabel: 'Доп. телефон',
                 });
                 phones_container.add(tf);
@@ -58,7 +59,7 @@
         text: '+',
         handler: function () {
            var tf = Ext.create('Ext.form.field.Text', {
-                    name: 'skype_'+(cnt_form.s++),
+                    name: 'skype_'+(form.s++),
                     fieldLabel: 'Доп. skype',
                 });
                 skypes_container.add(tf);
@@ -80,7 +81,7 @@
         text: '+',
         handler: function () {
            var tf = Ext.create('Ext.form.field.Text', {
-                    name: 'email_'+(cnt_form.e++),
+                    name: 'email_'+(form.e++),
                     fieldLabel: 'Доп. эл. почта',
                 });
                 emails_container.add(tf);
@@ -151,7 +152,7 @@ value: employee_store.getAt('0').get('id'),
 			{
 	
       fieldLabel: "Теги",
-      name: 'Tags',
+      name: 'tag_0',
 value: tags_store.getAt('0').get('id'),
     store: tags_store,
     queryMode: 'local',
@@ -166,7 +167,7 @@ value: tags_store.getAt('0').get('id'),
         handler: function () {
            var tf = Ext.create('Ext.form.field.ComboBox', {
                     fieldLabel: "Теги",
-      name: 'Tags',
+      name: 'tag_'+(form.t++),
 value: tags_store.getAt('0').get('id'),
     store: tags_store,
     queryMode: 'local',
@@ -209,6 +210,19 @@ add_email:function(email){
 										value: skype
                 });
                 skypes_container.add(tf);	
+				},
+				add_tag:function(tag){
+					 var tf = Ext.create('Ext.form.field.ComboBox', {
+                    fieldLabel: "Теги",
+      name: 'tag_'+(form.t++),
+value: tag,
+    store: tags_store,
+    queryMode: 'local',
+    displayField: 'name',
+    valueField: 'id',
+                });
+                tags_container.add(tf);
+			
 				},
 });
 

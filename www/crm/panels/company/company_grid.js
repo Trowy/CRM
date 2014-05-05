@@ -11,9 +11,8 @@ var company_store = Ext.create('Ext.data.JsonStore', {
 	{name: 'Segment_name', mapping: 'Segment.name'}, 
 	{name: 'BusinessScale_name', mapping: 'BusinessScale.name'}, 
 	{name: 'CompanyStatus_name', mapping: 'CompanyStatus.name'}, 
-	{name: 'CompanyStatus_name', mapping: 'CompanyStatus.name'}, 
-	{name: 'Employee_name', mapping: 'Employee.last_name'}, 
-	{name: 'Tags_name', mapping: 'Tags.name'},
+	{name: 'CompanyStatus_name', mapping: 'CompanyStatus.name'}, 	
+	{name: 'Tags_name', mapping: 'Tags'},
 ],
     
   
@@ -48,7 +47,8 @@ phones = "";
 	(row.get('skypes')+"").split(',').forEach(function(value){skypes+="<a href='skype:"+value+"'>"+value+"</a><br>"});
 	emails = "";
 	(row.get('emails')+"").split(',').forEach(function(value){emails+="<a href='#' onclick='create_email_window(\""+value+"\");return false;'>"+value+"</a><br>"});
-	
+	tags = "";
+	row.get('Tags_name').forEach(function(value){tags += value.name+"<br>"});
 companyForm.getForm().setValues({
 	name:row.get('name'),
 	info:row.get('info'),
@@ -59,8 +59,8 @@ companyForm.getForm().setValues({
 	City:row.get('City_name'),
 	BusinessScale:row.get('BusinessScale_name'),
 	CompanyStatus:row.get('CompanyStatus_name'),
-	Employee:row.get('Employee_name'),
-	Tags:row.get('Tags_name'),
+	Segment:row.get('Segment_name'),
+	Tags:tags,
 })
 }},
 		

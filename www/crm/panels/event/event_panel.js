@@ -55,6 +55,7 @@ eventStatus: row.get('EventStatus'),
 action: 'edit'
    
 })
+evt_window.items.items[0].getForm().findField("date").hide();
 	evt_window.show();}
 	
 

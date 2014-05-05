@@ -316,8 +316,13 @@ date:row.get('date'),
 duration:row.get('duration'),
 info:row.get('info'),
 eventStatus:row.get('EventStatus_name'),
+
+})
+if(row.get('Attachment_name')[0].id){
+	eventForm.getForm().setValues({
 attachment:"<a href='"+domen+"crm/attachments?id="+row.get('Attachment_name')[0].id+"' target='_blink'>"+row.get('Attachment_name')[0].name+"</a>",
 })
+}
 }},
 				
 	store: event_store1,
