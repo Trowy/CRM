@@ -39,7 +39,25 @@ name: 'emails',
 fieldLabel: 'Skype',
 name: 'skypes',
 
-}
+},{
+
+xtype:'hidden',
+
+name: 'phones_hidden',
+
+},{
+
+
+xtype:'hidden',
+name: 'emails_hidden',
+
+},{
+
+xtype:'hidden',
+
+name: 'skypes_hidden',
+
+},
 ]  
        
 });
@@ -56,8 +74,8 @@ var contractorFormPanel= {
 		tbar: [                     
   
                    
-  {text:'Написать письмо',iconCls: 'mail',handler:function(){create_email_window(contractorForm.getForm().findField("emails").getValue().split('<br>')[0]);}},   
-  {text:'Звонок',iconCls: 'skype',handler:function(){document.location = "skype:"+contractorForm.getForm().findField("skypes").getValue().split('<br>')[0];}}
+  {text:'Написать письмо',iconCls: 'mail',handler:function(){create_email_window(contractorForm.getForm().findField("emails_hidden").getValue().split(',')[0]);}},   
+  {text:'Звонок',iconCls: 'skype',handler:function(){document.location = "skype:"+contractorForm.getForm().findField("skypes_hidden").getValue().split(',')[0];}}
 ],
 		
 		items: [

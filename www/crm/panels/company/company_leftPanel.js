@@ -41,7 +41,27 @@ name: 'emails',
 fieldLabel: 'Skype',
 name: 'skypes',
 
+},
+{
+
+xtype:'hidden',
+
+name: 'phones_hidden',
+
 },{
+
+
+xtype:'hidden',
+name: 'emails_hidden',
+
+},{
+
+xtype:'hidden',
+
+name: 'skypes_hidden',
+
+},
+{
 
 
 fieldLabel: 'Город',
@@ -88,8 +108,8 @@ var companyFormPanel= {
 			
 		tbar: [                     
                        
-  {text:'Написать письмо',iconCls: 'mail',handler:function(){create_email_window(companyForm.getForm().findField("emails").getValue().split('<br>')[0]);}},   
-  {text:'Звонок',iconCls: 'skype',}
+  {text:'Написать письмо',iconCls: 'mail',handler:function(){create_email_window(companyForm.getForm().findField("emails_hidden").getValue().split(',')[0]);}},   
+  {text:'Звонок',iconCls: 'skype',handler:function(){document.location = "skype:"+companyForm.getForm().findField("skypes_hidden").getValue().split(',')[0];}}
 ],
 		
 		items: [

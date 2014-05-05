@@ -18,6 +18,7 @@ if(company_grid.getSelectionModel().getSelection()!=""){
 	emails = 	(row.get('emails')+"").split(',');
 	phones = 	(row.get('phones')+"").split(',');
 	skypes = 	(row.get('skypes')+"").split(',');
+	//tags = 	tags.split('<br>');
 	
 	cmp_window.items.items[0].getForm().setValues({
 id: row.get('id'),
@@ -46,6 +47,10 @@ for(i=1;i<emails.length;i++){
 for(i=1;i<skypes.length;i++){
 	cmp_window.items.items[0].add_skype(skypes[i]);
 }
+
+//for(i=1;i<tags.length;i++){
+	//cmp_window.items.items[0].add_tag(tags[i]);
+//}
 
 	cmp_window.show();
 	}

@@ -42,8 +42,10 @@ contractorForm.getForm().setValues({
 	info:row.get('info'),
 	phones:phones,
 	emails:emails,
-	skypes:skypes
-
+	skypes:skypes,
+phones_hidden:row.get('phones'),
+	emails_hidden:row.get('emails'),
+	skypes_hidden:row.get('skypes')
 })	
 }
 	},
