@@ -51,7 +51,7 @@ var tab_report_panel = Ext.create('Ext.TabPanel',
 		handler: refresh_rp
 		},
 		{
-		text: 'Экспорт',
+		text: 'Экспорт',iconCls: 'export',
 		handler: refresh_rp
 		}
 	],
