@@ -138,7 +138,7 @@ add_email:function(email){
  return win = Ext.create('Ext.window.Window',{
  
 	
-				
+				iconCls: 'contractor', 
     title: '...', 
 	width:300, 
 	

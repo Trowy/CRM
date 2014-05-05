@@ -1,0 +1,43 @@
+.key {
+  background-image:url('../icons/key.png') !important;
+}
+
+.submit_login {
+  background-image:url('../icons/submit_login.png') !important;
+}
+
+.add {
+  background-image:url('../icons/new.gif') !important;
+}
+
+.edit {
+  background-image:url('../icons/edit.gif') !important;
+}
+
+.delete {
+  background-image:url('../icons/delete.gif') !important;
+}
+
+.refresh {
+  background-image:url('../icons/refresh.png') !important;
+}
+
+.contractor{
+	background-image:url('../icons/contractor.png') !important;	
+}
+
+.company{
+	background-image:url('../icons/company.png') !important;	
+}
+
+.event{
+	background-image:url('../icons/event.png') !important;	
+}
+
+.skype{
+	background-image:url('../icons/skype.png') !important;	
+}
+
+.mail{
+	background-image:url('../icons/mail.png') !important;	
+}

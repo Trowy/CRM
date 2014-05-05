@@ -67,20 +67,20 @@ var segment_panel = Ext.create('Ext.panel.Panel', {
                     },
 	tbar: [
 		{
-		text: 'Добавить',
+		text: 'Добавить',iconCls: 'add',
 		handler: create_add_sgt_window
 		},
 		{
-		text: 'Изменить',
+		text: 'Изменить',iconCls: 'edit',
 		handler: create_edit_sgt_window
 		},
 		{		
-		text: 'Удалить',
+		text: 'Удалить',iconCls: 'delete',
 		handler: create_del_sgt_window
 		},
 		'-',
 		{
-		text: 'Обновить',
+		text: 'Обновить',iconCls: 'refresh',
 		handler: refresh_sgt
 		}
 	],

@@ -71,7 +71,7 @@
  function create_email_window(email){
   email_win = Ext.create('Ext.window.Window',{
  
-	
+	iconCls: 'mail',
 				
    title: 'Отправка почты',  
 	width:500, 

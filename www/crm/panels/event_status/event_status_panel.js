@@ -65,20 +65,20 @@ var event_status_panel = Ext.create('Ext.panel.Panel', {
 	
 	tbar: [
 		{
-		text: 'Добавить',
+		text: 'Добавить',iconCls: 'add',
 		handler: create_add_es_window
 		},
 		{
-		text: 'Изменить',
+		text: 'Изменить',iconCls: 'edit',
 		handler: create_edit_es_window
 		},
 		{		
-		text: 'Удалить',
+		text: 'Удалить',iconCls: 'delete',
 		handler: create_del_es_window
 		},
 		'-',
 		{
-		text: 'Обновить',
+		text: 'Обновить',iconCls: 'refresh',
 		handler: refresh_es
 		}
 	],

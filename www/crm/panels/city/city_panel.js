@@ -67,20 +67,20 @@ layout: {
 	
 	tbar: [
 		{
-		text: 'Добавить',
+		text: 'Добавить',iconCls: 'add',
 		handler: create_add_ct_window
 		},
 		{
-		text: 'Изменить',
+		text: 'Изменить',iconCls: 'edit',
 		handler: create_edit_ct_window
 		},
 		{		
-		text: 'Удалить',
+		text: 'Удалить',iconCls: 'delete',
 		handler: create_del_ct_window
 		},
 		'-',
 		{
-		text: 'Обновить',
+		text: 'Обновить',iconCls: 'refresh',
 		handler: refresh_ct
 		}
 	],

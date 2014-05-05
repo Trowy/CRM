@@ -47,7 +47,7 @@ var tab_report_panel = Ext.create('Ext.TabPanel',
 		activeTab: 0,
 		tbar: [	
 		{
-		text: 'Обновить',
+		text: 'Обновить',iconCls: 'refresh',
 		handler: refresh_rp
 		},
 		{

@@ -65,20 +65,20 @@ var business_scale_panel = Ext.create('Ext.panel.Panel', {
 	
 	tbar: [
 		{
-		text: 'Добавить',
+		text: 'Добавить',iconCls: 'add',
 		handler: create_add_bs_window
 		},
 		{
-		text: 'Изменить',
+		text: 'Изменить',iconCls: 'edit',
 		handler: create_edit_bs_window
 		},
 		{		
-		text: 'Удалить',
+		text: 'Удалить',iconCls: 'delete',
 		handler: create_del_bs_window
 		},
 		'-',
 		{
-		text: 'Обновить',
+		text: 'Обновить',iconCls: 'refresh',
 		handler: refresh_bs
 		}
 	],

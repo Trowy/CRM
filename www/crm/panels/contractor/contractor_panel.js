@@ -78,7 +78,8 @@ function refresh_cnt(){
 
 var contractor_panel = Ext.create('Ext.panel.Panel', {
 	
-	title: 'Контактные лица',   
+	title: 'Контактные лица',  iconCls: 'contractor', 
+	
 	layout: {
                         type: 'vbox',
                         align: 'stretch'
@@ -87,20 +88,21 @@ var contractor_panel = Ext.create('Ext.panel.Panel', {
 	
 	tbar: [
 		{
-		text: 'Добавить',
+		text: 'Добавить',iconCls: 'add',
 		handler: create_add_cnt_window
+		
 		},
 		{
-		text: 'Изменить',
+		text: 'Изменить',iconCls: 'edit',
 		handler: create_edit_cnt_window
 		},
 		{		
-		text: 'Удалить',
+		text: 'Удалить',iconCls: 'delete',
 		handler: create_del_cnt_window
 		},
 		'-',
 		{
-		text: 'Обновить',
+		text: 'Обновить',iconCls: 'refresh',
 		handler: refresh_cnt
 		},
 	],

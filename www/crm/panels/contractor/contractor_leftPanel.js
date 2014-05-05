@@ -56,8 +56,8 @@ var contractorFormPanel= {
 		tbar: [                     
   
                    
-  {text:'Написать письмо',handler:function(){create_email_window(contractorForm.getForm().findField("emails").getValue().split('<br>')[0]);}},   
-  {text:'Звонок',handler:function(){document.location = "skype:"+contractorForm.getForm().findField("skypes").getValue().split('<br>')[0];}}
+  {text:'Написать письмо',iconCls: 'mail',handler:function(){create_email_window(contractorForm.getForm().findField("emails").getValue().split('<br>')[0]);}},   
+  {text:'Звонок',iconCls: 'skype',handler:function(){document.location = "skype:"+contractorForm.getForm().findField("skypes").getValue().split('<br>')[0];}}
 ],
 		
 		items: [
