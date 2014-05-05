@@ -37,7 +37,7 @@ function create_del_ct_window(){
         success: function( result, request ){
             
 						var response = Ext.decode(result.responseText);
-                 if (response.success) {refresh_et();}
+                 if (response.success) {refresh_ct();}
                  else {Ext.MessageBox.show({
 								title: 'Ошибка',
 								msg: response.errors.name,

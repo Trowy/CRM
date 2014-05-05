@@ -48,7 +48,7 @@ var report_grid1 = Ext.create('Ext.grid.Panel', {
 });
 
 var report_store2 = Ext.create('Ext.data.JsonStore', {
-    fields: ['employee_id', 'cmpInsert', 'cmpUpdate','cmpDelete', 'evtInsert', 'evtUpdate','evtDelete'],
+    fields: ['employee_id', 'employee', 'cmpInsert', 'cmpUpdate','cmpDelete', 'evtInsert', 'evtUpdate','evtDelete'],
     
   
   proxy:{
@@ -68,7 +68,7 @@ var report_grid2 = Ext.create('Ext.grid.Panel', {
 	columns: [    
     {
       text: "Сотрудник",
-      dataIndex: 'employee_id',      
+      dataIndex: 'employee',      
     },
 	{
       text: "Добавлено компаний",
@@ -97,7 +97,7 @@ var report_grid2 = Ext.create('Ext.grid.Panel', {
 });
 
 var report_store3 = Ext.create('Ext.data.JsonStore', {
-    fields: ['employee_id', 'cmpInsert', 'cmpUpdate','cmpDelete', 'evtInsert', 'evtUpdate','evtDelete'],
+    fields: ['employee_id', 'employee', 'cmpInsert', 'cmpUpdate','cmpDelete', 'evtInsert', 'evtUpdate','evtDelete'],
     
   
   proxy:{
@@ -117,7 +117,7 @@ var report_grid3 = Ext.create('Ext.grid.Panel', {
 	columns: [    
     {
       text: "Сотрудник",
-      dataIndex: 'employee_id',      
+      dataIndex: 'employee',      
     },
 	{
       text: "Добавлено компаний",
