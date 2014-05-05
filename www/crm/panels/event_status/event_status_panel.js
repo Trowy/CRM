@@ -31,7 +31,7 @@ function create_del_es_window(){
 	
 	Ext.Ajax.request({
         method: 'POST',
-        url: domen+'crm/Employee',
+        url: domen+'crm/event_statuses',
         params: { id: selectedRecord.data.id, action: 'delete'},
         success: function( result, request ){
            
