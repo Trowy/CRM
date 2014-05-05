@@ -88,8 +88,8 @@ var companyFormPanel= {
 			
 		tbar: [                     
                        
-  {text:'Написать письмо',handler:function(){create_email_window(companyForm.getForm().findField("emails").getValue().split('<br>')[0]);}},   
-  {text:'Звонок'}
+  {text:'Написать письмо',iconCls: 'mail',handler:function(){create_email_window(companyForm.getForm().findField("emails").getValue().split('<br>')[0]);}},   
+  {text:'Звонок',iconCls: 'skype',}
 ],
 		
 		items: [
