@@ -56,6 +56,7 @@ action: 'edit'
    
 })
 evt_window.items.items[0].getForm().findField("date").hide();
+evt_window.items.items[0].getForm().findField("filedata").hide();
 	evt_window.show();}
 	
 
@@ -286,7 +287,7 @@ activeTab: 0,
 				event_panel2,
 				event_panel3,					
 				]
-		},{title: 'События компании',iconCls: 'event',
+		},{title: 'События компании',iconCls: 'event_cmp',
 				xtype: 'tabpanel',
 				id: 'cmpevt',
 				items:[
@@ -294,7 +295,7 @@ activeTab: 0,
 				event_panel5,
 				event_panel6,					
 				]
-		},{title: 'События контактного лица',iconCls: 'event',
+		},{title: 'События контактного лица',iconCls: 'event_cntr',
 				xtype: 'tabpanel',
 				id: 'cntevt',
 				items:[

@@ -54,27 +54,27 @@ phones_hidden:row.get('phones'),
 		columns: [      
 	{
       text: "Фамилия",
-      dataIndex: 'last_name',  
+      dataIndex: 'last_name',  width:150 
 			
     },
 	{
       text: "Имя",
-      dataIndex: 'first_name',   
+      dataIndex: 'first_name',   width:150 
     },
 	{
       text: "Отчество",
-      dataIndex: 'middle_name', 
+      dataIndex: 'middle_name', width:150 
     },
 	{
       text: "Телефон",
-      dataIndex: 'phones', 
+      dataIndex: 'phones', width:150 
     },
 	{
       text: "Эл. почта",
-      dataIndex: 'emails',  
+      dataIndex: 'emails',  width:150 
     },
 	{
       text: "Скайп",
-      dataIndex: 'skypes',  
+      dataIndex: 'skypes',  width:'100%'
     }]
 });

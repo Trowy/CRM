@@ -19,14 +19,14 @@ var city_grid = Ext.create('Ext.grid.Panel', {
 	columns: [    
     {
       text: "Название",
-      dataIndex: 'name',      
+      dataIndex: 'name',    width:150   
     },
 	{
       text: "Код города",
-      dataIndex: 'code',      
+      dataIndex: 'code',   width:100    
     },
 	{
       text: "Временная зона",
-      dataIndex: 'time_zone',      
+      dataIndex: 'time_zone',      width:'100%'
     }]
 });

@@ -18,27 +18,27 @@ var employee_grid = Ext.create('Ext.grid.Panel', {
 	store: employee_store,
 	columns: [    
     {
-      text: "Название",
-      dataIndex: 'login',      
+      text: "Логин",
+      dataIndex: 'login',    width:100   
     },
 	{
       text: "Фамилия",
-      dataIndex: 'last_name',      
+      dataIndex: 'last_name',  width:150     
     },
 	{
       text: "Имя",
-      dataIndex: 'first_name',      
+      dataIndex: 'first_name',  width:130     
     },
 	{
       text: "Отчество",
-      dataIndex: 'middle_name',      
+      dataIndex: 'middle_name', width:150      
     },
 	{
       text: "Роль",
-      dataIndex: 'role',      
+      dataIndex: 'role',   width:80    
     },
 	{
       text: "Эл. почта",
-      dataIndex: 'email',      
+      dataIndex: 'email',   width:'100%'   
     }]
 });

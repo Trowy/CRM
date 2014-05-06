@@ -19,10 +19,10 @@ var business_scale_grid = Ext.create('Ext.grid.Panel', {
 	columns: [    
     {
       text: "Название",
-      dataIndex: 'name',      
+      dataIndex: 'name', width:150     
     },
 	{
       text: "Описание",
-      dataIndex: 'info',      
+      dataIndex: 'info',    width:'100%'  
     }]
 });

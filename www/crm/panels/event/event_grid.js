@@ -329,23 +329,23 @@ attachment:"<a href='"+domen+"crm/attachments?id="+row.get('Attachment_name')[0]
 	columns: [    
     {
       text: "Название",
-      dataIndex: 'title',      
+      dataIndex: 'title',  width:150     
     },
 	{
       text: "Тип",
-      dataIndex: 'EventType_name',      
+      dataIndex: 'EventType_name',    width:150   
     },
 	{
       text: "Дата",
-      dataIndex: 'date',      
+      dataIndex: 'date',    width:100   
     },
 	{
       text: "Конт. лицо",
-      dataIndex: 'Contractor_name',      
+      dataIndex: 'Contractor_name',  width:200     
     },
 	{
       text: "Описание",
-      dataIndex: 'info',      
+      dataIndex: 'info',width:'100%'       
     }]
 });
 
@@ -375,23 +375,23 @@ eventStatus:row.get('EventStatus_name')
 	columns: [    
     {
       text: "Название",
-      dataIndex: 'title',      
+      dataIndex: 'title',      width:150
     },
 	{
       text: "Тип",
-      dataIndex: 'EventType_name',      
+      dataIndex: 'EventType_name',    width:150  
     },
 	{
       text: "Дата",
-      dataIndex: 'date',      
+      dataIndex: 'date',      width:100
     },
 	{
       text: "Конт. лицо",
-      dataIndex: 'Contractor_name',      
+      dataIndex: 'Contractor_name',     width:200 
     },
 	{
       text: "Описание",
-      dataIndex: 'info',      
+      dataIndex: 'info',      width:'100%'
     }]
 });
 
@@ -420,23 +420,23 @@ eventStatus:row.get('EventStatus_name')
 	columns: [    
     {
       text: "Название",
-      dataIndex: 'title',      
+      dataIndex: 'title',      width:150
     },
 	{
       text: "Тип",
-      dataIndex: 'EventType_name',      
+      dataIndex: 'EventType_name',    width:150  
     },
 	{
       text: "Дата",
-      dataIndex: 'date',      
+      dataIndex: 'date',     width:100 
     },
 	{
       text: "Конт. лицо",
-      dataIndex: 'Contractor_name',      
+      dataIndex: 'Contractor_name', width:200     
     },
 	{
       text: "Описание",
-      dataIndex: 'info',      
+      dataIndex: 'info',   width:'100%'   
     }]
 });
 
@@ -465,23 +465,23 @@ eventStatus:row.get('EventStatus_name')
 	columns: [    
     {
       text: "Название",
-      dataIndex: 'title',      
+      dataIndex: 'title',     width:150 
     },
 	{
       text: "Тип",
-      dataIndex: 'EventType_name',      
+      dataIndex: 'EventType_name',    width:150  
     },
 	{
       text: "Дата",
-      dataIndex: 'date',      
+      dataIndex: 'date',   width:100   
     },
 	{
       text: "Конт. лицо",
-      dataIndex: 'Contractor_name',      
+      dataIndex: 'Contractor_name',   width:200   
     },
 	{
       text: "Описание",
-      dataIndex: 'info',      
+      dataIndex: 'info', width:'100%'     
     }]
 });
 
@@ -510,23 +510,23 @@ eventStatus:row.get('EventStatus_name')
 	columns: [    
     {
       text: "Название",
-      dataIndex: 'title',      
+      dataIndex: 'title',    width:150  
     },
 	{
       text: "Тип",
-      dataIndex: 'EventType_name',      
+      dataIndex: 'EventType_name',   width:150   
     },
 	{
       text: "Дата",
-      dataIndex: 'date',      
+      dataIndex: 'date', width:100     
     },
 	{
       text: "Конт. лицо",
-      dataIndex: 'Contractor_name',      
+      dataIndex: 'Contractor_name',    width:200  
     },
 	{
       text: "Описание",
-      dataIndex: 'info',      
+      dataIndex: 'info',   width:'100%'   
     }]
 });
 
@@ -555,23 +555,23 @@ eventStatus:row.get('EventStatus_name')
 	columns: [    
     {
       text: "Название",
-      dataIndex: 'title',      
+      dataIndex: 'title',   width:150   
     },
 	{
       text: "Тип",
-      dataIndex: 'EventType_name',      
+      dataIndex: 'EventType_name',    width:150  
     },
 	{
       text: "Дата",
-      dataIndex: 'date',      
+      dataIndex: 'date', width:100     
     },
 	{
       text: "Конт. лицо",
-      dataIndex: 'Contractor_name',      
+      dataIndex: 'Contractor_name',  width:200    
     },
 	{
       text: "Описание",
-      dataIndex: 'info',      
+      dataIndex: 'info', width:'100%'     
     }]
 });
 
@@ -600,23 +600,23 @@ eventStatus:row.get('EventStatus_name')
 columns: [    
     {
       text: "Название",
-      dataIndex: 'title',      
+      dataIndex: 'title',  width:150    
     },
 	{
       text: "Тип",
-      dataIndex: 'EventType_name',      
+      dataIndex: 'EventType_name', width:150     
     },
 	{
       text: "Дата",
-      dataIndex: 'date',      
+      dataIndex: 'date', width:100     
     },
 	{
       text: "Конт. лицо",
-      dataIndex: 'Contractor_name',      
+      dataIndex: 'Contractor_name',width:200      
     },
 	{
       text: "Описание",
-      dataIndex: 'info',      
+      dataIndex: 'info',    width:'100%'  
     }]
 });
 
@@ -645,23 +645,23 @@ eventStatus:row.get('EventStatus_name')
 	columns: [    
     {
       text: "Название",
-      dataIndex: 'title',      
+      dataIndex: 'title',    width:150  
     },
 	{
       text: "Тип",
-      dataIndex: 'EventType_name',      
+      dataIndex: 'EventType_name',    width:150  
     },
 	{
       text: "Дата",
-      dataIndex: 'date',      
+      dataIndex: 'date',   width:100   
     },
 	{
       text: "Конт. лицо",
-      dataIndex: 'Contractor_name',      
+      dataIndex: 'Contractor_name',      width:200
     },
 	{
       text: "Описание",
-      dataIndex: 'info',      
+      dataIndex: 'info',    width:'100%'  
     }]
 });
 
@@ -691,22 +691,22 @@ eventStatus:row.get('EventStatus_name')
 	columns: [    
     {
       text: "Название",
-      dataIndex: 'title',      
+      dataIndex: 'title',      width:150
     },
 	{
       text: "Тип",
-      dataIndex: 'EventType_name',      
+      dataIndex: 'EventType_name',  width:150    
     },
 	{
       text: "Дата",
-      dataIndex: 'date',      
+      dataIndex: 'date',     width:100 
     },
 	{
       text: "Конт. лицо",
-      dataIndex: 'Contractor_name',      
+      dataIndex: 'Contractor_name',   width:200   
     },
 	{
       text: "Описание",
-      dataIndex: 'info',      
+      dataIndex: 'info',      width:'100%'
     }]
 });

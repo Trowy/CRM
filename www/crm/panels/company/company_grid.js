@@ -72,23 +72,23 @@ companyForm.getForm().setValues({
    
 	{
       text: "Название",
-      dataIndex: 'name',      
+      dataIndex: 'name',      width:150 
     },
 	{
       text: "Город",       
-	  dataIndex: 'City_name'
+	  dataIndex: 'City_name',width:150 
     },
 	{
       text: "Статус",
-      dataIndex: 'CompanyStatus_name',      
+      dataIndex: 'CompanyStatus_name',  width:150     
     },
 	{
       text: "Сегмент",
-      dataIndex: 'Segment_name',      
+      dataIndex: 'Segment_name',      width:150 
     },
 	{
       text: "Размер бизнеса",
-      dataIndex: 'BusinessScale_name',      
+      dataIndex: 'BusinessScale_name',     width:'100%'  
     }
 	
 	]

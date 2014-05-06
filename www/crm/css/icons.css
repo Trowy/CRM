@@ -34,6 +34,14 @@
 	background-image:url('../icons/event.png') !important;	
 }
 
+.event_cmp{
+	background-image:url('../icons/event_cmp.png') !important;	
+}
+
+.event_cntr{
+	background-image:url('../icons/event_cntr.png') !important;	
+}
+
 .skype{
 	background-image:url('../icons/skype.png') !important;	
 }
@@ -44,4 +52,12 @@
 
 .export{
 	background-image:url('../icons/export.png') !important;	
+}
+
+.exit{
+	background-image:url('../icons/exit.png') !important;	
+}
+
+.help{
+	background-image:url('../icons/help.png') !important;	
 }

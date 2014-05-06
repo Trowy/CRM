@@ -7,6 +7,7 @@
 	defaults:{xtype:'textfield'	},	//component by default of the form
 	items:[{
       fieldLabel: "Название",
+			id: 'title',      
       name: 'title',      
     },{
 	xtype: 'combobox',
@@ -43,7 +44,8 @@ value: event_type_store.getAt('0').get('id'),
     },
 	{xtype:'datefield',
       fieldLabel: "Дата поступления",
-      name: 'date',      
+      name: 'date',  
+			value: new Date(),
     },{xtype: 'numberfield',
       fieldLabel: "Продолжител.",
       name: 'duration',      
@@ -66,6 +68,7 @@ value: event_status_store.getAt('0').get('id'),
 	{
                     xtype: 'fileuploadfield',
                     id: 'filedata',
+										name: 'filedata',
                     emptyText: 'Select a document to upload...',
                     fieldLabel: 'File',
                     buttonText: 'Browse'
@@ -111,7 +114,7 @@ value: event_status_store.getAt('0').get('id'),
 					waitMsg: 'Сохранение...',
 					
 					success: function(f,a){
-						//evt_win.close();
+						evt_win.close();
 						refresh_evt();
 					},
 					
@@ -119,7 +122,7 @@ value: event_status_store.getAt('0').get('id'),
 						if (a.failureType === Ext.form.Action.CONNECT_FAILURE){
 							Ext.MessageBox.show({
 								title: 'Ошибка',
-								msg: 'Ошибка подключения к серверу. Проверьте интернет соединение.',
+								msg: 'Ошибка подключения к серверу. Проверьте интернет соединение.1',
 								buttons: Ext.MessageBox.OK,
 								icon: Ext.MessageBox.ERROR
 							});
