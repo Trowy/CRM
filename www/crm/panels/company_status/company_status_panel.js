@@ -1,87 +1,92 @@
-function create_add_cs_window(){
-
-	cs_window = create_cs_window();	
-	cs_window.title = 'Добавить статус компании';	
+function create_add_cs_window() {
+	cs_window = create_cs_window();
+	cs_window.title = 'Добавить статус компании';
 	cs_window.items.items[0].getForm().setValues({
-action: 'new'
-});	
+		action: 'new'
+	});
 	cs_window.show();
-	
-
 }
 
-function create_edit_cs_window(){
-if(company_status_grid.getSelectionModel().getSelection()!=""){
-	cs_window = create_cs_window();cs_window.title = 'Изменить статус компании';	
-	var row = company_status_grid.getSelectionModel().getSelection()[0];
-	
-	cs_window.items.items[0].getForm().setValues({
-id: row.get('id'),
-name: row.get('name'),
-info: row.get('info'),
-action: 'edit'
-});
-	cs_window.show();
-
+function create_edit_cs_window() {
+	if (company_status_grid.getSelectionModel().getSelection() !== "") {
+		cs_window = create_cs_window();
+		cs_window.title = 'Изменить статус компании';
+		var row = company_status_grid.getSelectionModel().getSelection()[0];
+		cs_window.items.items[0].getForm().setValues({
+			id: row.get('id'),
+			name: row.get('name'),
+			info: row.get('info'),
+			action: 'edit'
+		});
+		cs_window.show();
+	}
 }
-}
 
-function create_del_cs_window(){
+function create_del_cs_window() {
 
 	var selectedRecord = company_status_grid.getSelectionModel().getSelection()[0];
-	
+
 	Ext.Ajax.request({
-        method: 'POST',
-        url:domen+'crm/company_statuses',
-        params: { id: selectedRecord.data.id, action: 'delete'},
-        success: function( result, request ){
-            
-            var response = Ext.decode(result.responseText);
-                 if (response.success) {refresh_cs();
-								 }else {Ext.MessageBox.show({
-								title: 'Ошибка',
-								msg: response.errors.name,
-								buttons: Ext.MessageBox.OK,
-								icon: Ext.MessageBox.ERROR
-							});}
-        }
-    });
+		method: 'POST',
+		url: domen + 'crm/company_statuses',
+		params: {
+			id: selectedRecord.data.id,
+			action: 'delete'
+		},
+		success: function(result, request) {
+
+			var response = Ext.decode(result.responseText);
+			if (response.success) {
+				refresh_cs();
+			} else {
+				Ext.MessageBox.show({
+					title: 'Ошибка',
+					msg: response.errors.name,
+					buttons: Ext.MessageBox.OK,
+					icon: Ext.MessageBox.ERROR
+				});
+			}
+		}
+	});
 
 }
 
-function refresh_cs(){
+function refresh_cs() {
 	company_status_store.load();
 	company_status_grid.getView().refresh();
 
 }
 
 var company_status_panel = Ext.create('Ext.panel.Panel', {
-	
 	title: 'Статус компании',
-		layout: {
-                        type: 'vbox',
-                        align: 'stretch'
-                    },
-	items: [company_status_grid],
-	
+	layout: {
+		type: 'vbox',
+		align: 'stretch'
+	},
+	items: [
+		company_status_grid
+	],
 	tbar: [
 		{
-		text: 'Добавить',iconCls: 'add',
-		handler: create_add_cs_window
+			text: 'Добавить',
+			iconCls: 'add',
+			handler: create_add_cs_window
 		},
 		{
-		text: 'Изменить',iconCls: 'edit',
-		handler: create_edit_cs_window
+			text: 'Изменить',
+			iconCls: 'edit',
+			handler: create_edit_cs_window
 		},
-		{		
-		text: 'Удалить',iconCls: 'delete',
-		handler: create_del_cs_window
+		{
+			text: 'Удалить',
+			iconCls: 'delete',
+			handler: create_del_cs_window
 		},
 		'-',
 		{
-		text: 'Обновить',iconCls: 'refresh',
-		handler: refresh_cs
+			text: 'Обновить',
+			iconCls: 'refresh',
+			handler: refresh_cs
 		}
-	],
-	
+	]
 });

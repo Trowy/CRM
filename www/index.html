@@ -9,51 +9,30 @@
 	
 	<link rel="stylesheet" type="text/css" href="extjs/resources/css/ext-all.css">
 	<link rel="stylesheet" type="text/css" href="extjs/ux/css/LiveSearchGridPanel.css">
-  <link rel="stylesheet" type="text/css" href="extjs/ux/statusbar/css/statusbar.css">
+	<link rel="stylesheet" type="text/css" href="extjs/ux/statusbar/css/statusbar.css">
 	<script type="text/javascript" src="extjs/ext-all.js"></script>
 	<script type="text/javascript" src="extjs/ext-theme-neptune.js"></script>
-	<script type="text/javascript" src="extjs/locale/ext-lang-ru.js"></script>	
+	<script type="text/javascript" src="extjs/locale/ext-lang-ru.js"></script>
 	
 	<!-- CRM -->
 	<link rel="stylesheet" type="text/css" href="crm/css/icons.css">
 	<script type="text/javascript">
-		function fnShowProps(obj, s, n){
-			var result = "";
-			for (var i in obj){
-				if(typeof(obj[i]) == "object" && n<3){
-					result +=fnShowProps(obj[i], s+"."+i, ++n);
-				}else{
-					result += s+"."+i + " = " + obj[i] + " "+typeof(n)+" "+n+"<br />\n";
-				}
-			}
-			
-			return result;
-		}
-
-		function getCookie(name) {
-			var matches = document.cookie.match(new RegExp(
-			                           "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-			));
-			
-			return matches ? decodeURIComponent(matches[1]) : "undefined";
 		
-		}
-
 		Ext.Loader.setConfig({enabled: true});
 		Ext.Loader.setPath('Ext', '/extjs');
-
-
+		
 		Ext.require([
 			'Ext.Msg',
 			'Ext.panel.*',
 			'Ext.grid.*',
 			'Ext.data.*',
-			'Ext.util.*',			
+			'Ext.util.*'
 			
 		]);
+		
 		Ext.Ajax.cors = true;
 		Ext.Ajax.useDefaultXhrHeader = false;
-		Ext.Ajax.withCredentials = true;		
+		Ext.Ajax.withCredentials = true;
 		
 		var domen = 'http://78.139.244.92:8080/';
 		
